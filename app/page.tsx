@@ -1,8 +1,14 @@
+import { Deskundigen } from "@/components/vosteq/deskundigen";
+import { Verbeteren } from "@/components/vosteq/verbeteren";
+import { VosteqCarousel } from "@/components/vosteq/vosteq-carousel";
+
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24 ">
-      <h1 className="font-aktiv-grotesk-extended">Dit is een test</h1>
+    <main className="flex flex-col items-center py-24">
+      <Deskundigen />
+      <Verbeteren />
+      <VosteqCarousel />
     </main>
   );
 }

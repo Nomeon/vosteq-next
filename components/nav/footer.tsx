@@ -1,18 +1,28 @@
-import { Input } from "@/components/ui/input";
+'use client';
+
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import Link from "next/link";
 
 const Footer = () => {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    console.log(e);
+  }
+
   return (
     <footer className="flex flex-col">
       <div className="bg-paars flex flex-col items-center">
         <h2 className="text-wit font-aktiv-grotesk-extended pt-32">Haal ook meer uit mensen en machine</h2>
         <p className="text-wit text-lg font-light font-aktiv-grotesk-extended pt-8">Ontdek hoe Vosteq jouw bedrijf kan transformeren naar Smart Manufacturing</p>
-        <div className="flex flex-row gap-4 pt-8">
-          <Input />
-          <button className="btn-solid-to-outline">Aanmelden</button>
-        </div>
+          <form onSubmit={onSubmit} className="flex flex-row gap-4 pt-8">
+            <input
+              type="email"
+              name="email"
+              placeholder="Vul je e-mailadres in"
+              className="w-96 py-2 px-4 border-2 border-wit font-aptos focus:outline-none focus:border-2 focus:border-groen"
+            />
+            <button className="btn-solid-to-outline">Aanmelden</button>
+          </form>
         <p className="text-wit pt-4 pb-32 text-xs font-aktiv-grotesk">Door je aan te melden, bevestig je dat je akkoord gaat met onze Algemene Voorwaarden.</p>
       </div>
       <div className="flex justify-between h-48 px-16">

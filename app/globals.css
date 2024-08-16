@@ -90,15 +90,15 @@ h4 {
 }
 
 .btn-solid {
-  @apply h-12 relative inline-flex -outline-offset-2 items-center bg-donkergroen outline-donkergroen text-wit font-aktiv-grotesk-extended text-base px-6 hover:bg-donkerpaars outline outline-2 hover:outline-donkerpaars hover:pr-10 transition-all duration-200;
+  @apply h-12 relative inline-flex -outline-offset-1 items-center bg-donkergroen outline-donkergroen text-wit font-aktiv-grotesk-extended text-base px-6 hover:bg-donkerpaars outline outline-1 hover:outline-donkerpaars hover:pr-10 transition-all duration-200;
 }
 
 .btn-solid-to-outline {
-  @apply h-12 relative inline-flex -outline-offset-2 items-center bg-donkergroen outline-donkergroen text-wit font-aktiv-grotesk-extended text-base px-6 hover:bg-transparent outline outline-2 hover:outline-wit hover:pr-10 transition-all duration-200; 
+  @apply h-12 relative inline-flex -outline-offset-1 items-center bg-donkergroen outline-donkergroen text-wit font-aktiv-grotesk-extended text-base px-6 hover:bg-transparent outline outline-1 hover:outline-wit hover:pr-10 transition-all duration-200; 
 }
 
 .btn-outline {
-  @apply h-12 relative inline-flex -outline-offset-2 items-center bg-transparent outline-donkerpaars text-donkerpaars font-aktiv-grotesk-extended text-base px-6 hover:bg-donkergroen outline outline-2 hover:outline-donkergroen hover:text-wit hover:pr-10 transition-all duration-200;
+  @apply h-12 relative inline-flex -outline-offset-1 items-center bg-transparent outline-donkerpaars text-donkerpaars font-aktiv-grotesk-extended text-base px-6 hover:bg-donkergroen outline outline-1 hover:outline-donkergroen hover:text-wit hover:pr-10 transition-all duration-200;
 }
 
 .btn-solid::after, .btn-outline::after, .btn-solid-to-outline::after {
