@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="preload" href="https://use.typekit.net/cwv3jes.css" as="style" />
         <link rel="stylesheet" href="https://use.typekit.net/cwv3jes.css" />
       </head> 
-      <body className="container font-aptos">
+      <body className="md:container font-aptos">
         <Header />
         {children}
         <Footer />

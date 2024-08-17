@@ -119,3 +119,53 @@ h4 {
   opacity: 1;
   right: 1rem;
 }
+
+.fly {
+  animation: fly-right 0.2s ease-in-out forwards;
+}
+
+@keyframes fly-right {
+  0% {
+    transform: translateX(-4rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Navbar toggle button */
+#menu-toggle.toggled > #icon:before {
+  top: 0px;
+}
+#menu-toggle.toggled > #icon:after {
+  bottom: 0px;
+}
+#icon:before,
+#icon:after {
+  height: 0.2rem;
+  left: 0px;
+  position: absolute;
+  transition: all 0.25s;
+  width: 1.8rem;
+}
+#icon:before {
+  top: -0.6rem;
+}
+#icon:after {
+  bottom: -0.6rem;
+}
+
+.menu {
+  transition: opacity 0.2s easeInOut, transform 0.3s easeInOut;
+  opacity: 0;
+  /* transform: translateY(-100%); */
+  visibility: hidden; /* Prevent interaction when hidden */
+}
+
+.menu.open {
+  opacity: 1;
+  /* transform: translateY(0); */
+  visibility: visible; /* Allow interaction when visible */
+}
