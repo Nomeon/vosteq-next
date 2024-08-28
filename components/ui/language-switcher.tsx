@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
 
     return (
         <div className="relative flex">
-            <button onClick={() => setIsOpen(!isOpen)} className="flex items-center text-paars">
+            <button onClick={() => setIsOpen(!isOpen)} className="flex items-center">
               <Icon className='w-4 h-4' icon="material-symbols:language" />
             </button>
             {isOpen && (

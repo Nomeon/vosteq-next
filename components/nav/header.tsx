@@ -89,7 +89,9 @@ const Header = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <LanguageSwitcher />
+      <div className='flex max-md:hidden text-paars'>
+        <LanguageSwitcher />
+      </div>
       <Link href='/contact' className='group flex items-center justify-center bg-groen w-40 hover:bg-donkergroen duration-200 max-md:hidden'>
         <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
       </Link>
