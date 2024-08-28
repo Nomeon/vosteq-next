@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Deskundigen } from "@/components/vosteq/deskundigen";
 import { Verbeteren } from "@/components/vosteq/verbeteren";
 import { VosteqCarousel } from "@/components/vosteq/vosteq-carousel";
 import { HomeHero } from "@/components/vosteq/home-hero";
 
+export const metadata: Metadata = {
+  title: "Vosteq | De Veranderexperts",
+  description: "Aan het bouwen!",
+};
 
 export default function Home() {
   return (
