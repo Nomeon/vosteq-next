@@ -11,27 +11,29 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col">
-      <div className="bg-paars flex flex-col items-center">
-        <h2 className="text-wit font-aktiv-grotesk-extended pt-32">Haal ook meer uit mensen en machine</h2>
+      <div className="bg-paars flex flex-col items-center container max-md:text-center py-16">
+        <h2 className="text-wit font-aktiv-grotesk-extended">Haal ook meer uit mensen en machine</h2>
         <p className="text-wit text-lg font-light font-aktiv-grotesk-extended pt-8">Ontdek hoe Vosteq jouw bedrijf kan transformeren naar Smart Manufacturing</p>
-          <form onSubmit={onSubmit} className="flex flex-row gap-4 pt-8">
+          <form onSubmit={onSubmit} className="flex flex-col md:flex-row gap-4 pt-8">
             <input
               type="email"
               name="email"
               placeholder="Vul je e-mailadres in"
-              className="w-96 py-2 px-4 border-2 border-wit font-aptos focus:outline-none focus:border-2 focus:border-groen"
+              className="py-2 px-4 border-2 border-wit font-aptos focus:outline-none focus:border-2 focus:border-groen"
             />
-            <button className="btn-solid-to-outline">Aanmelden</button>
+            <div>
+              <button className="btn-solid-to-outline">Aanmelden</button>
+            </div>
           </form>
-        <p className="text-wit pt-4 pb-32 text-xs font-aktiv-grotesk">Door je aan te melden, bevestig je dat je akkoord gaat met onze Algemene Voorwaarden.</p>
+        <p className="text-wit pt-4 text-xs font-aktiv-grotesk">Door je aan te melden, bevestig je dat je akkoord gaat met onze Algemene Voorwaarden.</p>
       </div>
-      <div className="flex justify-between h-48 px-16">
+      <div className="flex flex-col md:flex-row justify-between max-md:gap-16 max-md:items-center md:px-16 py-16">
         <div className='flex flex-row items-center gap-6'>
           <Image src='/vosteq-logo.svg' width={134} height={24} alt='logo' />
           <p className="font-aktiv-grotesk-extended text-paars font-semibold">de veranderexperts</p>
         </div>
         <div className="text-black flex items-center">
-          <ul className="flex flex-row font-aktiv-grotesk-extended gap-4">
+          <ul className="flex flex-col max-md:items-center md:flex-row font-aktiv-grotesk-extended gap-4">
             <li>Markten</li>
             <li>Kennis en inspiratie</li>
             <li>Ons team</li>
@@ -47,7 +49,7 @@ const Footer = () => {
           <Icon icon="mdi:youtube" width="24" height="24" />
         </div>
       </div>
-      <div className="flex bg-groen h-32 items-center justify-center font-aptos text-wit gap-4">
+      <div className="flex flex-col md:flex-row bg-groen py-12 items-center justify-center font-aptos text-wit gap-4">
         <p>© 2024 Vosteq. Alle rechten voorbehouden.</p>
         <Link href="/"><p className="underline">Privacybeleid</p></Link>
         <Link href="/"><p className="underline">Algemene Voorwaarden</p></Link>

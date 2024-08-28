@@ -17,14 +17,22 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.documentElement.style.overflow = 'auto'
+    }
+  }, [isMenuOpen])
+
   return (
-    <header className='bg-inherit flex flex-row h-24 justify-between w-full'>
+    <header className='bg-inherit flex flex-row h-24 justify-between w-full sticky top-0 z-10'>
       <div className='flex flex-row items-center gap-4 md:gap-6 max-md:w-full max-md:container z-20'>
         <Image className='h-4 md:h-6 w-auto md:pl-8' src='/vosteq-logo.svg' width={134} height={24} alt='logo' />
         <p className="font-aktiv-grotesk-extended text-paars font-semibold max-md:text-xs">de veranderexperts</p>
@@ -75,7 +83,7 @@ const Header = () => {
         <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
       </button>
       {/* Mobile Menu */}
-      <div className={`${isMenuOpen ? 'open' : ''} menu h-dvh w-full bg-wit absolute pt-24 z-10 flex flex-col justify-between duration-500 transition-all`}>
+      <div className={`${isMenuOpen ? 'open' : ''} absolute menu h-dvh w-full bg-wit pt-24 flex flex-col justify-between duration-500 transition-all`}>
         <Accordion type='single' collapsible className='container text-paars'>
           <AccordionItem value='item-1'>
             <AccordionTrigger className='text-base'>Diensten</AccordionTrigger>

@@ -6,11 +6,11 @@ import { HomeHero } from "@/components/vosteq/home-hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <HomeHero />
       <Deskundigen />
       <Verbeteren />
       <VosteqCarousel />
-    </main>
+    </div>
   );
 }
