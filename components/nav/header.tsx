@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link } from "@/lib/i18n";
+import { usePathname } from "@/lib/i18n";
 import { Icon } from '@iconify/react';
 import { Separator } from "@/components/ui/separator"
 import {
@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import React, { useEffect } from 'react';
+import * as m from "@/paraglide/messages.js";
 
 
 const Header = () => {
@@ -56,7 +57,7 @@ const Header = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
             <NavigationMenuContent className='flex flex-col p-6'>
-                <NavigationMenuLink href='/diensten/veranderen'>Veranderen</NavigationMenuLink>
+                <NavigationMenuLink href='/diensten/veranderen'>{m.sleek_last_reindeer_slide()}</NavigationMenuLink>
                 <Separator />
                 <NavigationMenuLink href='/diensten/verbeteren'>Verbeteren</NavigationMenuLink>
                 <Separator />

@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 
 const Footer = () => {
   return (

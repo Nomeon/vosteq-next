@@ -1,7 +1,7 @@
 'use client'
 import { Icon } from "@iconify/react";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 
 import {
   Carousel,

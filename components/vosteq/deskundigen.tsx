@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 
 const Deskundigen = () => {
   return (
