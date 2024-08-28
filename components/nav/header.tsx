@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/accordion"
 import React, { useEffect } from 'react';
 import * as m from "@/paraglide/messages.js";
+import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
 
 const Header = () => {
@@ -88,6 +89,7 @@ const Header = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <LanguageSwitcher />
       <Link href='/contact' className='group flex items-center justify-center bg-groen w-40 hover:bg-donkergroen duration-200 max-md:hidden'>
         <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
       </Link>
