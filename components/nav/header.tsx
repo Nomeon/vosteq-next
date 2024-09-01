@@ -39,6 +39,23 @@ const Header = () => {
     setIsMenuOpen(false)
   }, [pathname])
 
+  function onNavChange() {
+    setTimeout(() => {
+      const triggers = document.querySelectorAll(
+        '.submenu-trigger[data-state="open"]'
+      )
+      if (triggers.length === 0) return
+
+      const firstTrigger = triggers[0] as HTMLElement
+      const viewports = document.getElementsByClassName("submenu-viewport")
+
+      if (viewports.length > 0) {
+        const viewport = viewports[0] as HTMLElement
+        viewport.style.left = `${firstTrigger.offsetLeft}px`
+      }
+    })
+  }
+
   return (
     <header className='bg-inherit flex flex-row h-24 justify-between w-full sticky top-0 z-10'>
       <div className='flex flex-row items-center gap-4 md:gap-6 max-md:w-full max-md:container z-20'>
@@ -53,38 +70,91 @@ const Header = () => {
         </button>
       </div>
       {/* Desktop Menu */}
-      <NavigationMenu className='font-aktiv-grotesk text-paars max-md:hidden'>
+      <NavigationMenu className='font-aktiv-grotesk text-paars max-md:hidden' onValueChange={onNavChange}>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="submenu-trigger">Diensten</NavigationMenuTrigger>
             <NavigationMenuContent className='flex flex-col p-6'>
-                <NavigationMenuLink href='/diensten/veranderen'>{m.sleek_last_reindeer_slide()}</NavigationMenuLink>
-                <Separator />
-                <NavigationMenuLink href='/diensten/verbeteren'>Verbeteren</NavigationMenuLink>
-                <Separator />
-                <NavigationMenuLink href='/diensten/verbinden'>Verbinden</NavigationMenuLink>
-                <Separator />
-                <NavigationMenuLink href='/diensten/versterken'>Versterken</NavigationMenuLink>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 1</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 2</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 3</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 4</NavigationMenuLink>
+              </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Veranderexperts</NavigationMenuTrigger>
-            <NavigationMenuContent className=''>
+            <NavigationMenuTrigger className="submenu-trigger">Veranderexperts</NavigationMenuTrigger>
+            <NavigationMenuContent className='flex flex-col p-6'>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 1</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 2</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 3</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 4</NavigationMenuLink>
+              </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Voor wie</NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuTrigger className="submenu-trigger">Voor wie</NavigationMenuTrigger>
+            <NavigationMenuContent className='flex flex-col p-6'>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 1</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 2</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 3</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 4</NavigationMenuLink>
+              </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Kennis en inspiratie</NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuTrigger className="submenu-trigger">Kennis en inspiratie</NavigationMenuTrigger>
+            <NavigationMenuContent className='flex flex-col p-6'>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 1</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 2</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 3</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 4</NavigationMenuLink>
+              </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Over Vosteq</NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuTrigger className="submenu-trigger">Over Vosteq</NavigationMenuTrigger>
+            <NavigationMenuContent className='flex flex-col p-6'>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 1</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 2</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 3</NavigationMenuLink>
+              </Link>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>Pagina 4</NavigationMenuLink>
+              </Link>
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -99,33 +169,53 @@ const Header = () => {
       <div className={`${isMenuOpen ? 'open' : ''} absolute menu h-dvh w-full bg-wit pt-24 flex flex-col justify-between duration-500 transition-all`}>
         <Accordion type='single' collapsible className='container text-paars'>
           <AccordionItem value='item-1'>
-            <AccordionTrigger className='text-base'>Diensten</AccordionTrigger>
-            <AccordionContent>
-              <p>Dit is een test</p>
+            <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>Diensten</AccordionTrigger>
+            <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 1</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 2</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 3</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 4</Link>
+              <Link href='/' className='hover:text-donkergroen'>Pagina 5</Link>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-2'>
-            <AccordionTrigger className='text-base'>Veranderexperts</AccordionTrigger>
-            <AccordionContent>
-              <p>Dit is een test</p>
+            <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>Veranderexperts</AccordionTrigger>
+            <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 1</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 2</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 3</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 4</Link>
+              <Link href='/' className='hover:text-donkergroen'>Pagina 5</Link>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-3'>
-            <AccordionTrigger className='text-base'>Voor wie</AccordionTrigger>
-            <AccordionContent>
-              <p>Dit is een test</p>
+            <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>Voor wie</AccordionTrigger>
+            <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 1</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 2</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 3</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 4</Link>
+              <Link href='/' className='hover:text-donkergroen'>Pagina 5</Link>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-4'>
-            <AccordionTrigger className='text-base'>Kennis en inspiratie</AccordionTrigger>
-            <AccordionContent>
-              <p>Dit is een test</p>
+            <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>Kennis en inspiratie</AccordionTrigger>
+            <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 1</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 2</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 3</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 4</Link>
+              <Link href='/' className='hover:text-donkergroen'>Pagina 5</Link>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-5'>
-            <AccordionTrigger className='text-base'>Over Vosteq</AccordionTrigger>
-            <AccordionContent>
-              <p>Dit is een test</p>
+            <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>Over Vosteq</AccordionTrigger>
+            <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 1</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 2</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 3</Link>
+              <Link href='/' className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>Pagina 4</Link>
+              <Link href='/' className='hover:text-donkergroen'>Pagina 5</Link>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
