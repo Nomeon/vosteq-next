@@ -74,11 +74,11 @@
 }
 
 h1 {
-  @apply text-5xl font-bold font-aktiv-grotesk-extended;
+  @apply text-3xl md:text-5xl font-bold font-aktiv-grotesk-extended;
 }
 
 h2 {
-  @apply text-4xl font-bold font-aktiv-grotesk-extended;
+  @apply text-3xl md:text-4xl font-bold font-aktiv-grotesk-extended;
 }
 
 h3 {

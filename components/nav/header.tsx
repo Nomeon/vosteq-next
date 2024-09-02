@@ -223,11 +223,11 @@ const Header = () => {
             <Link href='/contact' className='font-aktiv-grotesk text-wit font-bold w-1/3 flex justify-start'>
               Contact
             </Link>
-            <button className='h-10 w-1/3 flex justify-center'>
-              <Icon icon='mdi:location-outline' className='text-wit w-10 h-10' />
+            <button className='h-8 w-1/3 flex justify-center'>
+              <Icon icon='mdi:location-outline' className='text-wit w-8 h-8' />
             </button>
-            <button className='w-1/3 h-10 flex justify-end'>
-              <Icon icon='mdi:phone-outline' className='text-wit w-10 h-10' />
+            <button className='w-1/3 h-8 flex justify-end'>
+              <Icon icon='mdi:phone-outline' className='text-wit w-8 h-8' />
             </button>
         </div>
       </div>

@@ -3,7 +3,8 @@ import { Deskundigen } from "@/components/vosteq/deskundigen";
 import { Verbeteren } from "@/components/vosteq/verbeteren";
 import { VosteqCarousel } from "@/components/vosteq/vosteq-carousel";
 import { HomeHero } from "@/components/vosteq/home-hero";
-import { ContactForm } from "@/components/vosteq/contact-form";
+import { NewsForm } from "@/components/vosteq/news-form";
+import { Experts } from "@/components/vosteq/experts";
 
 export const metadata: Metadata = {
   title: "Vosteq | De Veranderexperts",
@@ -16,8 +17,9 @@ export default function Home() {
       <HomeHero />
       <Deskundigen />
       <Verbeteren />
+      <Experts />
       <VosteqCarousel />
-      <ContactForm />
+      <NewsForm />
     </div>
   );
 }

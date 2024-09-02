@@ -49,7 +49,7 @@ const VosteqCarousel = () => {
             </div>
             <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
               <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>
-              <p className="text-paars font-aktiv-grotesk-extended text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
+              <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
               <div>
                 <button className='btn-outline font-semibold'>Bekijk case</button>
               </div>
@@ -61,7 +61,7 @@ const VosteqCarousel = () => {
             </div>
             <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
               <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>
-              <p className="text-paars font-aktiv-grotesk-extended text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
+              <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
               <div>
                 <button className='btn-outline font-semibold'>Bekijk case</button>
               </div>
