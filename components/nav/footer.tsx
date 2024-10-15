@@ -5,7 +5,7 @@ import { Link } from "@/lib/i18n";
 const Footer = () => {
   return (
     <footer className="flex flex-col">
-      <div className="flex flex-col md:flex-row justify-between max-md:gap-16 max-md:items-center md:px-16 py-16">
+      <div className="flex flex-col container md:flex-row justify-between max-md:gap-16 max-md:items-center md:px-16 py-16">
         <div className='flex flex-row items-center gap-6'>
           <Image src='/vosteq-logo.svg' width={134} height={24} alt='logo' />
           <p className="font-aktiv-grotesk-extended text-paars font-semibold">de veranderexperts</p>
