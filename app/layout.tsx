@@ -3,6 +3,7 @@ import { languageTag } from "@/paraglide/runtime.js"
 import "./globals.css";
 import { Header } from "@/components/nav/header";
 import { Footer } from "@/components/nav/footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Header />
           <main>
             {children}
+            <SpeedInsights />
           </main>
           <Footer />
         </body>
