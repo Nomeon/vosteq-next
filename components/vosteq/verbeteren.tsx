@@ -1,25 +1,23 @@
 'use client'
+
 import { Icon } from "@iconify/react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "@/lib/i18n";
-
 import {
+  type CarouselApi,
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
+  CarouselItem
 } from "@/components/ui/carousel"
-import React from "react";
+import { useState, useEffect, FC } from "react";
 
 
 const Verbeteren = () => {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!api) {
       return
     }
@@ -32,172 +30,78 @@ const Verbeteren = () => {
     })
   }, [api])
 
-  return (
-    <div className="container flex flex-col items-center py-16">
-      <h2 className="text-paars">Verbeteren in 5 stappen</h2>
-      <div className="flex flex-row gap-4 py-12 max-md:hidden">
-        {/* Optimaliseren */}
-        <div className="outline outline-1 outline-groen w-56 h-96 px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-          <div className="flex items-center justify-center h-32">
-            <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:magnify' width={60} height={60} />
-          </div>
-          <h4 className="text-paars text-xl">Optimaliseren</h4>
-          <Separator className="bg-paars my-2" />
-          <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Continue verbeteren</p>
-          <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link className='mt-auto pb-4' href="/">
-            <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-          </Link>
-        </div>
-        {/* Innoveren */}
-        <div className="outline outline-1 outline-groen w-56 h-96 px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-          <div className="flex items-center justify-center h-32">
-            <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:lightbulb-on' width={60} height={60} />
-          </div>
-          <h4 className="text-paars text-xl">Innoveren</h4>
-          <Separator className="bg-paars my-2" />
-          <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Doorbraak</p>
-          <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link className='mt-auto pb-4' href="/">
-            <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-          </Link>
-        </div>
-        {/* Implementeren */}
-        <div className="outline outline-1 outline-groen w-56 h-96 px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-          <div className="flex items-center justify-center h-32">
-            <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:hammer-wrench' width={60} height={60} />
-          </div>
-          <h4 className="text-paars text-xl">Implementeren</h4>
-          <Separator className="bg-paars my-2" />
-          <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Omzetten</p>
-          <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link className='mt-auto pb-4' href="/">
-            <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-          </Link>
-        </div>
-        {/* Herstructureren */}
-        <div className="outline outline-1 outline-groen w-56 h-96 px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-          <div className="flex items-center justify-center h-32">
-            <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:account-group' width={60} height={60} />
-          </div>
-          <h4 className="text-paars text-xl">Herstructureren</h4>
-          <Separator className="bg-paars my-2" />
-          <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Basis op orde</p>
-          <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link className='mt-auto pb-4' href="/">
-            <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-          </Link>
-        </div>
-        {/* Veranderen */}
-        <div className="outline outline-1 outline-groen w-56 h-96 px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-          <div className="flex items-center justify-center h-32">
-            <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:sync' width={60} height={60} />
-          </div>
-          <h4 className="text-paars text-xl">Veranderen</h4>
-          <Separator className="bg-paars my-2" />
-          <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Mensen meenemen</p>
-          <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link className='mt-auto pb-4' href="/">
-            <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-          </Link>
-        </div>
-      </div>
-      {/* Mobile Carousel */}
+  interface StepCardProps {
+    icon: string;
+    title: string;
+    subtitle: string;
+    description: string;
+  }
 
-      <div className="w-full pt-4 md:hidden">
-        <Carousel setApi={setApi} className="py-4 px-8">
-          <CarouselContent>
-            <CarouselItem key={1} className="w-full flex items-center">
-            <div className="w-full h-96 p-2">
-              <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-                <div className="flex items-center justify-center h-32">
-                  <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:magnify' width={60} height={60} />
-                </div>
-                <h4 className="text-paars text-xl">Optimaliseren</h4>
-                <Separator className="bg-paars my-2" />
-                <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Continue verbeteren</p>
-                <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <Link className='mt-auto pb-4' href="/">
-                  <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-                </Link>
-              </div>
-            </div>
-            </CarouselItem>
-            <CarouselItem key={2} className="w-full flex items-center">
-              <div className="w-full h-96 p-2">
-              <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-                <div className="flex items-center justify-center h-32">
-                  <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:lightbulb-on' width={60} height={60} />
-                </div>
-                <h4 className="text-paars text-xl">Innoveren</h4>
-                <Separator className="bg-paars my-2" />
-                <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Doorbraak</p>
-                <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <Link className='mt-auto pb-4' href="/">
-                  <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-                </Link>
-              </div>
-            </div>
-            </CarouselItem>
-            <CarouselItem key={3} className="w-full flex items-center">
-            <div className="w-full h-96 p-2">
-              <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-                <div className="flex items-center justify-center h-32">
-                  <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:hammer-wrench' width={60} height={60} />
-                </div>
-                <h4 className="text-paars text-xl">Implementeren</h4>
-                <Separator className="bg-paars my-2" />
-                <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Omzetten</p>
-                <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <Link className='mt-auto pb-4' href="/">
-                  <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-                </Link>
-              </div>
-            </div>
-            </CarouselItem>
-            <CarouselItem key={4} className="w-full flex items-center justify-center">
-              <div className="w-full h-96 p-2">
-                <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-                  <div className="flex items-center justify-center h-32">
-                    <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:account-group' width={60} height={60} />
-                  </div>
-                  <h4 className="text-paars text-xl">Herstructureren</h4>
-                  <Separator className="bg-paars my-2" />
-                  <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Basis op orde</p>
-                  <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <Link className='mt-auto pb-4' href="/">
-                    <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-                  </Link>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem key={5} className="w-full flex items-center">
-            <div className="w-full h-96 p-2">
-              <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
-                <div className="flex items-center justify-center h-32">
-                  <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon='mdi:sync' width={60} height={60} />
-                </div>
-                <h4 className="text-paars text-xl">Veranderen</h4>
-                <Separator className="bg-paars my-2" />
-                <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">Mensen meenemen</p>
-                <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <Link className='mt-auto pb-4' href="/">
-                  <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-                </Link>
-              </div>
-            </div>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
-        <div className="flex flex-row justify-between w-full">
-          <p className="text-5xl text-paars font-extralight font-aktiv-grotesk-extended">{current}/{count}</p>
-          <div className="flex flex-row items-center gap-2">
-            <button onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
-            <button onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
-          </div>
-        </div>
+  const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description }) => (
+    <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
+      <div className="flex items-center justify-center h-32">
+        <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon={icon} width={60} height={60} />
       </div>
+      <h4 className="text-paars text-xl">{title}</h4>
+      <Separator className="bg-paars my-2" />
+      <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">{subtitle}</p>
+      <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">{description}</p>
+      <Link className='mt-auto pb-4' href="/">
+        <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
+      </Link>
     </div>
+  );
+
+  const steps = [
+    {
+      icon: 'mdi:magnify',
+      title: 'Optimaliseren',
+      subtitle: 'Continue verbeteren',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },
+    {
+      icon: 'mdi:lightbulb-on',
+      title: 'Innoveren',
+      subtitle: 'Doorbraak',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },
+    {
+      icon: 'mdi:hammer-wrench',
+      title: 'Implementeren',
+      subtitle: 'Omzetten',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },
+    {
+      icon: 'mdi:account-group',
+      title: 'Herstructureren',
+      subtitle: 'Basis op orde',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    }
+  ];
+
+  return (
+    <div className="container flex flex-col items-center pt-16">
+    <h2 className="text-paars max-md:text-xl">Verbeteren in 4 stappen</h2>
+    <div className="flex flex-row gap-16 py-12 max-md:hidden md:px-16 md:pb-32">
+      {steps.map((step, index) => (
+        <StepCard key={index} icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} />
+      ))}
+    </div>
+    {/* Mobile Carousel */}
+    <div className="w-full pt-4 md:hidden">
+      <Carousel setApi={setApi} className="py-4">
+        <CarouselContent>
+          {steps.map((step, index) => (
+            <CarouselItem key={index} className="basis-2/3 flex items-center">
+              <div className="w-full h-96 p-1">
+                <StepCard icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </div>
+  </div>
   )
 }
 

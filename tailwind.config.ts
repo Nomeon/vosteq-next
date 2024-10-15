@@ -86,6 +86,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      translate: {
+        '85/100': '85%',
+        '9/10': '90%',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
