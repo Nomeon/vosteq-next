@@ -38,7 +38,7 @@ const Verbeteren = () => {
   }
 
   const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description }) => (
-    <div className="outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
+    <div className="h-96 w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
       <div className="flex items-center justify-center h-32">
         <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon={icon} width={60} height={60} />
       </div>
@@ -80,9 +80,9 @@ const Verbeteren = () => {
   ];
 
   return (
-    <div className="container flex flex-col items-center pt-16">
-    <h2 className="text-paars max-md:text-xl">Verbeteren in 4 stappen</h2>
-    <div className="flex flex-row gap-16 py-12 max-md:hidden md:px-16 md:pb-32">
+    <div className="container flex flex-col items-center py-16">
+    <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Verbeteren in 4 stappen</h2>
+    <div className="flex flex-row gap-16 py-12 max-md:hidden md:px-16 md:pb-16">
       {steps.map((step, index) => (
         <StepCard key={index} icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} />
       ))}
@@ -93,7 +93,7 @@ const Verbeteren = () => {
         <CarouselContent>
           {steps.map((step, index) => (
             <CarouselItem key={index} className="basis-2/3 flex items-center">
-              <div className="w-full h-96 p-1">
+              <div className="w-full h-full p-1">
                 <StepCard icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} />
               </div>
             </CarouselItem>
