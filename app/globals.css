@@ -65,13 +65,17 @@
   }
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    overflow: visible;
   }
 }
 
 @font-face {
   font-family: 'Aptos';
   src: url('/fonts/Aptos.ttf') format('ttf');
+}
+
+html {
+  overflow-x: hidden!important;
 }
 
 h1 {
