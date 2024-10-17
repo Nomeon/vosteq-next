@@ -10,6 +10,14 @@ import {
 } from "@/components/ui/carousel"
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Harry from "@/public/images/experts/Harry.webp";
+import Ronald from "@/public/images/experts/Ronald_de_Witte.webp";
+import Maarten from "@/public/images/experts/Maarten_Woertman.webp";
+import Marijke from "@/public/images/experts/Marijke_Oosterveld.webp";
+import Stijn from "@/public/images/experts/Stijn_Nijhuis.webp";
+import Bob from "@/public/images/experts/Bob_Selker.webp";
+import Joyce from "@/public/images/experts/Joyce_Kloosterman.webp";
+
 
 const Experts = () => {
   const [api, setApi] = useState<CarouselApi>()
@@ -23,49 +31,49 @@ const Experts = () => {
       name: "Harry",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Harry.webp"
+      imageSrc: Harry
     },
     {
       key: 2,
       name: "Ronald",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Ronald_de_Witte.webp"
+      imageSrc: Ronald
     },
     {
       key: 3,
       name: "Maarten",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Maarten_Woertman.webp"
+      imageSrc: Maarten
     },
     {
       key: 4,
       name: "Marijke",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Marijke_Oosterveld.webp"
+      imageSrc: Marijke
     },
     {
       key: 5,
       name: "Stijn",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Stijn_Nijhuis.webp"
+      imageSrc: Stijn
     },
     {
       key: 6,
       name: "Bob",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Bob_Selker.webp"
+      imageSrc: Bob
     },
     {
       key: 7,
       name: "Joyce",
       role: "Directeur Vosteq",
       description: "Directeur Vosteq, werktuigbouwkundige, met passie voor het innoveren en automatiseren van processen Betrokken en gericht op het samen ontdekken en implementeren van resultaat.",
-      imageSrc: "/images/experts/Joyce_Kloosterman.webp"
+      imageSrc: Joyce
     }
   ]
 
@@ -103,7 +111,7 @@ const Experts = () => {
             <CarouselItem key={item.key} className="basis-2/3 md:basis-1/4 flex flex-col relative">
             <div className="relative group">
               <div className="relative overflow-hidden">
-                <Image className="w-full h-full" src={item.imageSrc} alt={item.name} width={300} height={600} />
+                <Image className="w-full h-full" src={item.imageSrc} alt={item.name} />
             
                 {/* Overlay */}
                 <div
