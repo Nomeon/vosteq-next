@@ -10,6 +10,7 @@ import {
   CarouselItem
 } from "@/components/ui/carousel"
 import { useState, useEffect, FC } from "react";
+import { StepCardProps } from "@/lib/definitions";
 
 
 const Verbeteren = () => {
@@ -29,13 +30,6 @@ const Verbeteren = () => {
       setCurrent(api.selectedScrollSnap() + 1)
     })
   }, [api])
-
-  interface StepCardProps {
-    icon: string;
-    title: string;
-    subtitle: string;
-    description: string;
-  }
 
   const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description }) => (
     <div className="h-96 w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">

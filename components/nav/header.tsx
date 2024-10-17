@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image';
 import { Link } from "@/lib/i18n";
 import { usePathname } from "@/lib/i18n";
@@ -17,24 +18,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { MenuSectionProps, AccordionSectionProps } from "@/lib/definitions";
 import { useEffect, useState, FC } from 'react';
 import * as m from "@/paraglide/messages.js";
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
-interface MenuLink {
-  name: string;
-  href: string;
-}
-
-interface MenuSectionProps {
-  title: string;
-  links: MenuLink[];
-}
-
-interface AccordionSectionProps {
-  title: string;
-  links: MenuLink[];
-}
 
 const MenuSection: FC<MenuSectionProps> = ({ title, links }) => (
   <NavigationMenuItem>
@@ -42,7 +30,7 @@ const MenuSection: FC<MenuSectionProps> = ({ title, links }) => (
     <NavigationMenuContent className='flex flex-col p-6'>
       {links.map((link, idx) => (
         <Link key={idx} href={link.href} legacyBehavior passHref>
-          <NavigationMenuLink className='w-32 border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
+          <NavigationMenuLink className='w-auto pr-2 whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
             {link.name}
           </NavigationMenuLink>
         </Link>
@@ -51,7 +39,7 @@ const MenuSection: FC<MenuSectionProps> = ({ title, links }) => (
   </NavigationMenuItem>
 );
 
-const AccordionSection: React.FC<AccordionSectionProps> = ({ title, links }) => (
+const AccordionSection: FC<AccordionSectionProps> = ({ title, links }) => (
   <AccordionItem value={title}>
     <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>
       {title}
@@ -70,12 +58,46 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  const menuLinks: MenuLink[] = [
-    { name: 'Pagina 1', href: '/' },
-    { name: 'Pagina 2', href: '/' },
-    { name: 'Pagina 3', href: '/' },
-    { name: 'Pagina 4', href: '/' },
-  ];
+  const menuData = [
+    {
+      title: 'Diensten',
+      links: [
+        { name: 'Directieadvies', href: '/diensten/directieadvies' },
+        { name: 'Interim management', href: '/diensten/interim-management' },
+        { name: 'Projectmanagement', href: '/diensten/projectmanagement' },
+        { name: 'Interim experts', href: '/diensten/interim-experts' },
+        { name: 'Parttime innovatieteam', href: '/diensten/parttime-innovatieteam' },
+      ]
+    },
+    {
+      title: 'Veranderexperts',
+      links: [
+        { name: 'Inzicht', href: '/veranderexperts/inzicht' },
+        { name: 'Strategisch plan', href: '/veranderexperts/strategisch-plan' },
+        { name: 'Inspiratie', href: '/veranderexperts/inspiratie' },
+        { name: 'Begeleiding', href: '/veranderexperts/begeleiding' },
+        { name: 'Oplossingen', href: '/veranderexperts/oplossingen' },
+        { name: 'Verbetering', href: '/veranderexperts/verbetering' },
+      ]
+    },
+    {
+      title: 'Kennis en inspiratie',
+      links: [
+        { name: 'Case studies', href: '/kennis-en-inspiratie/case-studies' },
+        { name: 'Opdrachtgevers', href: '/kennis-en-inspiratie/opdrachtgevers' },
+      ]
+    },
+    {
+      title: 'Over Vosteq',
+      links: [
+        { name: 'Missie en visie', href: '/over-vosteq/missie-en-visie' },
+        { name: 'Waarden en normen', href: '/over-vosteq/waarden-en-normen' },
+        { name: 'De veranderexperts', href: '/over-vosteq/de-veranderexperts' },
+        { name: 'Werken bij Vosteq', href: '/over-vosteq/werken-bij-vosteq' },
+        { name: 'MVO-beleid', href: '/over-vosteq/mvo-beleid' },
+      ]
+    }
+  ]
 
   useEffect(() => {
     document.documentElement.style.overflow = isMenuOpen ? 'hidden' : 'auto';
@@ -120,8 +142,8 @@ const Header = () => {
         {/* Desktop Menu */}
         <NavigationMenu className='font-aktiv-grotesk text-paars max-xl:hidden ml-8' onValueChange={onNavChange}>
           <NavigationMenuList>
-            {['Diensten', 'Veranderexperts', 'Voor wie', 'Kennis en inspiratie', 'Over Vosteq'].map((title, idx) => (
-              <MenuSection key={idx} title={title} links={menuLinks} />
+            {menuData.map((section, idx) => (
+              <MenuSection key={idx} title={section.title} links={section.links} />
             ))}
           </NavigationMenuList>
         </NavigationMenu>
@@ -133,8 +155,8 @@ const Header = () => {
         {/* Mobile Menu */}
         <div className={`${isMenuOpen ? 'open' : ''} absolute menu h-dvh w-full bg-wit pt-24 flex flex-col justify-between duration-500 transition-all`}>
           <Accordion type='single' collapsible className='container text-paars'>
-            {['Diensten', 'Veranderexperts', 'Voor wie', 'Kennis en inspiratie', 'Over Vosteq'].map((title, idx) => (
-              <AccordionSection key={idx} title={title} links={menuLinks} />
+            {menuData.map((section, idx) => (
+              <AccordionSection key={idx} title={section.title} links={section.links} />
             ))}
           </Accordion>
           <div className='h-24 bg-groen flex flex-row items-center container'>
