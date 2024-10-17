@@ -46,7 +46,7 @@ const VosteqCarousel = () => {
           <CarouselContent>
             <CarouselItem key={1} className="w-full flex flex-col md:flex-row">
               <div className="flex md:w-1/2 w-full">
-                <Image className='object-cover' src="/images/2018-Vosteq-hapert.webp" alt='Vosteq bij Hapert' width={650} height={550} />
+                <Image className='object-cover' src="/images/Vosteq-Hapert-2018-2.webp" alt='Vosteq bij Hapert' width={650} height={550} />
               </div>
               <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
                 <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>
@@ -58,7 +58,7 @@ const VosteqCarousel = () => {
             </CarouselItem>
             <CarouselItem key={2} className="w-full flex flex-col md:flex-row">
               <div className="flex md:w-1/2 w-full">
-                <Image className='object-cover' src="/images/2018-Vosteq-hapert.webp" alt='Vosteq bij Hapert' width={650} height={550} />
+                <Image className='object-cover' src="/images/Vosteq-Hapert-2018-2.webp" alt='Vosteq bij Hapert' width={650} height={550} />
               </div>
               <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
                 <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>

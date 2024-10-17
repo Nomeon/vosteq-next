@@ -17,7 +17,7 @@ const HomeHero = () => {
           <button className='btn-solid'><Link href='/'>{m.cool_noisy_snail_drum()}</Link></button>
           <button className='btn-solid'><Link href='/'>{m.blue_warm_bee_dig()}</Link></button>
         </div>
-        <Image className='md:-mt-48 object-cover md:translate-y-1/2 max-md:pt-16' src="/images/hero.webp" alt='Hero' height={400} width={1100} />
+        <Image className='md:-mt-48 object-cover md:translate-y-1/2 max-md:pt-16' src="/images/Vosteq-Hapert-2018-1.webp" alt='Hero' height={400} width={1100} />
         <div className="w-40 bg-geel p-6 flex flex-col gap-2 text-paars absolute right-8 top-1/2 group hover:bg-groen hover:text-wit transition-all duration-200 max-md:hidden">
           <p className="font-aktiv-grotesk-extended text-lg leading-5 font-bold">{m.patchy_plane_lark_breathe()}</p>
           <Separator className="bg-paars group-hover:bg-wit transition-all duration-200"/>
