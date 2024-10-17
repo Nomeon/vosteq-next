@@ -20,11 +20,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center text-paars">
-          <Icon icon="mdi:facebook" width="24" height="24" />
-          <Icon icon="mdi:instagram" width="24" height="24" />
-          <Icon icon="ri:twitter-x-line" width="20" height="20" />
           <Icon icon="mdi:linkedin" width="24" height="24" />
-          <Icon icon="mdi:youtube" width="24" height="24" />
         </div>
       </div>
       <div className="flex flex-col md:flex-row bg-groen py-12 items-center justify-center font-aptos text-wit gap-4">
