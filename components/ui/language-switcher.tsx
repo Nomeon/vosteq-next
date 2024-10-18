@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
     const [isOpen, setIsOpen] = useState(false);
     const labels = { en: "gb", nl: "nl" };
 
-    const handleLocaleChange = (locale: any) => {
+    const handleLocaleChange = (locale: 'en' | 'nl' | undefined) => {
         router.push(pathname, { locale });
         setIsOpen(false);  // Close the dropdown after selection
     };

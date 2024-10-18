@@ -20,8 +20,8 @@ import {
 } from "@/components/ui/accordion"
 import { MenuSectionProps, AccordionSectionProps } from "@/lib/definitions";
 import { useEffect, useState, FC } from 'react';
-import * as m from "@/paraglide/messages.js";
-import { LanguageSwitcher } from '@/components/ui/language-switcher';
+// import * as m from "@/paraglide/messages.js";
+// import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
 
 const MenuSection: FC<MenuSectionProps> = ({ title, links }) => (

@@ -4,33 +4,15 @@ import { Icon } from "@iconify/react";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "@/lib/i18n";
 import {
-  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem
 } from "@/components/ui/carousel"
-import { useState, useEffect, FC } from "react";
+import { FC } from "react";
 import { StepCardProps } from "@/lib/definitions";
 
 
 const Verbeteren = () => {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
-
   const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description }) => (
     <div className="h-96 w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
       <div className="flex items-center justify-center h-32">
@@ -83,7 +65,7 @@ const Verbeteren = () => {
     </div>
     {/* Mobile Carousel */}
     <div className="w-full pt-4 md:hidden">
-      <Carousel setApi={setApi} className="py-4">
+      <Carousel className="py-4">
         <CarouselContent>
           {steps.map((step, index) => (
             <CarouselItem key={index} className="basis-2/3 flex items-center">

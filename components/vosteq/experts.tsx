@@ -1,7 +1,6 @@
 'use client'
 
-import * as React from "react"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -20,9 +19,7 @@ import Joyce from "@/public/images/experts/Joyce_Kloosterman.webp";
 
 
 const Experts = () => {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
+  const [api, setApi] = useState<CarouselApi>();
   const [visibleOverlays, setVisibleOverlays] = useState<{ [key: number]: boolean }>({});
 
   const carouselItems = [
@@ -76,19 +73,6 @@ const Experts = () => {
       imageSrc: Joyce
     }
   ]
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
 
   const toggleOverlay = (key: number) => {
     setVisibleOverlays((prev) => ({ ...prev, [key]: !prev[key] }));
