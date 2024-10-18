@@ -69,10 +69,91 @@
   }
 }
 
-@font-face {
-  font-family: 'Aptos';
-  src: url('/fonts/Aptos.ttf') format('ttf');
+
+@layer base {
+  @font-face {
+    font-family: 'Aptos';
+    src: url('/fonts/Aptos.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-200.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-600.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk Extended';
+    src: url('/fonts/aktiv-grotesk-ex-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('/fonts/aktiv-grotesk-300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('/fonts/aktiv-grotesk-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('/fonts/aktiv-grotesk-500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('/fonts/aktiv-grotesk-600.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('/fonts/aktiv-grotesk-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
 }
+
 
 html {
   overflow-x: hidden!important;

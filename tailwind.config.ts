@@ -19,8 +19,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        'aktiv-grotesk': ['aktiv-grotesk', 'sans-serif'],
-        'aktiv-grotesk-extended': ['aktiv-grotesk-extended', 'sans-serif'],
+        'aktiv-grotesk': ['Aktiv Grotesk', 'sans-serif'],
+        'aktiv-grotesk-extended': ['Aktiv Grotesk Extended', 'sans-serif'],
         'aptos': ['Aptos', 'sans-serif'],
       },
       colors: {

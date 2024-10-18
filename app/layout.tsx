@@ -12,11 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <LanguageProvider>
-      <html lang={languageTag()}>
-        <head>
-          <link rel="preload" href="https://use.typekit.net/cwv3jes.css" as="style" />
-          <link rel="stylesheet" href="https://use.typekit.net/cwv3jes.css" />
-        </head> 
+      <html lang={languageTag()}> 
         <body className="font-aptos">
           <Header />
           <main>
