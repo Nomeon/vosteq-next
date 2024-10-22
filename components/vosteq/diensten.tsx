@@ -10,7 +10,6 @@ import {
 import { FC } from 'react';
 import * as m from "@/paraglide/messages.js";
 import { Icon } from '@iconify/react';
-import { Button } from '../ui/button';
 
 interface StepDienstenProps {
   icon: string;
@@ -61,7 +60,7 @@ const Diensten = () => {
           <h1 className="text-paars max-md:text-xl">Directie advies</h1>
           <p className="font-aktiv-grotesk-extended text-xl max-md:text-lg text-paars">Succesvolle groei en duurzame winstgevendheid beginnen bij een solide interne basis. Bij Vosteq bieden we directieadvies dat zich richt op het versterken van jouw organisatie van binnenuit, zodat je beter voorbereid bent om externe uitdagingen aan te gaan en kansen te benutten. Hierbij nemen we jouw organisatie en haar onderscheidende krachten als uitgangspunt.</p>
           <h2 className='pt-8 text-paars'>Diepgaande analyse</h2>
-          <p className='text-diepgrijs'>Onze 'inside-out benadering' begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
+          <p className='text-diepgrijs'>Onze &apos;inside-out benadering&apos; begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
         </div>
         <div className="md:w-1/2 container relative">
           <Image className='object-cover' src="/images/deskundigen.svg" alt='Deskundigen' width={650} height={550} />
