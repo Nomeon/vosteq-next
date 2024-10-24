@@ -8,9 +8,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 import { Icon } from "@iconify/react";
-import Image from "next/image";
-import VosteqHapert from "@/public/images/Vosteq-Hapert-2018-2.webp";
 import { DatoCase } from "@/lib/definitions";
+import { Image } from "react-datocms";
 
 
 const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
@@ -47,24 +46,21 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
         <Carousel className="w-full" setApi={setApi}>
           <CarouselContent>
             {cases.map((caseItem, idx) => (
-              <CarouselItem key={idx} className="w-full flex flex-col md:flex-row">
+              <CarouselItem key={idx} className="w-full flex md:gap-8 flex-col md:flex-row">
                 <div className="flex md:w-1/2 w-full">
-                  <Image
+                  <Image 
                     className="object-cover"
-                    src={VosteqHapert} // Replace with actual image from case if available
-                    alt={`Vosteq bij ${caseItem.title}`}
-                    width={650}
-                    height={550}
+                    data={caseItem.mainImage.responsiveImage}
                   />
                 </div>
-                <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
-                  <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">
+                <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4 h-full">
+                  <p className="text-paars font-aktiv-grotesk-extended text-base pb-4 flex-none">
                     Project Management bij {caseItem.title}
                   </p>
-                  <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">
+                  <p className="text-paars font-aktiv-grotesk-extended text-base md:text-2xl pb-8 font-semibold grow">
                     "{caseItem.quote}"
                   </p>
-                  <div>
+                  <div className="flex-none">
                     <button className="btn-outline font-semibold">Bekijk case</button>
                   </div>
                 </div>

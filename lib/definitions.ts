@@ -25,6 +25,14 @@ export type DatoCase = {
   title: string;
   quote: string;
   slug: string;
+  mainImage: {
+    responsiveImage: {
+      srcSet: string;
+      src: string;
+      width: number;
+      height: number;
+    }
+  }
   _status: string;
   _firstPublishedAt: string;
 }

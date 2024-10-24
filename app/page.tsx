@@ -19,6 +19,14 @@ const PAGE_CONTENT_QUERY = `
       title
       quote
       slug
+      mainImage {
+        responsiveImage {
+          src
+          srcSet  
+          width
+          height
+        }
+      }
       _status
       _firstPublishedAt
     }
