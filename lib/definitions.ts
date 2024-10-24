@@ -19,3 +19,12 @@ export type StepCardProps = {
   subtitle: string;
   description: string;
 }
+
+export type DatoCase = {
+  id: string;
+  title: string;
+  quote: string;
+  slug: string;
+  _status: string;
+  _firstPublishedAt: string;
+}

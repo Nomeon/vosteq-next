@@ -1,5 +1,6 @@
 'use client';
-import * as React from "react"
+
+import { useState, useEffect } from "react"
 import {
   Carousel,
   CarouselContent,
@@ -9,14 +10,15 @@ import {
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import VosteqHapert from "@/public/images/Vosteq-Hapert-2018-2.webp";
+import { DatoCase } from "@/lib/definitions";
 
 
-const VosteqCarousel = () => {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
+const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!api) {
       return
     }
@@ -44,30 +46,30 @@ const VosteqCarousel = () => {
         </div>
         <Carousel className="w-full" setApi={setApi}>
           <CarouselContent>
-            <CarouselItem key={1} className="w-full flex flex-col md:flex-row">
-              <div className="flex md:w-1/2 w-full">
-                <Image className='object-cover' src={VosteqHapert} alt='Vosteq bij Hapert' width={650} height={550} />
-              </div>
-              <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
-                <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>
-                <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
-                <div>
-                  <button className='btn-outline font-semibold'>Bekijk case</button>
+            {cases.map((caseItem, idx) => (
+              <CarouselItem key={idx} className="w-full flex flex-col md:flex-row">
+                <div className="flex md:w-1/2 w-full">
+                  <Image
+                    className="object-cover"
+                    src={VosteqHapert} // Replace with actual image from case if available
+                    alt={`Vosteq bij ${caseItem.title}`}
+                    width={650}
+                    height={550}
+                  />
                 </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem key={2} className="w-full flex flex-col md:flex-row">
-              <div className="flex md:w-1/2 w-full">
-                <Image className='object-cover' src={VosteqHapert} alt='Vosteq bij Hapert' width={650} height={550} />
-              </div>
-              <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
-                <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">Project Management</p>
-                <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">“Met enorme betrokkenheid steunt Vosteq ons bij het structureren van de processen en de organisatie. Samen bereiden wij ons voor op verdere groei van Hapert”</p>
-                <div>
-                  <button className='btn-outline font-semibold'>Bekijk case</button>
+                <div className="flex flex-col md:w-1/2 md:p-16 bg-wit p-4">
+                  <p className="text-paars font-aktiv-grotesk-extended text-base pb-4">
+                    Project Management bij {caseItem.title}
+                  </p>
+                  <p className="text-paars font-aktiv-grotesk-extended text-xl md:text-2xl pb-8 font-semibold">
+                    "{caseItem.quote}"
+                  </p>
+                  <div>
+                    <button className="btn-outline font-semibold">Bekijk case</button>
+                  </div>
                 </div>
-              </div>
-            </CarouselItem>
+              </CarouselItem>
+            ))}
           </CarouselContent>
         </Carousel>
         <div className="flex flex-row justify-between w-full md:hidden pt-8">
