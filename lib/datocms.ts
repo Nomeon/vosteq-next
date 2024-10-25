@@ -20,3 +20,43 @@ export async function datoFetch(query: string): Promise<DatoCase[]> {
   const { data } = await response.json();
   return data.allCases;
 }
+
+export const CASE_BY_SLUG_QUERY = `
+  query {
+    allCases(filter: {slug: {eq: $slug}}) {
+      id
+      title
+      quote
+      slug
+      mainImage {
+        responsiveImage {
+          src
+          srcSet  
+          width
+          height
+        }
+      }
+      _status
+      _firstPublishedAt
+    }
+  }`;
+
+export const PAGE_CONTENT_QUERY = `
+  query {
+    allCases {
+      id
+      title
+      quote
+      slug
+      mainImage {
+        responsiveImage {
+          src
+          srcSet  
+          width
+          height
+        }
+      }
+      _status
+      _firstPublishedAt
+    }
+  }`;

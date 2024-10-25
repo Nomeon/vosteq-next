@@ -1,30 +1,9 @@
 import { notFound } from 'next/navigation';
-import { datoFetch } from '@/lib/datocms';
-
-const CASE_BY_SLUG_QUERY = `
-  query {
-    allCases(filter: {slug: {eq: $slug}}) {
-      id
-      title
-      quote
-      slug
-      mainImage {
-        responsiveImage {
-          src
-          srcSet  
-          width
-          height
-        }
-      }
-      _status
-      _firstPublishedAt
-    }
-  }`;
+import { datoFetch, CASE_BY_SLUG_QUERY } from '@/lib/datocms';
 
 export default async function CasePage({ params }: { params: { slug: string } }) {
   const allCases = await datoFetch(CASE_BY_SLUG_QUERY.replace('$slug', `"${params.slug}"`));
   const caseData = allCases.length ? allCases[0] : notFound();
-  console.log(caseData)
 
   return (
     <div className="container">
