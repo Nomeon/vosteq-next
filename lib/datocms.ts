@@ -1,6 +1,6 @@
 import { DatoCase } from "@/lib/definitions";
 
-export async function fetchCases(query: string): Promise<DatoCase[]> {
+export async function datoFetch(query: string): Promise<DatoCase[]> {
   const response = await fetch('https://graphql.datocms.com/', {
     method: 'POST',
     headers: {

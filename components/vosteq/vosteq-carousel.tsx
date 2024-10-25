@@ -10,12 +10,13 @@ import {
 import { Icon } from "@iconify/react";
 import { DatoCase } from "@/lib/definitions";
 import { Image } from "react-datocms";
+import Link from "next/link";
 
 
 const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
   const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
+  const [current, setCurrent] = useState<number>(0)
+  const [count, setCount] = useState<number>(0)
 
   useEffect(() => {
     if (!api) {
@@ -61,7 +62,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
                     "{caseItem.quote}"
                   </p>
                   <div className="flex-none">
-                    <button className="btn-outline font-semibold">Bekijk case</button>
+                    <button className="btn-outline font-semibold"><Link href={`/kennis-en-inspiratie/case-studies/${caseItem.slug}`}>Bekijk case</Link></button>
                   </div>
                 </div>
               </CarouselItem>

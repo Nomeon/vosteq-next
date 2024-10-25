@@ -5,7 +5,7 @@ import { VosteqCarousel } from "@/components/vosteq/vosteq-carousel";
 import { HomeHero } from "@/components/vosteq/home-hero";
 import { NewsForm } from "@/components/vosteq/news-form";
 import { Experts } from "@/components/vosteq/experts";
-import { fetchCases } from '@/lib/datocms';
+import { datoFetch } from '@/lib/datocms';
 
 export const metadata: Metadata = {
   title: "Vosteq | De Veranderexperts",
@@ -33,7 +33,7 @@ const PAGE_CONTENT_QUERY = `
   }`;
 
 export default async function Home() {
-  const allCases = await fetchCases(PAGE_CONTENT_QUERY);
+  const allCases = await datoFetch(PAGE_CONTENT_QUERY);
 
   return (
     <div className="flex flex-col items-center">
@@ -41,7 +41,7 @@ export default async function Home() {
       <Deskundigen />
       <Verbeteren />
       <Experts />
-      <VosteqCarousel cases={allCases} />
+        <VosteqCarousel cases={allCases} />
       <NewsForm />
     </div>
   );
