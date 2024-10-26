@@ -125,8 +125,8 @@ const Header = () => {
   }
 
   return (
-    <header className='bg-white w-full sticky top-0 z-10'>
-      <div className='flex flex-row xl:container h-24 w-full justify-between box-border'>
+    <header className='bg-white w-full flex sticky top-0 z-10'>
+      <div className='flex flex-row xl:container h-24 w-full gap-4 box-border'>
         <div className='flex flex-row items-center gap-4 xl:gap-6 max-xl:w-full max-xl:container z-20'>
           <Link href='/'>
             <Image className='h-4 xl:h-6 w-auto xl:pl-8' src='/vosteq-logo.svg' width={134} height={24} alt='logo' />
@@ -148,10 +148,6 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Link href='/contact' className='group flex ml-auto items-center justify-center bg-groen w-40 hover:bg-donkergroen duration-200 max-xl:hidden'>
-          <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
-        </Link>
-
         {/* Mobile Menu */}
         <div className={`${isMenuOpen ? 'open' : ''} absolute menu h-dvh w-full bg-wit pt-24 flex flex-col justify-between duration-500 transition-all`}>
           <Accordion type='single' collapsible className='container text-paars'>
@@ -170,6 +166,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <Link href='/contact' className='group flex ml-auto items-center justify-center bg-groen w-40 hover:bg-donkergroen duration-200 max-xl:hidden'>
+        <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
+      </Link>
     </header>
   )
 }
