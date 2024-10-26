@@ -19,13 +19,13 @@ interface StepDienstenProps {
 
 const Diensten = () => {
   const StepCard: FC<StepDienstenProps> = ({ icon, title, description }) => (
-    <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
+    <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col flex-1">
       <div className="flex items-center justify-center h-32">
-        <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon={icon} width={60} height={60} />
+        <Icon className='text-groen' icon={icon} width={60} height={60} />
       </div>
       <h4 className="text-paars text-base md:text-xl">{title}</h4>
       <Separator className="bg-paars my-2" />
-      <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200">{description}</p>
+      <p className="text-diepgrijs font-aktiv-grotesk-extended">{description}</p>
     </div>
   );
 
@@ -110,7 +110,7 @@ const Diensten = () => {
         <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
           <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
           <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Dankzij onze inside-out benadering realiseren we:</p>
-          <div className="flex flex-row gap-16 py-12 max-md:hidden md:px-16 md:pb-16">
+          <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
             {steps.map((step, index) => (
               <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />
             ))}
