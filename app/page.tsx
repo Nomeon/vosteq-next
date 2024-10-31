@@ -5,6 +5,7 @@ import { VosteqCarousel } from "@/components/vosteq/vosteq-carousel";
 import { HomeHero } from "@/components/vosteq/home-hero";
 import { NewsForm } from "@/components/vosteq/news-form";
 import { Experts } from "@/components/vosteq/experts";
+import { Popup } from "@/components/ui/popup";
 import { datoFetch, PAGE_CONTENT_QUERY } from '@/lib/datocms';
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center">
+      <Popup />
       <HomeHero />
       <Deskundigen />
       <Verbeteren />

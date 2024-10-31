@@ -36,3 +36,9 @@ export type DatoCase = {
   _status: string;
   _firstPublishedAt: string;
 }
+
+export type StepDienstenProps = {
+  icon: string;
+  title: string;
+  description: string;
+}
