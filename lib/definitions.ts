@@ -25,6 +25,11 @@ export type DatoCase = {
   title: string;
   quote: string;
   slug: string;
+  contactpersoon: string;
+  uitdaging: string;
+  achtergrond: string;
+  procesaanpak: string;
+  bulletOpsteken: string;
   mainImage: {
     responsiveImage: {
       srcSet: string;

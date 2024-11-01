@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Link } from "@/lib/i18n";
 import { Separator } from "@/components/ui/separator";
 import { StepDienstenProps } from "@/lib/definitions";
 import { Accordion, AccordionItem, AccordionContent, AccordionTrigger } from '@/components/ui/accordion';
@@ -9,7 +8,6 @@ import {
   CarouselItem
 } from "@/components/ui/carousel"
 import { FC } from 'react';
-import * as m from "@/paraglide/messages.js";
 import { Icon } from '@iconify/react';
 import { Popup } from '@/components/ui/popup';
 import type { Metadata } from "next";
@@ -80,28 +78,28 @@ export default function Directieadvies() {
           </div>
           <Accordion type='single' collapsible className='md:w-1/2'>
             <AccordionItem value='stap1' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Inzicht krijgen in je bedrijf</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Inzicht krijgen in je bedrijf</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
                 Wat is de huidige staat van jouw organisatie? Om een duidelijk antwoord op deze vraag te krijgen, organiseren we koffiegesprekken en analyseren we de bedrijfsprocessen en -technologieën, de organisatiestructuur, de leiderschapscapaciteiten en de werknemersbetrokkenheid.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap2' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Identificeren van kernkwaliteiten</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Identificeren van kernkwaliteiten</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
                 We helpen je bij het identificeren van de unieke kwaliteiten en sterke punten binnen jouw organisatie, zoals bijvoorbeeld de innovatieve productieprocessen, het sterke team of de diepgaande technische expertise. Of een combinatie daarvan.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap3' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Strategische versterking</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Strategische versterking</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
                 Op basis van onze inzichten ontwikkelen we strategieën om de kernkwaliteiten verder te versterken. Dit kan variëren van procesoptimalisatie, automatisering, digitalisering en/of organisatieontwikkeling tot het verbeteren van de bedrijfscultuur en het innovatievermogen.
               </AccordionContent>
               <Separator className='bg-wit' />
               </AccordionItem>
             <AccordionItem value='stap4' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg'><div className='flex'><p className='pr-2 font-bold'>Stap 4.</p>Implementatie en begeleiding</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 4.</p>Implementatie en begeleiding</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
                 We begeleiden je bij de implementatie van deze strategieën en zorgen ervoor dat ze in de dagelijkse operaties van je bedrijf worden geïntegreerd.
               </AccordionContent>

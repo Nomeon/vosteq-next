@@ -16,7 +16,6 @@ export async function datoFetch(query: string): Promise<DatoCase[]> {
   if (!response.ok) {
     throw new Error('Failed to fetch data');
   }
-
   const { data } = await response.json();
   return data.allCases;
 }
@@ -28,6 +27,11 @@ export const CASE_BY_SLUG_QUERY = `
       title
       quote
       slug
+      contactpersoon
+      uitdaging
+      achtergrond
+      procesaanpak
+      bulletOpsteken
       mainImage {
         responsiveImage {
           src

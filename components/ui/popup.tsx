@@ -22,7 +22,7 @@ const Popup = () => {
             </button>
             <p className="font-aktiv-grotesk-extended text-lg leading-5 font-bold">{m.patchy_plane_lark_breathe()}</p>
             <Separator className="bg-paars group-hover:bg-wit transition-all duration-200"/>
-            <Link href='/' className="font-aktiv-grotesk flex flex-row items-center">
+            <Link href='/contact' className="font-aktiv-grotesk flex flex-row items-center">
                 <p className="w-2/3">{m.knotty_gross_elk_aid()}</p>
                 <Icon icon='mdi:chevron-right' className='fly text-wit w-1/3 h-full hidden group-hover:inline'/>
             </Link>
