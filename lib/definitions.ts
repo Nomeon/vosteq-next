@@ -5,6 +5,7 @@ export type MenuLink = {
 
 export type MenuSectionProps = {
   title: string;
+  href?: string;
   links: MenuLink[];
 }
 

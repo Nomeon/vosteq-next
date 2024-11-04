@@ -24,9 +24,11 @@ import { useEffect, useState, FC } from 'react';
 // import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
 
-const MenuSection: FC<MenuSectionProps> = ({ title, links }) => (
+const MenuSection: FC<MenuSectionProps> = ({ title, href, links }) => (
   <NavigationMenuItem>
-    <NavigationMenuTrigger className="submenu-trigger">{title}</NavigationMenuTrigger>
+    <NavigationMenuTrigger className="submenu-trigger">
+      { href? <Link href={href}>{title}</Link> : title }
+    </NavigationMenuTrigger>
     <NavigationMenuContent className='flex flex-col p-6'>
       {links.map((link, idx) => (
         <Link key={idx} href={link.href} legacyBehavior passHref>
@@ -61,6 +63,7 @@ const Header = () => {
   const menuData = [
     {
       title: 'Diensten',
+      href: '/diensten',
       links: [
         { name: 'Directieadvies', href: '/diensten/directieadvies' },
         { name: 'Interim management', href: '/diensten/interim-management' },
@@ -143,7 +146,7 @@ const Header = () => {
         <NavigationMenu className='font-aktiv-grotesk text-paars max-xl:hidden ml-8' onValueChange={onNavChange}>
           <NavigationMenuList>
             {menuData.map((section, idx) => (
-              <MenuSection key={idx} title={section.title} links={section.links} />
+              <MenuSection key={idx} title={section.title} href={section.href} links={section.links} />
             ))}
           </NavigationMenuList>
         </NavigationMenu>

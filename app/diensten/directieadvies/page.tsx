@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function Directieadvies() {
-  
   const StepCard: FC<StepDienstenProps> = ({ icon, title, description }) => (
     <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col max-md:h-full">
       <div className="flex items-center justify-center h-32">
