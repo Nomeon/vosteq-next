@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function InterimManagement() {
-  
   const StepCard: FC<StepDienstenProps> = ({ icon, title, description }) => (
     <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col max-md:h-full">
       <div className="flex items-center justify-center h-32">
@@ -34,24 +33,19 @@ export default function InterimManagement() {
 
   const steps = [
     {
-      icon: 'mdi:cog-transfer',
-      title: 'Verbeterde interne efficiëntie',
-      description: 'door processen te optimaliseren en middelen beter in te zetten.'
+      icon: 'mdi:account-question',
+      title: 'Mogelijkheid om te sparren',
+      description: "met ervaren leiders die gewend zijn om te presteren in situaties waar iets extra's nodig is."
     },
     {
       icon: 'mdi:account-group',
-      title: 'Een sterkere bedrijfscultuur',
-      description: 'waar medewerkers zich betrokken voelen en bijdragen aan het succes van het bedrijf.'
+      title: 'Tijdelijke versterking',
+      description: 'met de expertise die essentieel is voor het succesvol afronden van een transformatie of innovatie.'
     },
     {
       icon: 'mdi:shield-check',
-      title: 'Een duurzaam concurrentievoordeel',
-      description: 'door te bouwen op de unieke interne kernwaarden binnen jouw organisatie.'
-    },
-    {
-      icon: 'mdi:chart-line',
-      title: 'Betere besluitvorming',
-      description: 'dankzij een scherp inzicht in je eigen organisatie en de verbetermogelijkheden.'
+      title: 'Doelen behalen zonder vertraging',
+      description: 'dankzij de snelle inzet en effectieve aanpak van onze interim-managers.'
     }
   ];
 
@@ -61,13 +55,13 @@ export default function InterimManagement() {
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
         <div className="md:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Organisatie verbetering</p>
-          <h1 className="text-paars">Directie advies</h1>
-          <p className="font-aktiv-grotesk-extended text-paars">Succesvolle groei en duurzame winstgevendheid beginnen bij een solide interne basis. Bij Vosteq bieden we directieadvies dat zich richt op het versterken van jouw organisatie van binnenuit, zodat je beter voorbereid bent om externe uitdagingen aan te gaan en kansen te benutten. Hierbij nemen we jouw organisatie en haar onderscheidende krachten als uitgangspunt.</p>
-          <h2 className='pt-8 text-paars max-md:text-2xl'>Diepgaande analyse</h2>
-          <p className='text-diepgrijs'>Onze &apos;inside-out benadering&apos; begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
+          <h1 className="text-paars">Interim management</h1>
+          <p className="font-aktiv-grotesk-extended text-paars">In de dynamische wereld van de maakindustrie kunnen er momenten zijn waarop jouw bedrijf extra kennis en capaciteit nodig heeft om een transformatie of innovatie succesvol door te voeren. Vosteq biedt interim-managementdiensten die jouw team tijdelijk versterken met ervaren leiders die gewend zijn om in uitdagende omstandigheden te presteren.</p>
+          <h2 className='pt-8 text-paars max-md:text-2xl'>Tijdelijke versterking op cruciale momenten</h2>
+          <p className='text-diepgrijs'>Ons interim-management biedt jouw bedrijf tijdelijke versterking op cruciale momenten. Of je nu een transformatie doorvoert, een innovatie implementeert, of te maken hebt met een complexe uitdaging; onze interim-managers staan klaar om je te ondersteunen. Ze brengen niet alleen de benodigde expertise mee, maar hebben ook ervaring met het werken in omgevingen waar iets extra's nodig is.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.svg" alt='Deskundigen' width={650} height={550} />
+          <Image className='object-cover' src="/images/deskundigen2.svg" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
       <div className='bg-gradient-to-b from-paars to-groen from-30% max-md:mb-16'>
@@ -78,30 +72,30 @@ export default function InterimManagement() {
           </div>
           <Accordion type='single' collapsible className='md:w-1/2'>
             <AccordionItem value='stap1' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Inzicht krijgen in je bedrijf</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Behoefteanalyse</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Wat is de huidige staat van jouw organisatie? Om een duidelijk antwoord op deze vraag te krijgen, organiseren we koffiegesprekken en analyseren we de bedrijfsprocessen en -technologieën, de organisatiestructuur, de leiderschapscapaciteiten en de werknemersbetrokkenheid.
+                We starten met het in kaart brengen van jouw specifieke behoeften. Dit kan variëren van het overbruggen van een managementvacature tot het leiden van een transformatieproject.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap2' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Identificeren van kernkwaliteiten</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Gerichte versterking</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                We helpen je bij het identificeren van de unieke kwaliteiten en sterke punten binnen jouw organisatie, zoals bijvoorbeeld de innovatieve productieprocessen, het sterke team of de diepgaande technische expertise. Of een combinatie daarvan.
+                Op basis van de behoefteanalyse selecteren we een interim-manager met de juiste ervaring en vaardigheden. Deze manager sluit naadloos aan bij jouw team en begint direct met het aanpakken van de uitdagingen.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap3' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Strategische versterking</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Implementatie en begeleiding</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Op basis van onze inzichten ontwikkelen we strategieën om de kernkwaliteiten verder te versterken. Dit kan variëren van procesoptimalisatie, automatisering, digitalisering en/of organisatieontwikkeling tot het verbeteren van de bedrijfscultuur en het innovatievermogen.
+                Onze interim-managers zijn gewend om zich snel in te werken en leveren vanaf dag één toegevoegde waarde. Ze begeleiden jouw team door het veranderproces en zorgen ervoor dat de doelstellingen worden bereikt.
               </AccordionContent>
               <Separator className='bg-wit' />
               </AccordionItem>
             <AccordionItem value='stap4' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 4.</p>Implementatie en begeleiding</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 4.</p>Kennisoverdracht</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                We begeleiden je bij de implementatie van deze strategieën en zorgen ervoor dat ze in de dagelijkse operaties van je bedrijf worden geïntegreerd.
+                Naast het leiden van de transformatie of innovatie, zorgen onze interim-managers ervoor dat hun kennis en ervaring worden overgedragen aan jouw team. Zo blijft de waarde van hun bijdrage behouden, ook nadat hun opdracht is voltooid.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -110,7 +104,7 @@ export default function InterimManagement() {
       <div className='md:container'>
         <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
           <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
-          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Dankzij onze inside-out benadering realiseren we:</p>
+          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Dankzij onze interim management:</p>
           <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
             {steps.map((step, index) => (
               <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />
