@@ -34,24 +34,19 @@ export default function ParttimeInnovatieteam() {
 
   const steps = [
     {
-      icon: 'mdi:cog-transfer',
-      title: 'Verbeterde interne efficiëntie',
-      description: 'door processen te optimaliseren en middelen beter in te zetten.'
+      icon: 'mdi:account-cog',
+      title: 'Multidisciplinaire aanpak',
+      description: 'waarbij expertise uit verschillende vakgebieden samenkomt om jouw project tot een succes te maken.'
     },
     {
-      icon: 'mdi:account-group',
-      title: 'Een sterkere bedrijfscultuur',
-      description: 'waar medewerkers zich betrokken voelen en bijdragen aan het succes van het bedrijf.'
-    },
-    {
-      icon: 'mdi:shield-check',
-      title: 'Een duurzaam concurrentievoordeel',
-      description: 'door te bouwen op de unieke interne kernwaarden binnen jouw organisatie.'
+      icon: 'mdi:currency-eur',
+      title: 'Verlaagde kosten',
+      description: 'door efficiënt gebruik te maken van de parttime inzet van onze specialisten, zonder onnodige overhead.'
     },
     {
       icon: 'mdi:chart-line',
-      title: 'Betere besluitvorming',
-      description: 'dankzij een scherp inzicht in je eigen organisatie en de verbetermogelijkheden.'
+      title: 'Succesvolle transformatie',
+      description: 'die volledig is afgestemd op de behoeften van jouw bedrijf en die meetbare resultaten oplevert.'
     }
   ];
 
@@ -61,10 +56,10 @@ export default function ParttimeInnovatieteam() {
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
         <div className="md:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Organisatie verbetering</p>
-          <h1 className="text-paars">Directie advies</h1>
-          <p className="font-aktiv-grotesk-extended text-paars">Succesvolle groei en duurzame winstgevendheid beginnen bij een solide interne basis. Bij Vosteq bieden we directieadvies dat zich richt op het versterken van jouw organisatie van binnenuit, zodat je beter voorbereid bent om externe uitdagingen aan te gaan en kansen te benutten. Hierbij nemen we jouw organisatie en haar onderscheidende krachten als uitgangspunt.</p>
-          <h2 className='pt-8 text-paars max-md:text-2xl'>Diepgaande analyse</h2>
-          <p className='text-diepgrijs'>Onze &apos;inside-out benadering&apos; begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
+          <h1 className="text-paars">Parttime innovatieteam</h1>
+          <p className="font-aktiv-grotesk-extended text-paars">Als MKB-maakbedrijf is het niet nodig om bij elk project alle rollen volledig in te vullen, maar bij complexe en grote transformaties is een geïntegreerde aanpak wel essentieel. Daarom biedt Vosteq een parttime innovatieteam dat kosteneffectief werkt om jouw bedrijf te begeleiden bij uitdagende projecten en innovaties. In dit innovatieteam combineren we de expertise van een directieadviseur, een projectmanager, een interim-manager en specialistische experts, zodat we de kennis en kunde leveren die nodig zijn om jouw doelen te realiseren.</p>
+          <h2 className='pt-8 text-paars max-md:text-2xl'>Ondersteuning op het juiste moment</h2>
+          <p className='text-diepgrijs'>In plaats van fulltime rollen die de kosten kunnen opdrijven, werkt ons innovatieteam in deeltijd. We zorgen ervoor dat alle rollen in het team, of het nu gaat om directieadvies, projectmanagement, interim-management of gespecialiseerde expertise, nauw met elkaar samenwerken en elkaar aanvullen. Dit betekent dat we precies de juiste hoeveelheid ondersteuning bieden op het juiste moment, zonder jouw organisatie op te zadelen met onnodige kosten.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
           <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
@@ -78,39 +73,33 @@ export default function ParttimeInnovatieteam() {
           </div>
           <Accordion type='single' collapsible className='md:w-1/2'>
             <AccordionItem value='stap1' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Inzicht krijgen in je bedrijf</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Gecombineerde rollen</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Wat is de huidige staat van jouw organisatie? Om een duidelijk antwoord op deze vraag te krijgen, organiseren we koffiegesprekken en analyseren we de bedrijfsprocessen en -technologieën, de organisatiestructuur, de leiderschapscapaciteiten en de werknemersbetrokkenheid.
+                Onze directieadviseurs, projectmanagers, interim-managers en experts werken nauw samen binnen hetzelfde projectteam. Ze combineren hun kennis en ervaring om uitdagingen vanuit verschillende invalshoeken aan te pakken.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap2' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Identificeren van kernkwaliteiten</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Flexibiliteit en schaalbaarheid</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                We helpen je bij het identificeren van de unieke kwaliteiten en sterke punten binnen jouw organisatie, zoals bijvoorbeeld de innovatieve productieprocessen, het sterke team of de diepgaande technische expertise. Of een combinatie daarvan.
+                We passen de inzet van ons team aan op basis van de specifieke behoeften binnen jouw project. Dit betekent dat we onze inspanningen kunnen op- en afschalen, afhankelijk van de voortgang en complexiteit van de transformatie.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap3' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Strategische versterking</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Kosteneffectiviteit</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Op basis van onze inzichten ontwikkelen we strategieën om de kernkwaliteiten verder te versterken. Dit kan variëren van procesoptimalisatie, automatisering, digitalisering en/of organisatieontwikkeling tot het verbeteren van de bedrijfscultuur en het innovatievermogen.
+                Omdat we de rollen in deeltijd combineren, kunnen we de kosten laag houden zonder in te boeten op kwaliteit. Onze aanpak is erop gericht dat jouw organisatie de kosten voor ons parttime innovatieteam binnen een jaar terugverdient dankzij de gerealiseerde efficiëntieverbeteringen en besparingen in jouw bedrijf.
               </AccordionContent>
               <Separator className='bg-wit' />
               </AccordionItem>
-            <AccordionItem value='stap4' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 4.</p>Implementatie en begeleiding</div></AccordionTrigger>
-              <AccordionContent className='md:text-base text-wit my-4'>
-                We begeleiden je bij de implementatie van deze strategieën en zorgen ervoor dat ze in de dagelijkse operaties van je bedrijf worden geïntegreerd.
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
         </div>
       </div>
       <div className='md:container'>
         <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
           <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
-          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Dankzij onze inside-out benadering realiseren we:</p>
+          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Met de inzet van ons parttime innovatieteam:</p>
           <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
             {steps.map((step, index) => (
               <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />
