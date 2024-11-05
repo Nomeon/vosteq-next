@@ -67,7 +67,7 @@ export default function Projectmanagement() {
           <p className='text-diepgrijs'>Onze &apos;inside-out benadering&apos; begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.svg" alt='Deskundigen' width={650} height={550} />
+          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
       <div className='bg-gradient-to-b from-paars to-groen from-30% max-md:mb-16'>

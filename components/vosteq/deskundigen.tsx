@@ -22,7 +22,7 @@ const Deskundigen = () => {
         </div>
       </div>
       <div className="md:w-1/2">
-        <Image className='object-cover' src="/images/deskundigen.svg" alt='Deskundigen' width={650} height={550} />
+        <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
       </div>
     </div>
   );

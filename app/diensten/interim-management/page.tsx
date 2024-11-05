@@ -61,7 +61,7 @@ export default function InterimManagement() {
           <p className='text-diepgrijs'>Ons interim-management biedt jouw bedrijf tijdelijke versterking op cruciale momenten. Of je nu een transformatie doorvoert, een innovatie implementeert, of te maken hebt met een complexe uitdaging; onze interim-managers staan klaar om je te ondersteunen. Ze brengen niet alleen de benodigde expertise mee, maar hebben ook ervaring met het werken in omgevingen waar iets extra's nodig is.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen2.svg" alt='Deskundigen' width={650} height={550} />
+          <Image className='object-cover' src="/images/deskundigen2.webp" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
       <div className='bg-gradient-to-b from-paars to-groen from-30% max-md:mb-16'>

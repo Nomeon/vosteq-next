@@ -41,7 +41,7 @@ export default function Diensten() {
           </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.svg" alt='Deskundigen' width={650} height={550} />
+          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
       {/* Bottom */}
@@ -68,7 +68,7 @@ export default function Diensten() {
           </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen2.svg" alt='Deskundigen' width={650} height={550} />
+          <Image className='object-cover' src="/images/deskundigen2.webp" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
     </div>
