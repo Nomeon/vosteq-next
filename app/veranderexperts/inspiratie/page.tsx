@@ -13,11 +13,11 @@ import { Popup } from '@/components/ui/popup';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vosteq | Parttime Innovatieteam",
+  title: "Vosteq | Inspiratie",
   description: "Aan het bouwen!",
 };
 
-export default function ParttimeInnovatieteam() {
+export default function Inspiratie() {
   
   const StepCard: FC<StepDienstenProps> = ({ icon, title, description }) => (
     <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col max-md:h-full">
@@ -34,19 +34,19 @@ export default function ParttimeInnovatieteam() {
 
   const steps = [
     {
-      icon: 'mdi:account-cog',
-      title: 'Multidisciplinaire aanpak',
-      description: 'waarbij expertise uit verschillende vakgebieden samenkomt om jouw project tot een succes te maken.'
+      icon: 'mdi:account-heart',
+      title: 'Betrokkenheid en motivatie',
+      description: 'binnen je team, wat leidt tot hogere productiviteit en betere resultaten.'
     },
     {
-      icon: 'mdi:currency-eur',
-      title: 'Verlaagde kosten',
-      description: 'door efficiënt gebruik te maken van de parttime inzet van onze specialisten, zonder onnodige overhead.'
+      icon: 'mdi:leaf',
+      title: 'Duurzame verandering',
+      description: 'omdat oplossingen worden ontworpen met aandacht voor de mensen die ermee werken.'
     },
     {
-      icon: 'mdi:chart-line',
-      title: 'Succesvolle transformatie',
-      description: 'die volledig is afgestemd op de behoeften van jouw bedrijf en die meetbare resultaten oplevert.'
+      icon: 'mdi:handshake',
+      title: 'Positieve werkomgeving',
+      description: 'waarin respect en waardering de basis vormen voor succes.'
     }
   ];
 
@@ -55,11 +55,19 @@ export default function ParttimeInnovatieteam() {
       <Popup />
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
         <div className="md:w-1/2 flex flex-col gap-4">
-          <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Organisatie verbetering</p>
-          <h1 className="text-paars">Parttime innovatieteam</h1>
-          <p className="font-aktiv-grotesk-extended text-paars">Als MKB-maakbedrijf is het niet nodig om bij elk project alle rollen volledig in te vullen, maar bij complexe en grote transformaties is een geïntegreerde aanpak wel essentieel. Daarom biedt Vosteq een parttime innovatieteam dat kosteneffectief werkt om jouw bedrijf te begeleiden bij uitdagende projecten en innovaties. In dit innovatieteam combineren we de expertise van een directieadviseur, een projectmanager, een interim-manager en specialistische experts, zodat we de kennis en kunde leveren die nodig zijn om jouw doelen te realiseren.</p>
-          <h2 className='pt-8 text-paars max-md:text-2xl'>Ondersteuning op het juiste moment</h2>
-          <p className='text-diepgrijs'>In plaats van fulltime rollen die de kosten kunnen opdrijven, werkt ons innovatieteam in deeltijd. We zorgen ervoor dat alle rollen in het team, of het nu gaat om directieadvies, projectmanagement, interim-management of gespecialiseerde expertise, nauw met elkaar samenwerken en elkaar aanvullen. Dit betekent dat we precies de juiste hoeveelheid ondersteuning bieden op het juiste moment, zonder jouw organisatie op te zadelen met onnodige kosten.</p>
+            <h1 className="text-paars">Inspiratie</h1>
+            <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat mensen het hart vormen van elk succesvol bedrijf. Of het nu gaat om onze eigen medewerkers, jouw team, of de klanten  die we bedienen; de mensen staan altijd centraal in alles wat we doen. We zijn ervan overtuigd dat wanneer mensen goed ondersteund, gewaardeerd en betrokken worden, ze hun volledige potentieel kunnen benutten. En dat leidt tot duurzame groei en innovatie.</p>
+            <h2 className='pt-8 text-paars max-md:text-2xl'>De mens centraal</h2>
+            <p className="">Bij Vosteq staat de kernwaarde "De mens centraal" voor:</p>
+            <div className="flex text-paars font-aptos text-base">
+                <ol className="inline">
+                    <li className="inline-block py-1 max-md:pr-2"><b>1.	Respect en waardering:</b> we benaderen elke samenwerking met respect en waardering voor de unieke talenten en ervaringen die mensen meebrengen. Dit geldt zowel voor onze eigen medewerkers als voor de teams van onze klanten. We geloven dat elk individu waarde toevoegt en een cruciale rol speelt in het succes van onze  projecten.</li>
+                    <Separator />
+                    <li className="inline-block py-1 max-md:pr-2"><b>2.	Ontwikkeling en groei:</b> we investeren in de ontwikkeling van onze mensen. Door training, coaching en voortdurende ondersteuning zorgen we ervoor dat iedereen de kans krijgt om te groeien en zijn of haar vaardigheden te verbeteren. Dit geldt ook voor de teams van onze klanten; wij helpen hen om te leren </li>
+                    <Separator />
+                    <li className="inline-block py-1 max-md:pr-2"><b>3.	Betrokkenheid en samenwerking:</b> we betrekken mensen actief bij het veranderingsproces. We luisteren naar hun ideeën, zorgen dat hun stem wordt gehoord en moedigen hen aan om bij te dragen aan de oplossingen die we implementeren. Dit zorgt voor een gevoel van eigenaarschap en betrokkenheid, wat essentieel is voor succesvolle veranderingen.</li>
+                </ol>
+            </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
           <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
@@ -73,23 +81,23 @@ export default function ParttimeInnovatieteam() {
           </div>
           <Accordion type='single' collapsible className='md:w-1/2'>
             <AccordionItem value='stap1' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Gecombineerde rollen</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 1.</p>Persoonlijke benadering</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Onze directieadviseurs, projectmanagers, interim-managers en experts werken nauw samen binnen hetzelfde projectteam. Ze combineren hun kennis en ervaring om uitdagingen vanuit verschillende invalshoeken aan te pakken.
+                Bij elk project nemen we de tijd om de mensen achter de processen te leren kennen. We zorgen ervoor dat we achterhalen wat hen motiveert, waar hun kracht ligt en hoe we hen het beste kunnen ondersteunen.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap2' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Flexibiliteit en schaalbaarheid</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 2.</p>Empathie en begrip</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                We passen de inzet van ons team aan op basis van de specifieke behoeften binnen jouw project. Dit betekent dat we onze inspanningen kunnen op- en afschalen, afhankelijk van de voortgang en complexiteit van de transformatie.
+                We werken vanuit empathie en begrip voor de uitdagingen waarmee mensen worden geconfronteerd. Of het nu gaat om het omgaan met veranderingen of het ontwikkelen van nieuwe vaardigheden, we staan klaar om steun te bieden op manieren die aansluiten bij hun behoeften.
               </AccordionContent>
             </AccordionItem>
             <Separator className='bg-wit' />
             <AccordionItem value='stap3' className='my-2'>
-              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Kosteneffectiviteit</div></AccordionTrigger>
+              <AccordionTrigger className='text-wit text-sm md:text-lg hover:text-geel'><div className='flex'><p className='pr-2 font-bold'>Stap 3.</p>Duurzame oplossingen</div></AccordionTrigger>
               <AccordionContent className='md:text-base text-wit my-4'>
-                Omdat we de rollen in deeltijd combineren, kunnen we de kosten laag houden zonder in te boeten op kwaliteit. Onze aanpak is erop gericht dat jouw organisatie de kosten voor ons parttime innovatieteam binnen een jaar terugverdient dankzij de gerealiseerde efficiëntieverbeteringen en besparingen in jouw bedrijf.
+                Omdat mensen centraal staan in onze aanpak, ontwikkelen we oplossingen die rekening houden met de menselijke factor. Dit betekent dat onze veranderingen niet alleen technisch, maar ook praktisch en bruikbaar zijn, zodat ze echt werken in de dagelijkse praktijk.
               </AccordionContent>
               </AccordionItem>
           </Accordion>
@@ -98,7 +106,7 @@ export default function ParttimeInnovatieteam() {
       <div className='md:container'>
         <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
           <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
-          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Met de inzet van ons parttime innovatieteam:</p>
+          <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Door de mensen centraal te stellen:</p>
           <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
             {steps.map((step, index) => (
               <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />
