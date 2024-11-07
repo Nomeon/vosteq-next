@@ -13,9 +13,9 @@ export default function WatLevertHetOp(props: {
       <div className="flex items-center justify-center h-32">
         <Icon className='text-groen' icon={icon} width={60} height={60} />
       </div>
-      <div className='flex flex-col'>
-        <h4 className="text-paars text-base md:text-xl flex-none">{title}</h4>
-        <Separator className="bg-paars my-2 flex-none" />
+      <div className='flex flex-col h-full pt-6'>
+        <h4 className="text-paars text-base md:text-xl h-1/4 flex items-end justify-center">{title}</h4>
+        <Separator className="bg-paars my-2" />
         <p className="text-diepgrijs font-aktiv-grotesk-extended grow">{description}</p>
       </div>
     </div>
