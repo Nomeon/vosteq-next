@@ -20,7 +20,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center text-paars">
-          <Icon icon="mdi:linkedin" width="24" height="24" />
+          <Link href='/'>
+            <Icon icon="mdi:linkedin" width="36" height="36" />
+          </Link>
         </div>
       </div>
       <div className="flex flex-col md:flex-row bg-groen py-12 items-center justify-center font-aptos text-wit gap-4">
