@@ -25,7 +25,7 @@ export default function WatLevertHetOp(props: {
     <div className='md:container'>
       <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
         <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
-        <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>Dankzij onze inside-out benadering realiseren we:</p>
+        <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>{props.omschrijving}</p>
         <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
           {props.steps.map((step, index) => (
             <StepCard key={index} icon={step.icon} title={step.title} description={step.description} />

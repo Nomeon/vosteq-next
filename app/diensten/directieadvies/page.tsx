@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { Popup } from '@/components/ui/popup';
 import type { Metadata } from "next";
+import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
+import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
-import WerkStappen from '@/components/vosteq/werk-stappen';
 
 export const metadata: Metadata = {
   title: "Vosteq | Directieadvies",
