@@ -32,6 +32,7 @@ export const CASE_BY_SLUG_QUERY = `
       achtergrond
       procesaanpak
       bulletOpsteken
+      bulletOpleveren
       mainImage {
         responsiveImage {
           src

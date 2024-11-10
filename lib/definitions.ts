@@ -31,6 +31,7 @@ export type DatoCase = {
   achtergrond: string;
   procesaanpak: string;
   bulletOpsteken: string;
+  bulletOpleveren: string;
   mainImage: {
     responsiveImage: {
       srcSet: string;
