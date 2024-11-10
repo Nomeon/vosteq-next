@@ -4,6 +4,7 @@ import { Separator } from '@/components/ui/separator';
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import { Popup } from '@/components/ui/popup';
 
 export const metadata: Metadata = {
     title: "Vosteq | Inzicht",
@@ -52,6 +53,7 @@ export default function Inzicht() {
 
     return (
         <div className='flex flex-col'>
+            <Popup />
             <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
                 <div className="md:w-1/2 flex flex-col gap-4">
                     <h1 className="text-paars">Inzicht</h1>
