@@ -169,7 +169,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Link href='/contact' className='group flex ml-auto items-center justify-center bg-groen w-40 hover:bg-donkergroen duration-200 max-xl:hidden'>
+      <Link href='/contact' className='group flex ml-auto items-center justify-center bg-groen w-44 hover:bg-donkergroen duration-200 max-xl:hidden'>
         <p className='text-wit font-aktiv-grotesk duration-200 group-hover:scale-105'>Contact</p>
       </Link>
     </header>

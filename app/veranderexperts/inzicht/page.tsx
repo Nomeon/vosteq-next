@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { Metadata } from "next";
-import { Separator } from '@/components/ui/separator';
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
@@ -62,13 +61,10 @@ export default function Inzicht() {
                     <div className="flex flex-col gap-1 font-aptos text-base">
                         <p className='font-bold'>De huidige bedrijfsprocessen:</p>
                         <p>Hoe lopen de huidige processen en waar liggen knelpunten?</p>
-                        <Separator />
                         <p className='font-bold pt-2'>De organisatiestructuur:</p>
                         <p>Hoe is je team georganiseerd en waar liggen de sterke en zwakke punten?</p>
-                        <Separator />
                         <p className='font-bold pt-2'>De bedrijfscultuur:</p>
                         <p>Wat drijft jouw medewerkers en hoe beïnvloedt dit de prestaties?</p>
-                        <Separator />
                         <p className='font-bold pt-2'>De marktpositie:</p>
                         <p>Hoe positioneer je jouw MKB-maakbedrijf in de markt en waar liggen de kansen en bedreigingen?</p>
                     </div>

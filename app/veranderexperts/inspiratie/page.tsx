@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { Metadata } from "next";
-import { Separator } from '@/components/ui/separator';
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
@@ -63,10 +62,8 @@ export default function Inspiratie() {
             <div className="flex flex-col gap-1 font-aptos text-base">
               <p className='font-bold'>Respect en waardering:</p>
               <p>We benaderen elke samenwerking met respect en waardering voor de unieke talenten en ervaringen die mensen meebrengen. Dit geldt zowel voor onze eigen medewerkers als voor de teams van onze klanten. We geloven dat elk individu waarde toevoegt en een cruciale rol speelt in het succes van onze projecten.</p>
-              <Separator />
               <p className='font-bold pt-2'>Ontwikkeling en groei:</p>
               <p>We investeren in de ontwikkeling van onze mensen. Door training, coaching en voortdurende ondersteuning zorgen we ervoor dat iedereen de kans krijgt om te groeien en zijn of haar vaardigheden te verbeteren. Dit geldt ook voor de teams van onze klanten; wij helpen hen om te leren en zich aan te passen aan veranderingen, zodat ze sterker uit elke transformatie komen.</p>
-              <Separator />
               <p className='font-bold pt-2'>Betrokkenheid en samenwerking:</p>
               <p>We betrekken mensen actief bij het veranderingsproces. We luisteren naar hun ideeën, zorgen dat hun stem wordt gehoord en moedigen hen aan om bij te dragen aan de oplossingen die we implementeren. Dit zorgt voor een gevoel van eigenaarschap en betrokkenheid, wat essentieel is voor succesvolle veranderingen.</p>
             </div>

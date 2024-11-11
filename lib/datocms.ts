@@ -10,7 +10,7 @@ export async function datoFetch(query: string): Promise<DatoCase[]> {
     body: JSON.stringify({
       query: query,
     }),
-    next: { revalidate: 86400 }, // Revalidate every 24 hours, !TODO switch to cache tags: https://www.datocms.com/docs/next-js/using-cache-tags
+    next: { revalidate: 3600 }, // Revalidate every hour, !TODO switch to cache tags: https://www.datocms.com/docs/next-js/using-cache-tags
   });
 
   if (!response.ok) {

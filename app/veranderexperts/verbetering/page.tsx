@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { Metadata } from "next";
-import { Separator } from '@/components/ui/separator';
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
@@ -64,10 +63,8 @@ export default function Verbetering() {
                     <div className="flex flex-col gap-1 font-aptos text-base">
                         <p className='font-bold'>Bewaking van continuïteit:</p>
                         <p>We monitoren de integratie van de veranderingen en maken waar nodig aanpassingen om de continuïteit te waarborgen.</p>
-                        <Separator />
                         <p className='font-bold pt-2'>Nazorg en ondersteuning:</p>
                         <p>We bieden blijvende ondersteuning aan jouw team, zodat iedereen weet hoe de nieuwe processen optimaal benut kunnen worden.</p>
-                        <Separator />
                         <p className='font-bold pt-2'>Evaluatie en optimalisatie:</p>
                         <p>We evalueren de effectiviteit van de veranderingen met regelmaat en zoeken hierbij naar mogelijkheden voor verdere optimalisatie.</p>
                     </div>
