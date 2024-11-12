@@ -11,12 +11,11 @@ const Footer = () => {
           <p className="font-aktiv-grotesk-extended text-paars font-semibold">de veranderexperts</p>
         </div>
         <div className="text-black flex items-center">
-          <ul className="flex flex-col max-md:items-center md:flex-row font-aktiv-grotesk-extended gap-4">
-            <li>Markten</li>
-            <li>Kennis en inspiratie</li>
-            <li>Ons team</li>
-            <li>Werkwijze</li>
-            <li>Over Vosteq</li>
+          <ul className="flex flex-col max-md:items-center md:flex-row font-aktiv-grotesk-extended md:gap-8 gap-4">
+            <li><Link href='/diensten'>Diensten</Link></li>
+            <li><Link href='/'>Veranderexperts</Link></li>
+            <li><Link href='/'>Kennis en inspiratie</Link></li>
+            <li><Link href='/'>Over vosteq</Link></li>
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center text-paars">

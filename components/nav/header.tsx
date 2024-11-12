@@ -87,7 +87,6 @@ const Header = () => {
       title: 'Kennis en inspiratie',
       links: [
         { name: 'Case studies', href: '/kennis-en-inspiratie/case-studies' },
-        { name: 'Opdrachtgevers', href: '/kennis-en-inspiratie/opdrachtgevers' },
       ]
     },
     {
