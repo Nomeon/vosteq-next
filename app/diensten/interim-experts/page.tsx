@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { WatLevertHetOp } from '@/components/vosteq/wat-levert-het-op';
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Interim Experts",
@@ -68,7 +69,7 @@ export default function InterimExperts() {
           <p className='text-diepgrijs'>Onze interim-experts zijn hoogopgeleide specialisten met jarenlange ervaring in de maakindustrie. Ze brengen de specifieke vakkennis mee die jouw bedrijf nodig heeft om complexe innovaties en projecten tot een succes te maken. Deze experts worden tijdelijk aan je team toegevoegd, zodat je kunt profiteren van hun kennis zónder de noodzaak van een langdurige aanstelling.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen2.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc='/images/interimexperts.webp' />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems} />

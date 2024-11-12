@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "@/lib/i18n";
 import * as m from "@/paraglide/messages.js";
+import DecoRight from "./deco-right";
 
 const Deskundigen = () => {
   return (
@@ -21,8 +22,8 @@ const Deskundigen = () => {
           </ul>
         </div>
       </div>
-      <div className="md:w-1/2">
-        <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+      <div className="md:w-1/2 container">
+        <DecoRight imageSrc="/images/home2.webp" />
       </div>
     </div>
   );

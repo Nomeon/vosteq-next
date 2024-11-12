@@ -4,6 +4,7 @@ import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 import { Popup } from '@/components/ui/popup';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
     title: "Vosteq | Begeleiding",
@@ -67,7 +68,7 @@ export default function Begeleiding() {
                     <p className='text-diepgrijs'>In de "begeleidingsfase" werken we nauw met jouw team samen om ervoor te zorgen dat de veranderingen soepel verlopen. Dit betekent dat we niet alleen adviseren, maar ook actief betrokken zijn bij de implementatie van veranderingen. We zorgen ervoor dat jouw medewerkers de benodigde vaardigheden en kennis opdoen om de nieuwe processen en strategieën succesvol uit te rollen.</p>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
-                    <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+                    <DecoRight imageSrc='/images/begeleiding.webp' />
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />

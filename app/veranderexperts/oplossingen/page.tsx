@@ -4,6 +4,7 @@ import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 import { Popup } from '@/components/ui/popup';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
     title: "Vosteq | Oplossingen",
@@ -67,7 +68,7 @@ export default function Oplossingen() {
                     <p className='text-diepgrijs'>Tijdens de "oplossingsfase" draait het om het identificeren en elimineren van de obstakels die jouw bedrijfsvoering belemmeren. Dit kan variëren van operationele problemen tot strategische knelpunten. Onze experts brengen de nodige expertise mee om deze uitdagingen grondig te analyseren en oplossingen te ontwikkelen en te implementeren die werken</p>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
-                    <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+                    <DecoRight imageSrc='/images/oplossingen.webp' />
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />

@@ -4,6 +4,7 @@ import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 import { Popup } from '@/components/ui/popup';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Inspiratie",
@@ -69,7 +70,7 @@ export default function Inspiratie() {
             </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc='/images/inspiratie.webp' />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems} />

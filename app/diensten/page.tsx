@@ -2,6 +2,8 @@ import { Popup } from "@/components/ui/popup";
 import Image from 'next/image';
 import { Metadata } from "next";
 import Link from "next/link";
+import DecoRight from "@/components/vosteq/deco-right";
+import DecoLeft from "@/components/vosteq/deco-left";
 
 export const metadata: Metadata = {
   title: "Vosteq | Diensten",
@@ -41,7 +43,7 @@ export default function Diensten() {
           </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc="/images/diensten.webp" />
         </div>
       </div>
       {/* Bottom */}
@@ -68,7 +70,7 @@ export default function Diensten() {
           </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen2.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoLeft imageSrc="/images/home2.webp" />
         </div>
       </div>
     </div>

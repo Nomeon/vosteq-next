@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { WatLevertHetOp } from '@/components/vosteq/wat-levert-het-op';
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Interim Management",
@@ -68,7 +69,7 @@ export default function InterimManagement() {
           <p className='text-diepgrijs'>Ons interim-management biedt jouw bedrijf tijdelijke versterking op cruciale momenten. Of je nu een transformatie doorvoert, een innovatie implementeert, of te maken hebt met een complexe uitdaging; onze interim-managers staan klaar om je te ondersteunen. Ze brengen niet alleen de benodigde expertise mee, maar hebben ook ervaring met het werken in omgevingen waar iets extra's nodig is.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen2.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc='/images/interimmanagement.webp' />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems}/>

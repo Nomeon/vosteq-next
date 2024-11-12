@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Directieadvies",
@@ -73,7 +74,7 @@ export default function Directieadvies() {
           <p className='text-diepgrijs'>Onze "inside-out benadering" begint met een diepgaande analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc="/images/directieadvies.webp" />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems} />

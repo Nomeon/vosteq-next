@@ -4,6 +4,7 @@ import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 import { Popup } from '@/components/ui/popup';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
     title: "Vosteq | Strategisch plan",
@@ -73,7 +74,7 @@ export default function StrategischPlan() {
                     <p className='text-diepgrijs'>Bij Vosteq geloven we in een flexibele en wendbare aanpak als het gaat om het maken en uitvoeren van strategische plannen voor complexe projecten. In plaats van rigide langetermijnplanningen werken we op basis van "sprints"; korte, intensieve werkperiodes waarin we deelprojecten met de hoogste prioriteit aanpakken. Deze "sprint-methode" stelt ons in staat om snel resultaten te boeken, het plan dynamisch aan te passen en in te spelen op veranderende omstandigheden.</p>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
-                    <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+                    <DecoRight imageSrc='/images/strategischplan.webp' />
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />

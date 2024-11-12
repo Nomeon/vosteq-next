@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { WatLevertHetOp } from '@/components/vosteq/wat-levert-het-op';
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Parttime Innovatieteam",
@@ -62,7 +63,7 @@ export default function ParttimeInnovatieteam() {
           <p className='text-diepgrijs'>In plaats van fulltime rollen die de kosten kunnen opdrijven, werkt ons innovatieteam in deeltijd. We zorgen ervoor dat alle rollen in het team, of het nu gaat om directieadvies, projectmanagement, interim-management of gespecialiseerde expertise, nauw met elkaar samenwerken en elkaar aanvullen. Dit betekent dat we precies de juiste hoeveelheid ondersteuning bieden op het juiste moment, zonder jouw organisatie op te zadelen met onnodige kosten.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc='/images/parttime-innovatieteam.webp' />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems} />

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { WatLevertHetOp } from '@/components/vosteq/wat-levert-het-op';
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
+import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
   title: "Vosteq | Projectmanagement",
@@ -68,7 +69,7 @@ export default function Projectmanagement() {
           <p className='text-diepgrijs'>In de maakindustrie is de balans tussen dagelijkse operaties en innovatie cruciaal. Veranderingen en nieuwe projecten kunnen veel van je team vergen, wat risico’s met zich meebrengt voor de continuïteit van je operationele processen. Bij Vosteq bieden we projectmanagement dat specifiek gericht op is verandering en innovatie. We ondersteunen jouw organisatie bij veranderingen en innovaties zonder de kernactiviteiten te verstoren.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc='/images/projectmanagement.webp' />
         </div>
       </div>
       <WerkStappen accordionItems={accordionItems} />

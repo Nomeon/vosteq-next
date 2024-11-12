@@ -26,13 +26,13 @@ import { useEffect, useState, FC } from 'react';
 
 const MenuSection: FC<MenuSectionProps> = ({ title, href, links }) => (
   <NavigationMenuItem>
-    <NavigationMenuTrigger className="submenu-trigger">
+    <NavigationMenuTrigger className="submenu-trigger text-base">
       { href? <Link href={href}>{title}</Link> : title }
     </NavigationMenuTrigger>
     <NavigationMenuContent className='flex flex-col p-6'>
       {links.map((link, idx) => (
         <Link key={idx} href={link.href} legacyBehavior passHref>
-          <NavigationMenuLink className='w-auto pr-2 whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
+          <NavigationMenuLink className='w-auto pr-2 text-base whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
             {link.name}
           </NavigationMenuLink>
         </Link>
@@ -91,6 +91,7 @@ const Header = () => {
     },
     {
       title: 'Over Vosteq',
+      href: '/over-vosteq',
       links: [
         { name: 'Missie en visie', href: '/over-vosteq/missie-en-visie' },
         { name: 'Waarden en normen', href: '/over-vosteq/waarden-en-normen' },
