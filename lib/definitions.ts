@@ -11,6 +11,7 @@ export type MenuSectionProps = {
 
 export type AccordionSectionProps = {
   title: string;
+  href?: string;
   links: MenuLink[];
 }
 
