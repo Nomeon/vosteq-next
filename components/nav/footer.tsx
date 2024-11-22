@@ -13,8 +13,8 @@ const Footer = () => {
         <div className="text-black flex items-center">
           <ul className="flex flex-col max-md:items-center md:flex-row font-aktiv-grotesk-extended md:gap-8 gap-4">
             <li><Link href='/diensten'>Diensten</Link></li>
-            <li><Link href='/'>Veranderexperts</Link></li>
-            <li><Link href='/'>Kennis en inspiratie</Link></li>
+            <li><Link href='/onze-aanpak'>Onze aanpak</Link></li>
+            <li><Link href='/klant-cases'>Klant cases</Link></li>
             <li><Link href='/over-vosteq'>Over vosteq</Link></li>
           </ul>
         </div>
