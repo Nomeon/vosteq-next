@@ -7,7 +7,7 @@ import { BottomCta } from '@/components/vosteq/bottom-cta';
 import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
-  title: "Vosteq | Expertise-on-demand",
+  title: "Vosteq | Expertise on demand",
   description: "Aan het bouwen!",
 };
 

@@ -35,7 +35,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
     <section className="bg-[#F1F9F9] w-full">
       <div className="container pt-8 md:pb-32 pb-8">
         <div className="flex flex-row justify-between px-16 items-center pb-8 max-md:hidden">
-          <h2 className="text-paars">Vosteq en in de praktijk</h2>
+          <h2 className="text-paars">Vosteq in de praktijk</h2>
           <div className="flex flex-row gap-8">
             <p className="text-5xl text-paars font-extralight font-aktiv-grotesk-extended">{current}/{count}</p>
             <div className="flex flex-row items-center gap-2">

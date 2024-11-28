@@ -7,8 +7,8 @@ const NewsForm = () => {
   return (
     <div className="w-full bg-paars">
       <div className="flex flex-col items-center container max-md:text-center py-16">
-        <h2 className="text-wit font-aktiv-grotesk-extended">Haal ook meer uit mensen en machine</h2>
-        <p className="text-wit text-lg font-light font-aktiv-grotesk-extended pt-8">Ontdek hoe Vosteq jouw bedrijf kan transformeren naar Smart Manufacturing</p>
+        <h2 className="text-wit font-aktiv-grotesk-extended">Neem contact met ons op</h2>
+        <p className="text-wit text-center md:w-2/3 text-lg font-light font-aktiv-grotesk-extended pt-8">Nieuwsgierig hoe wij jouw bedrijf kunnen helpen? Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig.</p>
           <form onSubmit={onSubmit} className="flex flex-col md:flex-row gap-4 pt-8">
             <input
               type="email"

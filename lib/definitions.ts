@@ -20,6 +20,7 @@ export type StepCardProps = {
   title: string;
   subtitle: string;
   description: string;
+  href: string;
 }
 
 export type DatoCase = {

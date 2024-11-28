@@ -9,8 +9,8 @@ import { Popup } from "@/components/ui/popup";
 import { datoFetch, PAGE_CONTENT_QUERY } from '@/lib/datocms';
 
 export const metadata: Metadata = {
-  title: "Vosteq | De Veranderexperts",
-  description: "Aan het bouwen!",
+  title: "Optimaliseer jouw MKB-bedrijf | Vosteq",
+  description: "Haal meer uit jouw mensen en machines met Vosteq. Met meer dan 25 jaar ervaring helpen wij MKB-maakbedrijven efficiënter, winstgevender en toekomstbestendig te worden. Ontdek onze expertise in procesoptimalisatie en digitalisering.",
 };
 
 export default async function Home() {
@@ -23,7 +23,7 @@ export default async function Home() {
       <Deskundigen />
       <Verbeteren />
       <Experts />
-        <VosteqCarousel cases={allCases} />
+      <VosteqCarousel cases={allCases} />
       <NewsForm />
     </div>
   );

@@ -28,7 +28,7 @@ const menuData = [
     links: [
       { name: 'Directieadvies', href: '/diensten/directieadvies' },
       { name: 'Innovatie- en verandertrajecten', href: '/diensten/innovatie-en-verandertrajecten' },
-      { name: 'Expertise-on-demand', href: '/diensten/expertise-on-demand' },
+      { name: 'Expertise on demand', href: '/diensten/expertise-on-demand' },
     ]
   },
   {
