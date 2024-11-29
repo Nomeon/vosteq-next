@@ -62,7 +62,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
                     "{caseItem.quote}"
                   </p>
                   <div className="flex-none">
-                    <button className="btn-outline font-semibold"><Link href={`/kennis-en-inspiratie/case-studies/${caseItem.slug}`}>Bekijk case</Link></button>
+                    <button className="btn-outline font-semibold"><Link href={`/klant-cases/${caseItem.slug}`}>Bekijk case</Link></button>
                   </div>
                 </div>
               </CarouselItem>
