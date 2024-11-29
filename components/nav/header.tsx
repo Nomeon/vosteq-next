@@ -51,7 +51,7 @@ const menuData = [
     title: 'Over Vosteq',
     href: '/over-vosteq',
     links: [
-      { name: 'Missie en visie', href: '/over-vosteq/missie-en-visie' },
+      { name: 'Visie en missie', href: '/over-vosteq/visie-en-missie' },
       { name: 'Waarden en normen', href: '/over-vosteq/waarden-en-normen' },
       { name: 'De veranderexperts', href: '/over-vosteq/de-veranderexperts' },
       { name: 'Werken bij Vosteq', href: '/over-vosteq/werken-bij-vosteq' },

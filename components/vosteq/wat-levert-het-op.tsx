@@ -4,10 +4,16 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import { Separator } from "@/components/ui/separator";
 import { StepDienstenProps } from "@/lib/definitions";
 
+const defaultTitle = 'Wat levert het op?';
+
 export default function WatLevertHetOp(props: {
+  title?: string;
   omschrijving: string;
   steps: StepDienstenProps[];
 }) {
+
+  const title = props.title || defaultTitle;
+
   const StepCard: FC<StepDienstenProps> = ({ icon, title, description }) => (
     <div className="py-8 md:w-72 text-center outline outline-1 outline-groen px-4 flex flex-col max-md:h-full">
       <div className="flex items-center justify-center h-32">
@@ -24,7 +30,7 @@ export default function WatLevertHetOp(props: {
   return (
     <div className='md:container'>
       <div className="container flex flex-col items-center md:py-16 max-md:pb-16">
-        <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Wat levert het op?</h2>
+        <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">{title}</h2>
         <p className='text-donkergroen pt-4 font-aktiv-grotesk-extended'>{props.omschrijving}</p>
         <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
           {props.steps.map((step, index) => (
