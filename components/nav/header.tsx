@@ -20,87 +20,97 @@ import {
 } from "@/components/ui/accordion"
 import { MenuSectionProps, AccordionSectionProps } from "@/lib/definitions";
 import { useEffect, useState, FC } from 'react';
-// import * as m from "@/paraglide/messages.js";
-// import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
+const menuData = [
+  {
+    title: 'Diensten',
+    href: '/diensten',
+    links: [
+      { name: 'Directieadvies', href: '/diensten/directieadvies' },
+      { name: 'Innovatie- en verandertrajecten', href: '/diensten/innovatie-en-verandertrajecten' },
+      { name: 'Expertise on demand', href: '/diensten/expertise-on-demand' },
+    ]
+  },
+  {
+    title: 'Onze aanpak',
+    href: '/onze-aanpak',
+    links: [
+      { name: 'Inzicht', href: '/onze-aanpak/inzicht' },
+      { name: 'Strategisch plan', href: '/onze-aanpak/strategisch-plan' },
+      { name: 'Inspiratie', href: '/onze-aanpak/inspiratie' },
+      { name: 'Begeleiding', href: '/onze-aanpak/begeleiding' },
+      { name: 'Resultaat', href: '/onze-aanpak/resultaat' },
+    ]
+  },
+  {
+    title: 'Klant cases',
+    href: '/klant-cases',
+    links: []
+  },
+  {
+    title: 'Over Vosteq',
+    href: '/over-vosteq',
+    links: [
+      { name: 'Visie en missie', href: '/over-vosteq/visie-en-missie' },
+      { name: 'Waarden en normen', href: '/over-vosteq/waarden-en-normen' },
+      { name: 'De veranderexperts', href: '/over-vosteq/de-veranderexperts' },
+      { name: 'Werken bij Vosteq', href: '/over-vosteq/werken-bij-vosteq' },
+      { name: 'MVO-beleid', href: '/over-vosteq/mvo-beleid' },
+    ]
+  }
+]
 
 const MenuSection: FC<MenuSectionProps> = ({ title, href, links }) => (
-  <NavigationMenuItem>
-    <NavigationMenuTrigger className="submenu-trigger text-base">
-      { href? <Link href={href}>{title}</Link> : title }
-    </NavigationMenuTrigger>
-    <NavigationMenuContent className='flex flex-col p-6'>
-      {links.map((link, idx) => (
-        <Link key={idx} href={link.href} legacyBehavior passHref>
-          <NavigationMenuLink className='w-auto pr-2 text-base whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
-            {link.name}
-          </NavigationMenuLink>
-        </Link>
-      ))}
-    </NavigationMenuContent>
-  </NavigationMenuItem>
+  links.length > 1 ? 
+    <NavigationMenuItem>
+      <NavigationMenuTrigger className="submenu-trigger text-base">
+        { href? <Link href={href}>{title}</Link> : title }
+      </NavigationMenuTrigger>
+      <NavigationMenuContent className='flex flex-col p-6'> 
+        {links.map((link, idx) => (
+          <Link key={idx} href={link.href} legacyBehavior passHref>
+            <NavigationMenuLink className='w-auto pr-2 text-base whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
+              {link.name}
+            </NavigationMenuLink>
+          </Link>
+        ))}
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  :
+    <NavigationMenuItem>
+      <Link href={href!} legacyBehavior passHref>
+        <NavigationMenuLink className='w-auto pr-2 no-underline font-aktiv-grotesk text-base whitespace-nowrap text-paars font-medium hover:text-donkergroen hover:border-donkergroen'>
+          {title}
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
 );
 
-const AccordionSection: FC<AccordionSectionProps> = ({ title, links }) => (
-  <AccordionItem value={title}>
-    <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>
-      {title}
-    </AccordionTrigger>
-    <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
-      {links.map((link, idx) => (
-        <Link key={idx} href={link.href} className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>
-          {link.name}
-        </Link>
-      ))}
-    </AccordionContent>
-  </AccordionItem>
+const AccordionSection: FC<AccordionSectionProps> = ({ title, href, links }) => (
+  links.length > 1 ?
+    <AccordionItem value={title}>
+      <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>
+        {title}
+      </AccordionTrigger>
+      <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
+        {links.map((link, idx) => (
+          <Link key={idx} href={link.href} className='pb-2 border-b border-paars hover:text-donkergroen hover:border-donkergroen'>
+            {link.name}
+          </Link>
+        ))}
+      </AccordionContent>
+    </AccordionItem>
+  :
+    <AccordionItem value={title} className='py-4 font-medium text-base font-aktiv-grotesk hover:text-donkergroen hover:font-semibold'>
+      <Link href={href!} >
+        {title}
+      </Link>
+    </AccordionItem>
 );
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
-
-  const menuData = [
-    {
-      title: 'Diensten',
-      href: '/diensten',
-      links: [
-        { name: 'Directieadvies', href: '/diensten/directieadvies' },
-        { name: 'Interim management', href: '/diensten/interim-management' },
-        { name: 'Projectmanagement', href: '/diensten/projectmanagement' },
-        { name: 'Interim experts', href: '/diensten/interim-experts' },
-        { name: 'Parttime innovatieteam', href: '/diensten/parttime-innovatieteam' },
-      ]
-    },
-    {
-      title: 'Veranderexperts',
-      links: [
-        { name: 'Inzicht', href: '/veranderexperts/inzicht' },
-        { name: 'Strategisch plan', href: '/veranderexperts/strategisch-plan' },
-        { name: 'Inspiratie', href: '/veranderexperts/inspiratie' },
-        { name: 'Begeleiding', href: '/veranderexperts/begeleiding' },
-        { name: 'Oplossingen', href: '/veranderexperts/oplossingen' },
-        { name: 'Verbetering', href: '/veranderexperts/verbetering' },
-      ]
-    },
-    {
-      title: 'Kennis en inspiratie',
-      links: [
-        { name: 'Case studies', href: '/kennis-en-inspiratie/case-studies' },
-      ]
-    },
-    {
-      title: 'Over Vosteq',
-      href: '/over-vosteq',
-      links: [
-        { name: 'Missie en visie', href: '/over-vosteq/missie-en-visie' },
-        { name: 'Waarden en normen', href: '/over-vosteq/waarden-en-normen' },
-        { name: 'De veranderexperts', href: '/over-vosteq/de-veranderexperts' },
-        { name: 'Werken bij Vosteq', href: '/over-vosteq/werken-bij-vosteq' },
-        { name: 'MVO-beleid', href: '/over-vosteq/mvo-beleid' },
-      ]
-    }
-  ]
 
   useEffect(() => {
     document.documentElement.style.overflow = isMenuOpen ? 'hidden' : 'auto';
@@ -155,7 +165,7 @@ const Header = () => {
         <div className={`${isMenuOpen ? 'open' : ''} absolute menu h-dvh w-full bg-wit pt-24 flex flex-col justify-between duration-500 transition-all`}>
           <Accordion type='single' collapsible className='container text-paars'>
             {menuData.map((section, idx) => (
-              <AccordionSection key={idx} title={section.title} links={section.links} />
+              <AccordionSection key={idx} title={section.title} href={section.href} links={section.links} />
             ))}
           </Accordion>
           <div className='h-24 bg-groen flex flex-row items-center container'>

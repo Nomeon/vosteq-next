@@ -11,6 +11,38 @@ export const metadata: Metadata = {
 };
 
 export default function WaardenEnNormen() {
+//   Betrouwbaarheid: Je kunt rekenen op een partner die zijn beloftes nakomt.
+// Betrokkenheid: Wij zetten ons volledig in voor jouw succes.
+// Innovatie: Wij bieden oplossingen die jouw bedrijf helpen voorop te blijven lopen.
+// Duurzame groei: Onze aanpak is gericht op blijvende waarde en maatschappelijke verantwoordelijkheid.
+
+
+
+
+  const steps = [
+    {
+      'icon': 'mdi:verified',
+      'title': 'Betrouwbaarheid',
+      'description': 'Je kunt rekenen op een partner die zijn beloftes nakomt.'
+    },
+    {
+      'icon': 'mdi:handshake',
+      'title': 'Betrokkenheid',
+      'description': 'Wij zetten ons volledig in voor jouw succes.'
+    },
+    {
+      'icon': 'mdi:wrench',
+      'title': 'Innovatie',
+      'description': 'Wij bieden oplossingen die jouw bedrijf helpen voorop te blijven lopen.'
+    },
+    {
+      'icon': 'mdi:account-group',
+      'title': 'Duurzame groei',
+      'description': 'Onze aanpak is gericht op blijvende waarde en maatschappelijke verantwoordelijkheid.'
+    }
+
+  ];
+
   const accordionItems = [
     {
       value: 'stap1',
@@ -22,7 +54,7 @@ export default function WaardenEnNormen() {
       value: 'stap2',
       stap: 'Respect en vertrouwen',
       title: '',
-      description: "We behandelen onze klanten, partners en collega's met respect. We bouwen aan vertrouwen door consistent te leveren wat we beloven."
+      description: "Wij behandelen onze klanten, partners en collega’s met respect en bouwen aan vertrouwen door consistent te leveren wat we beloven."
     },
     {
       value: 'stap3',
@@ -34,7 +66,7 @@ export default function WaardenEnNormen() {
       value: 'stap4',
       stap: 'Verantwoordelijkheid',
       title: '',
-      description: 'We nemen verantwoordelijkheid voor onze acties en hun impact op jouw bedrijf en de samenleving. Dit betekent ook dat we onze fouten erkennen en eraan werken om deze te corrigeren.'
+      description: 'We nemen verantwoordelijkheid voor onze acties en hun impact op jouw bedrijf en de samenleving. Dit betekent dat we onze fouten erkennen en actief werken aan het corrigeren ervan.'
     }
   ]
 
@@ -43,27 +75,29 @@ export default function WaardenEnNormen() {
       <Popup />
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
         <div className="md:w-1/2 flex flex-col gap-4">
-            <h1 className="text-paars">Waarden en normen</h1>
-            <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq vormen onze waarden de basis van alles wat we doen. Ze sturen onze beslissingen, ons gedrag en de manier waarop we samenwerken met onze klanten in het MKB. Deze waarden zijn diepgeworteld in onze bedrijfscultuur en bepalen hoe we onszelf als een betrouwbare partner onderscheiden in de maakindustrie.</p>
-            <div className="flex flex-col gap-1 font-aptos text-base">
-                <p className='font-bold'>Waarde 1 - Integriteit:</p>
-                <p>We handelen altijd eerlijk en transparant, zowel intern als extern. Bij Vosteq geloven we dat langdurige relaties gebaseerd zijn op vertrouwen en daarom staan we voor  onze woorden en daden.</p>
-                <p className='font-bold pt-2'>Waarde 2 - Betrokkenheid:</p>
-                <p>We zijn meer dan alleen een dienstverlener; we zijn een partner die zich volledig inzet voor het succes van jouw bedrijf. We voelen ons persoonlijk betrokken bij elk project en geven niet op totdat de doelen zijn bereikt.</p>
-                <p className='font-bold pt-2'>Waarde 3 - Innovatie:</p>
-                <p>In een wereld die voortdurend verandert, streven we ernaar om altijd voorop te lopen met innovatieve oplossingen. We moedigen creativiteit aan en zijn continu op zoek naar nieuwe manieren om processen te verbeteren en waarde toe te voegen voor onze klanten.</p>
-                <p className='font-bold pt-2'>Waarde 4 - Klantgerichtheid:</p>
-                <p>Jouw behoeften staan centraal in alles wat we doen. We luisteren, begrijpen jou en passen onze aanpak aan om ervoor te zorgen dat oplossingen perfect aansluiten bij de specifieke uitdagingen van jouw MKB-bedrijf.</p>
-                <p className='font-bold pt-2'>Waarde 5 - Duurzaamheid:</p>
-                <p>We geloven in duurzame oplossingen die niet alleen bijdragen aan het succes van vandaag, maar ook aan een betere toekomst. Dit geldt voor de manier waarop we zaken doen, de oplossingen die we aanbieden en onze inzet voor maatschappelijke verantwoordelijkheid.</p>
-            </div>
+          <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>De basis van ons succes</p>
+          <h1 className="text-paars">Waarden en normen</h1>
+          <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq vormen onze waarden de ruggengraat van alles wat we doen. Ze sturen onze beslissingen, ons gedrag en de manier waarop we samenwerken met onze klanten in de maakindustrie. Deze waarden zijn diepgeworteld in onze bedrijfscultuur en onderscheiden ons als een betrouwbare partner voor MKB-maakbedrijven.</p>
+          <div className="flex flex-col gap-1 font-aptos text-base">
+              <p className='font-bold'>Integriteit:</p>
+              <p>Wij handelen eerlijk en transparant, zowel intern als extern. Vertrouwen is de basis voor langdurige relaties, en daarom staan we altijd voor onze woorden en daden.</p>
+              <p className='font-bold pt-2'>Betrokkenheid:</p>
+              <p>Wij zijn meer dan een dienstverlener; we zijn een toegewijde partner. Onze inzet stopt niet totdat jouw doelen zijn bereikt.</p>
+              <p className='font-bold pt-2'>Innovatie:</p>
+              <p>In een wereld die voortdurend verandert, streven wij naar creatieve en vernieuwende oplossingen. We zoeken continu naar manieren om processen te verbeteren en meer waarde toe te voegen.</p>
+              <p className='font-bold pt-2'>Klantgerichtheid:</p>
+              <p>Jouw behoeften staan centraal. We luisteren, begrijpen jouw uitdagingen en passen onze aanpak daarop aan.</p>
+              <p className='font-bold pt-2'>Duurzaamheid:</p>
+              <p>Wij geloven in duurzame oplossingen die niet alleen vandaag impact maken, maar ook bijdragen aan een betere toekomst.</p>
+          </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
           <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
         </div>
       </div>
-      <WerkStappen title={'Onze normen'} accordionItems={accordionItems} />
-      <BottomCta titel="Wil je samenwerken met een partner die niet alleen resultaten levert, maar dit ook doet met integriteit, betrokkenheid en een duidelijke focus op jouw behoeften? " paragraph="Neem contact met ons op en ontdek hoe onze waarden en normen het verschil kunnen maken voor jouw MKB-bedrijf." />
+      <WerkStappen title='Onze normen:' accordionItems={accordionItems} />
+      <WatLevertHetOp omschrijving='Hoe onze waarden en normen het verschil maken:' steps={steps} />
+      <BottomCta titel="Wil jij samenwerken met een partner die niet alleen resultaten levert, maar dit doet met integriteit en betrokkenheid?" paragraph="Ontdek hoe onze waarden en normen jouw bedrijf kunnen versterken. Neem vandaag nog contact met ons op!" />
     </div>
   );
 }

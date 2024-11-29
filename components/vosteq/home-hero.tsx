@@ -12,9 +12,8 @@ const HomeHero = () => {
         <p className="font-aktiv-grotesk text-lg text-center pt-16 w-2/3 max-md:container">{m.aloof_blue_hedgehog_pat()}</p>
         <div className="pt-16 flex gap-2 flex-col md:flex-row max-md:items-center">
           <button className='btn-solid'><Link href='/diensten/directieadvies'>{m.house_away_puffin_cuddle()}</Link></button>
-          <button className='btn-solid'><Link href='/diensten/projectmanagement'>{m.plain_this_turkey_type()}</Link></button>
-          <button className='btn-solid'><Link href='/diensten/interim-management'>{m.cool_noisy_snail_drum()}</Link></button>
-          <button className='btn-solid'><Link href='/diensten/interim-experts'>{m.blue_warm_bee_dig()}</Link></button>
+          <button className='btn-solid'><Link href='/diensten/innovatie-en-verandertrajecten'>{m.cool_noisy_snail_drum()}</Link></button>
+          <button className='btn-solid'><Link href='/diensten/expertise-on-demand'>{m.blue_warm_bee_dig()}</Link></button>
         </div>
         <Image className='md:-mt-48 object-cover md:translate-y-1/2 max-md:pt-16' src={hero} alt='Vosteq bij Hapert' placeholder="blur" />
       </section>

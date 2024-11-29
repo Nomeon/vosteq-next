@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function BottomCta(props: {
   titel: string;
   paragraph: string;
@@ -8,9 +10,9 @@ export default function BottomCta(props: {
         <div className='w-full flex flex-col items-center text-center gap-8'>
           <h2 className='text-wit'>{props.titel}</h2>
           <p className='text-wit'>{props.paragraph}</p>
-          <div>
+          <Link href='/contact'>
             <button className='btn-solid'>Neem contact op</button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

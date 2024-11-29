@@ -11,6 +11,7 @@ export type MenuSectionProps = {
 
 export type AccordionSectionProps = {
   title: string;
+  href?: string;
   links: MenuLink[];
 }
 
@@ -19,6 +20,7 @@ export type StepCardProps = {
   title: string;
   subtitle: string;
   description: string;
+  href: string;
 }
 
 export type DatoCase = {

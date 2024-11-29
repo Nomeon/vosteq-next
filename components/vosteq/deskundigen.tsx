@@ -14,11 +14,11 @@ const Deskundigen = () => {
         <h4 className="text-paars">{m.house_topical_stingray_buy()}</h4>
         <div className="flex text-donkergroen font-aptos text-base">
           <ul className="inline">
-            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/'>{m.actual_round_termite_amaze()} &gt;</Link></li>
+            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/diensten/directieadvies'>{m.actual_round_termite_amaze()} &gt;</Link></li>
             <Separator />
-            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/'>{m.crisp_royal_deer_earn()} &gt;</Link></li>
+            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/diensten/innovatie-en-verandertrajecten'>{m.crisp_royal_deer_earn()} &gt;</Link></li>
             <Separator />
-            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/'>{m.bright_proof_crab_empower()} &gt;</Link></li>
+            <li className="inline-block py-1 hover:text-paars hover:font-semibold max-md:pr-2"><Link href='/diensten/expertise-on-demand'>{m.bright_proof_crab_empower()} &gt;</Link></li>
           </ul>
         </div>
       </div>
