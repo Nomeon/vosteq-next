@@ -33,6 +33,10 @@ export const CASE_BY_SLUG_QUERY = `
       procesaanpak
       bulletOpsteken
       bulletOpleveren
+      seoData {
+        title
+        description
+      }
       mainImage {
         responsiveImage {
           src
