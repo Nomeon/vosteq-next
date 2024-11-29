@@ -69,7 +69,7 @@ export default function Directieadvies() {
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Organisatie verbetering</p>
           <h1 className="text-paars">Directie advies</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Succesvolle groei en duurzame winstgevendheid beginnen bij een solide interne basis. Bij Vosteq bieden we directieadvies op maat, gericht op het versterken van jouw organisatie van binnenuit. Door te focussen op jouw unieke kernkwaliteiten helpen we je om externe uitdagingen te overwinnen en kansen te benutten. Hierbij nemen we jouw organisatie en haar onderscheidende krachten als uitgangspunt.</p>
-          <h2 className='pt-8 text-paars max-md:text-2xl'>Diepgaande analyse</h2>
+          <h3 className='pt-8 text-paars max-md:text-2xl'>Diepgaande analyse</h3>
           <p className='text-diepgrijs'>We beginnen met een diepgaande “inside-out” analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">

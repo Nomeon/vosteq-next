@@ -1,32 +1,32 @@
-import Image from 'next/image';
 import type { Metadata } from "next";
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 import { Popup } from '@/components/ui/popup';
 import DecoRight from '@/components/vosteq/deco-right';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: "Vosteq | Begeleiding",
-    description: "Aan het bouwen!",
+    title: "Hands-on Begeleiding voor Verandering | Vosteq",
+    description: "Ontdek hoe Vosteq hands-on begeleiding biedt bij organisatieverandering. Van training tot implementatie: wij zorgen dat jouw transformaties slagen.",
   };
 
 export default function Begeleiding() {
     const steps = [
         {
             icon: 'mdi:handshake',
-            title: 'Ondersteuning',
-            description: 'om veranderingen met vertrouwen en efficiëntie door te voeren.'
+            title: 'Ondersteuning met impact',
+            description: 'want jouw team krijgt de vaardigheden en kennis om veranderingen zelfverzekerd door te voeren.'
         },
         {
             icon: 'mdi:alarm-check',
-            title: "Obstakels snel aanpakken",
-            description: 'waardoor de kans op succes aanzienlijk toeneemt.'
+            title: "Snelle aanpak van obstakels",
+            description: 'waardoor vertragingen worden voorkomen en de kans op aanzienlijk succes toeneemt.'
         },
         {
             icon: 'mdi:chart-line',
             title: 'Vloeiende overgang',
-            description: 'naar nieuwe processen en technologieën, met minimale verstoring van de dagelijkse activiteiten.'
+            description: 'naar nieuwe processen en technologieën, zonder verstoring van dagelijkse activiteiten.'
         }
     ];
 
@@ -35,25 +35,25 @@ export default function Begeleiding() {
             value: 'stap1',
             stap: 'Stap 1.',
             title: 'Hands-on begeleiding',
-            description: 'We werken zij aan zij met jouw medewerkers tijdens de implementatie van nieuwe processen en systemen. Dit zorgt ervoor dat zij vertrouwen krijgen in het gebruik van nieuwe methoden en technologieën.'
+            description: 'We werken direct met jouw medewerkers tijdens de implementatie van nieuwe processen en systemen. Dit bouwt vertrouwen op en zorgt voor een soepele overgang.'
         },
         {
             value: 'stap2',
             stap: 'Stap 2.',
             title: 'Training en ontwikkeling',
-            description: 'We bieden gerichte trainingen aan jouw team om ervoor te zorgen dat iedereen de veranderingen begrijpt en effectief kan toepassen. Dit kan variëren van technische trainingen tot workshops over nieuwe werkwijzen.'
+            description: 'Ons team verzorgt gerichte trainingen en workshops, afgestemd op de behoeften van jouw organisatie. Denk aan technische trainingen en nieuwe werkwijzen.'
         },
         {
             value: 'stap3',
             stap: 'Stap 3.',
             title: 'Probleemoplossing',
-            description: 'We kunnen snel ingrijpen en oplossingen bieden wanneer zich onverwachte problemen voordoen. Dit zorgt ervoor dat de verandering niet stagneert en dat obstakels snel worden overwonnen.'
+            description: 'Bij onverwachte obstakels grijpen we snel in met praktische oplossingen, zodat het veranderproces niet stagneert.'
         },
         {
             value: 'stap4',
             stap: 'Stap 4.',
             title: 'Continuïteit waarborgen',
-            description: 'We monitoren de voortgang en passen onze ondersteuning waar nodig aan, zodat de veranderingen duurzaam zijn en blijvend resultaat opleveren.'
+            description: 'Door voortgang te monitoren en onze aanpak aan te passen waar nodig, zorgen we voor duurzame veranderingen met blijvend resultaat.'
         }
     ]
 
@@ -62,18 +62,19 @@ export default function Begeleiding() {
             <Popup />
             <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
                 <div className="md:w-1/2 flex flex-col gap-4">
+                    <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Hands-on ondersteuning voor succesvolle verandering</p>
                     <h1 className="text-paars">Begeleiding</h1>
-                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat verandering de meeste kans van slagen heeft wanneer er effectieve en praktische ondersteuning is. Daarom bieden we jou de nodige begeleiding om de veranderingen in jouw bedrijf ook daadwerkelijk door te voeren. Onze experts staan klaar om je medewerkers stap voor stap te begeleiden en obstakels uit de weg te ruimen, zodat het plan in de praktijk wordt gebracht en resultaten oplevert.</p>
-                    <h2 className='pt-8 text-paars max-md:text-2xl'>Adviseren en implementeren</h2>
-                    <p className='text-diepgrijs'>In de "begeleidingsfase" werken we nauw met jouw team samen om ervoor te zorgen dat de veranderingen soepel verlopen. Dit betekent dat we niet alleen adviseren, maar ook actief betrokken zijn bij de implementatie van veranderingen. We zorgen ervoor dat jouw medewerkers de benodigde vaardigheden en kennis opdoen om de nieuwe processen en strategieën succesvol uit te rollen.</p>
+                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq begrijpen we dat verandering alleen slaagt met effectieve en praktische ondersteuning. Onze hands-on begeleiding zorgt ervoor dat jouw organisatie niet alleen weet wat er moet gebeuren, maar ook daadwerkelijk stappen zet om veranderingen door te voeren. <Link className="underline hover:text-donkergroen" href='/over-vosteq/de-veranderexperts'>Onze experts</Link> staan zij aan zij met jouw team om obstakels te overwinnen en duurzame resultaten te bereiken.</p>
+                    <h3 className='pt-8 text-paars max-md:text-2xl'>Adviseren en implementeren</h3>
+                    <p className='text-diepgrijs'>In de begeleidingsfase werken we nauw samen met jouw team om veranderingen soepel te laten verlopen. Wij gaan verder dan alleen adviseren: onze experts zijn actief betrokken bij de implementatie en bieden de nodige begeleiding om nieuwe processen en strategieën succesvol uit te rollen. Met onze aanpak leren jouw medewerkers niet alleen wát er moet veranderen, maar ook hóe ze deze veranderingen kunnen toepassen en borgen in de praktijk.</p>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
                     <DecoRight imageSrc='/images/begeleiding.webp' />
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />
-            <WatLevertHetOp steps={steps} omschrijving='Dankzij onze begeleiding:' />
-            <BottomCta titel="Wil je dat jouw team de nodige begeleiding krijgt om veranderingen succesvol door te voeren?" paragraph="Neem dan vandaag nog contact met ons op en ontdek hoe wij kunnen helpen om je doelen te bereiken." />
+            <WatLevertHetOp steps={steps} omschrijving='Met de begeleiding van Vosteq profiteer je van:' />
+            <BottomCta titel="Wil jij jouw team de begeleiding bieden die nodig is voor succesvolle veranderingen?" paragraph="Neem contact op met Vosteq en ontdek hoe wij jouw organisatie kunnen ondersteunen in elke stap van het proces." />
         </div>
     )
 }

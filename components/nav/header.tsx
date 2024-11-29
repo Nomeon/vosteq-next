@@ -33,6 +33,7 @@ const menuData = [
   },
   {
     title: 'Onze aanpak',
+    href: '/onze-aanpak',
     links: [
       { name: 'Inzicht', href: '/onze-aanpak/inzicht' },
       { name: 'Strategisch plan', href: '/onze-aanpak/strategisch-plan' },

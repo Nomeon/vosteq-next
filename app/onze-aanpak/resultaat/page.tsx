@@ -7,26 +7,26 @@ import { Popup } from '@/components/ui/popup';
 import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
-    title: "Vosteq | Resultaat",
-    description: "Aan het bouwen!",
+    title: "Duurzame Resultaten voor MKB-Maakbedrijven | Vosteq",
+    description: "Ontdek hoe Vosteq zorgt voor duurzame veranderingen en blijvende resultaten. Van implementatie tot optimalisatie: wij helpen jouw MKB-maakbedrijf vooruit",
   };
 
 export default function Resultaat() {
     const steps = [
         {
-            icon: 'mdi:alarm-check',
-            title: 'Problemen snel aanpakken',
-            description: 'waardoor jouw bedrijf verder kan zonder onderbrekingen'
-        },
-        {
-            icon: 'mdi:tools',
-            title: "Maatwerkoplossingen",
-            description: 'die specifiek zijn afgestemd op jouw bedrijf en de unieke uitdagingen waarmee je te maken hebt.'
+            icon: 'mdi:target',
+            title: 'Volledige integratie',
+            description: 'want veranderingen worden naadloos onderdeel van de dagelijkse bedrijfsvoering.'
         },
         {
             icon: 'mdi:chart-line',
-            title: 'Duurzame resultaten',
-            description: 'door problemen grondig aan te pakken en toekomstige knelpunten te voorkomen.'
+            title: "Maximale resultaten",
+            description: 'van geïmplementeerde veranderingen door voortdurende optimalisatie en aanpassing van nieuwe processen.'
+        },
+        {
+            icon: 'mdi:progress-clock',
+            title: 'Blijvende meerwaarde',
+            description: 'want veranderingen blijven op de lange termijn bijdragen aan de groei en efficiëntie van jouw bedrijf.'
         }
     ];
 
@@ -34,26 +34,26 @@ export default function Resultaat() {
         {
             value: 'stap1',
             stap: 'Stap 1.',
-            title: 'Probleemanalyse',
-            description: 'We beginnen met een grondige analyse van het probleem. We verzamelen alle relevante informatie en inzichten om de oorzaak van het probleem volledig te begrijpen.'
+            title: 'Implementatie volgen',
+            description: 'We monitoren hoe nieuwe processen en systemen in de praktijk werken en lossen eventuele knelpunten direct op.'
         },
         {
             value: 'stap2',
             stap: 'Stap 2.',
-            title: 'Ontwikkelen van oplossingen',
-            description: 'Op basis van onze analyse ontwikkelen we gerichte oplossingen die specifiek zijn afgestemd op de aard van het probleem en de behoeften van jouw bedrijf.'
+            title: 'Blijvende ondersteuning',
+            description: 'Ons team blijft beschikbaar voor coaching en begeleiding, zodat jouw medewerkers de veranderingen effectief toepassen.'
         },
         {
             value: 'stap3',
             stap: 'Stap 3.',
-            title: 'Implementatie',
-            description: 'We implementeren de oplossing(en) snel en effectief, met minimale verstoring van je dagelijkse activiteiten. Ons team zorgt ervoor dat een oplossing naadloos wordt geïntegreerd in je bestaande processen.'
+            title: 'Evalueren en optimaliseren',
+            description: 'Regelmatige evaluaties helpen ons om verbeterpunten te identificeren en het maximale uit de nieuwe processen te halen.'
         },
         {
             value: 'stap4',
             stap: 'Stap 4.',
-            title: 'Monitoring en aanpassing',
-            description: 'Nadat een oplossing is geïmplementeerd, blijven we betrokken om de resultaten te monitoren en waar nodig aanpassingen door te voeren om te garanderen dat het probleem volledig wordt opgelost.'
+            title: 'Duurzame integratie',
+            description: 'Ons uiteindelijke doel is ervoor te zorgen dat veranderingen volledig geïntegreerd worden in jouw bedrijfsvoering en langdurig waarde toevoegen.'
         }
     ]
 
@@ -62,18 +62,26 @@ export default function Resultaat() {
             <Popup />
             <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
                 <div className="md:w-1/2 flex flex-col gap-4">
-                    <h1 className="text-paars">Oplossingen</h1>
-                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq weten we dat elk MKB-maakbedrijf af en toe voor uitdagingen komt te staan die verder gaan dan de dagelijkse bedrijfsvoering. Soms ontstaan er complexe problemen die onmiddellijke en deskundige aandacht vereisen. In de "oplossingsfase" richten wij ons op het snel en effectief aanpakken van deze knelpunten, zodat je bedrijf zonder onderbrekingen verder kan.</p>
-                    <h2 className='pt-8 text-paars max-md:text-2xl'>Obstakels identificeren en elimineren</h2>
-                    <p className='text-diepgrijs'>Tijdens de "oplossingsfase" draait het om het identificeren en elimineren van de obstakels die jouw bedrijfsvoering belemmeren. Dit kan variëren van operationele problemen tot strategische knelpunten. Onze experts brengen de nodige expertise mee om deze uitdagingen grondig te analyseren en oplossingen te ontwikkelen en te implementeren die werken</p>
+                    <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Duurzame veranderingen die werken</p>
+                    <h1 className="text-paars">Resultaat</h1>
+                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq draait alles om blijvende verbetering. Het doorvoeren van veranderingen is slechts de eerste stap; ons doel is om ervoor te zorgen dat nieuwe processen, systemen en strategieën duurzaam en succesvol blijven werken binnen jouw MKB-maakbedrijf.</p>
+                    <h3 className='pt-8 text-paars max-md:text-2xl'>Daadwerkelijk en blijvend effect</h3>
+                    <div className="flex flex-col gap-1 font-aptos text-base">
+                        <p className='font-bold'>Bewaking van continuïteit:</p>
+                        <p>We volgen de integratie van veranderingen en passen aan waar nodig om blijvende resultaten te waarborgen.</p>
+                        <p className='font-bold pt-2'>Nazorg en ondersteuning:</p>
+                        <p>We bieden blijvende ondersteuning en coaching aan jouw team om nieuwe processen optimaal te benutten.</p>
+                        <p className='font-bold pt-2'>Evaluatie en optimalisatie:</p>
+                        <p>Door regelmatig te evalueren, identificeren we kansen voor verdere verbetering en maximalisatie van resultaten.</p>
+                    </div>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
-                    <DecoRight imageSrc='/images/oplossingen.webp' />
+                    <DecoRight imageSrc='/images/verbetering.webp' />
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />
-            <WatLevertHetOp omschrijving='Dankzij onze oplossingsgerichte aanpak:' steps={steps} />
-            <BottomCta titel="Heb je te maken met een complex probleem dat onmiddellijke aandacht vereist? " paragraph="Neem dan contact met ons op en ontdek hoe wij je kunnen helpen om snel en effectief tot een oplossing te komen." />
+            <WatLevertHetOp omschrijving='Met de verbeteringsaanpak van Vosteq profiteer je van:' steps={steps} />
+            <BottomCta titel="Wil jij blijvende resultaten realiseren met duurzame veranderingen?" paragraph="Ontdek hoe Vosteq jouw bedrijf helpt om meerwaarde te creëren die werkt - vandaag, morgen en in de toekomst." />
         </div>
     )
 }

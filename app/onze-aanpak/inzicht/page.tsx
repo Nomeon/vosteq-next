@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Metadata } from "next";
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
@@ -7,26 +6,26 @@ import { Popup } from '@/components/ui/popup';
 import DecoRight from '@/components/vosteq/deco-right';
 
 export const metadata: Metadata = {
-    title: "Vosteq | Inzicht",
-    description: "Aan het bouwen!",
+    title: "Inzicht voor MKB-Maakbedrijven | Vosteq",
+    description: "Ontdek hoe Vosteq diepgaand inzicht biedt in jouw MKB-maakbedrijf. Onze analyses vormen de basis voor oplossingen die werken. Lees meer of neem contact op!",
   };
 
-export default function Inzicht() {    
+export default function Inzicht() {
     const steps = [
         {
             icon: 'mdi:target',
             title: 'Gerichte oplossingen ontwikkelen ',
-            description: 'die precies inspelen op jouw unieke uitdagingen.'
+            description: 'die nauw aansluiten op jouw unieke kansen en uitdagingen.'
         },
         {
             icon: 'mdi:shield-alert',
             title: "Risico's minimaliseren",
-            description: 'omdat we weten waar de valkuilen liggen.'
+            description: 'door valkuilen vroegtijdig te signaleren, voorkomen we problemen.'
         },
         {
             icon: 'mdi:progress-clock',
-            title: 'Efficiëntere bedrijfsprocessen',
-            description: 'realiseren omdat we vanaf het begin een helder beeld hebben van wat er moet gebeuren.'
+            title: 'Efficiëntie verhogen',
+            description: 'omdat we een helder beeld hebben van wat er verbeterd moet worden.'
         }
     ];
 
@@ -35,19 +34,19 @@ export default function Inzicht() {
             value: 'stap1',
             stap: 'Stap 1.',
             title: 'Diepgaande analyse',
-            description: 'We beginnen met gesprekken met jouw team en met het verzamelen van data over je huidige processen en prestaties. Dit onderdeel kan interviews, observaties en het analyseren van bestaande documentatie omvatten.'
+            description: 'We starten met gesprekken en verzamelen informatie over jouw processen en prestaties. Dit omvat interviews, observaties en een analyse van bestaande documentatie.'
         },
         {
             value: 'stap2',
             stap: 'Stap 2.',
-            title: 'Identificeren kernuitdagingen',
-            description: 'Op basis van onze analyse identificeren we de kernuitdagingen die jouw bedrijf belemmeren om te groeien of te innoveren.'
+            title: 'Identificeren van kernuitdagingen',
+            description: 'Op basis van onze analyse brengen we de belangrijkste obstakels en groeikansen in kaart.'
         },
         {
             value: 'stap3',
             stap: 'Stap 3.',
-            title: 'Inzicht verwerven',
-            description: 'We vertalen onze bevindingen naar duidelijke inzichten die als basis dienen voor de volgende stappen in het veranderproces.'
+            title: 'Inzichten vertalen naar actie',
+            description: 'Onze bevindingen vertalen we naar heldere inzichten die de basis vormen voor het vervolgtraject.'
         }
     ]
 
@@ -56,18 +55,20 @@ export default function Inzicht() {
             <Popup />
             <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
                 <div className="md:w-1/2 flex flex-col gap-4">
+                    <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Basis voor succesvolle verbetering</p>
                     <h1 className="text-paars">Inzicht</h1>
-                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat elke succesvolle verandering begint met een diepgaand inzicht in jouw bedrijf. Daarom is de eerste stap in onze aanpak altijd gericht op het volledig doorgronden van jouw organisatie, processen en uitdagingen. We nemen de tijd om te ontdekken en te begrijpen wat er binnen jouw MKB-maakbedrijf speelt, zodat we oplossingen op maat kunnen ontwikkelen die echt werken.</p>
+                    <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat elke succesvolle transformatie begint met een grondig inzicht in jouw organisatie. Onze aanpak start daarom altijd met het volledig begrijpen van jouw MKB-maakbedrijf: van processen en structuren tot bedrijfscultuur en marktpositie. Door deze diepgaande analyse leggen we een stevig fundament voor oplossingen op maat die echt werken en blijvend resultaat opleveren.</p>
                     <h2 className='pt-8 text-paars max-md:text-2xl text-3xl'>Gedetailleerde bedrijfsanalyse</h2>
+                    <p>Onze "inzicht-fase" gaat verder dan een oppervlakkige blik. We duiken diep in jouw organisatie om helder te krijgen waar de kansen en uitdagingen liggen. Hierbij richten we ons op vier cruciale aspecten:</p>
                     <div className="flex flex-col gap-1 font-aptos text-base">
-                        <p className='font-bold'>De huidige bedrijfsprocessen:</p>
-                        <p>Hoe lopen de huidige processen en waar liggen knelpunten?</p>
-                        <p className='font-bold pt-2'>De organisatiestructuur:</p>
-                        <p>Hoe is je team georganiseerd en waar liggen de sterke en zwakke punten?</p>
-                        <p className='font-bold pt-2'>De bedrijfscultuur:</p>
-                        <p>Wat drijft jouw medewerkers en hoe beïnvloedt dit de prestaties?</p>
-                        <p className='font-bold pt-2'>De marktpositie:</p>
-                        <p>Hoe positioneer je jouw MKB-maakbedrijf in de markt en waar liggen de kansen en bedreigingen?</p>
+                        <p className='font-bold'>Bedrijfsprocessen:</p>
+                        <p>Hoe verlopen jouw huidige processen? Waar liggen de knelpunten en hoe kan het beter?</p>
+                        <p className='font-bold pt-2'>Organisatiestructuur:</p>
+                        <p>Hoe is jouw team georganiseerd? Wat zijn de sterke en zwakke punten?</p>
+                        <p className='font-bold pt-2'>Bedrijfscultuur:</p>
+                        <p>Wat motiveert jouw medewerkers en hoe draagt dit bij aan hun prestaties?</p>
+                        <p className='font-bold pt-2'>Marktpositie:</p>
+                        <p>Waar staat jouw bedrijf in de markt? Welke kansen en bedreigingen spelen een rol?</p>
                     </div>
                 </div>
                 <div className="md:w-1/2 container relative pb-16">
@@ -75,8 +76,8 @@ export default function Inzicht() {
                 </div>
             </div>
             <WerkStappen accordionItems={accordionItems} />
-            <WatLevertHetOp omschrijving='Zo gauw wij een diepgaand inzicht in jouw bedrijf hebben, kunnen we voor jou:' steps={steps} />
-            <BottomCta titel="Wil je veranderingen in jouw bedrijf doorvoeren die écht werken?" paragraph="Laten we beginnen met een goed gesprek, zodat we inzicht krijgen in jouw organisatie." />
+            <WatLevertHetOp omschrijving='Met een diepgaand inzicht in jouw organisatie kunnen we:' steps={steps} />
+            <BottomCta titel="Wil je veranderingen doorvoeren die écht impact maken?" paragraph="Het begint met inzicht. Neem vandaag nog contact met ons op voor een vrijblijvend gesprek." />
         </div>
     )
 }
