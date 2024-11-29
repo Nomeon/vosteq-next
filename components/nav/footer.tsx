@@ -19,7 +19,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center text-paars">
-          <Link href='https://www.linkedin.com/company/vosteq-veranderexperts-in-smart-manufacturing/'>
+          <Link target='_blank' href='https://www.linkedin.com/company/vosteq-veranderexperts-in-smart-manufacturing/'>
             <Icon icon="mdi:linkedin" width="36" height="36" />
           </Link>
         </div>
