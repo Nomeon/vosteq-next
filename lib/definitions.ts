@@ -34,6 +34,10 @@ export type DatoCase = {
   procesaanpak: string;
   bulletOpsteken: string;
   bulletOpleveren: string;
+  seoData: {
+    title: string;
+    description: string;
+  }
   mainImage: {
     responsiveImage: {
       srcSet: string;
