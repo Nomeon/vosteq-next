@@ -17,7 +17,9 @@ import Image from "next/image";
 
 export default function DeVeranderexperts() {
     const [api, setApi] = useState<CarouselApi>();
-    const [visibleOverlays, setVisibleOverlays] = useState<{ [key: number]: boolean }>({});
+    const [visibleOverlays, setVisibleOverlays] = useState(
+      Array(carouselItems.length).fill(false)
+    );
 
     const steps = [
       {
@@ -81,13 +83,14 @@ export default function DeVeranderexperts() {
       }
     ]
 
-    const toggleOverlay = (key: number) => {
-        setVisibleOverlays((prev) => ({ ...prev, [key]: !prev[key] }));
+    const toggleOverlay = (index: number) => {
+      setVisibleOverlays((prev) =>
+        prev.map((isVisible, i) => (i === index ? !isVisible : isVisible))
+      );
     };
-
+    
     return (
       <div className='flex flex-col'>
-
         <div className="container pb-32">
           <div className="flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
             <div className="md:w-1/2 flex flex-col gap-4">
@@ -110,26 +113,10 @@ export default function DeVeranderexperts() {
                             {/* Overlay */}
                             <div
                             className={`w-full h-full absolute top-0 left-0 flex flex-col justify-start md:justify-end transition-all opacity-80 duration-300 bg-gradient-to-tl from-paars to-groen from-10% md:opacity-0 md:group-hover:opacity-80 ${
-                                visibleOverlays[item.key] ? 'max-md:translate-y-0' : 'max-md:translate-y-85/100'
+                              visibleOverlays[idx] ? 'max-md:translate-y-0' : 'max-md:translate-y-85/100'
                             }`}
                             >
-                              <p className={`${visibleOverlays[item.key] ? 'max-md:text-opacity-100' : 'max-md:text-opacity-0'} transition-all duration-300 text-wit text-base font-aktiv-grotesk-extended w-full p-4`}>{item.description}</p>
-                            </div>
-                            
-                            {/* Button to toggle overlay on mobile */}
-                            <div className="w-full h-12 absolute bottom-0 flex flex-row justify-between items-center p-2 md:hidden">
-                            <p className={`text-white font-aptos transition-all duration-300" pl-2 ${visibleOverlays[item.key] ? 'opacity-0' : 'opacity-100'}`}>{item.role}</p>
-                            <button
-                                className="text-wit md:hidden"
-                                onClick={() => toggleOverlay(item.key)}
-                                >
-                                <Icon
-                                icon='mdi:chevron-up'
-                                width={32}
-                                height={32}
-                                className={`transition-transform duration-300 ${visibleOverlays[item.key] ? '-rotate-180' : 'rotate-0'}`}
-                                />
-                            </button>
+                              <p className={`${visibleOverlays[idx] ? 'max-md:text-opacity-100' : 'max-md:text-opacity-0'} transition-all duration-300 text-wit text-base font-aktiv-grotesk-extended w-full p-4`}>{item.description}</p>
                             </div>
                         </div>
                     </div>
@@ -139,8 +126,8 @@ export default function DeVeranderexperts() {
           </div>
           <Carousel className="w-full md:hidden" setApi={setApi}>
             <CarouselContent>
-              {carouselItems.map((item) => (
-                <CarouselItem key={item.key} className="basis-2/3 md:basis-1/4 flex flex-col relative">
+              {carouselItems.map((item, idx) => (
+                <CarouselItem key={`carousel-item-${idx}`} className="basis-2/3 md:basis-1/4 flex flex-col relative">
                 <div className="relative group">
                   <div className="relative overflow-hidden">
                     <Image className="w-full h-full" src={item.imageSrc} alt={item.name} />
@@ -148,24 +135,24 @@ export default function DeVeranderexperts() {
                     {/* Overlay */}
                     <div
                       className={`w-full h-full absolute top-0 left-0 flex flex-col justify-start md:justify-end transition-all opacity-80 duration-300 bg-gradient-to-tl from-paars to-groen from-10% md:opacity-0 md:group-hover:opacity-80 ${
-                        visibleOverlays[item.key] ? 'max-md:translate-y-0' : 'max-md:translate-y-85/100'
+                        visibleOverlays[idx] ? 'max-md:translate-y-0' : 'max-md:translate-y-85/100'
                       }`}
                     >
-                      <p className={`${visibleOverlays[item.key] ? 'max-md:text-opacity-100' : 'max-md:text-opacity-0'} transition-all duration-300 text-wit text-base font-aktiv-grotesk-extended w-full p-4`}>{item.description}</p>
+                      <p className={`${visibleOverlays[idx] ? 'max-md:text-opacity-100' : 'max-md:text-opacity-0'} transition-all duration-300 text-wit text-base font-aktiv-grotesk-extended w-full p-4`}>{item.description}</p>
                     </div>
                 
                     {/* Button to toggle overlay on mobile */}
                     <div className="w-full h-12 absolute bottom-0 flex flex-row justify-between items-center p-2 md:hidden">
-                      <p className={`text-white font-aptos transition-all duration-300" pl-2 ${visibleOverlays[item.key] ? 'opacity-0' : 'opacity-100'}`}>{item.role}</p>
+                      <p className={`text-white font-aptos transition-all duration-300 pl-2 ${visibleOverlays[idx] ? 'opacity-0' : 'opacity-100'}`}></p>
                       <button
                         className="text-wit md:hidden"
-                        onClick={() => toggleOverlay(item.key)}
+                        onClick={() => toggleOverlay(idx)}
                       >
                         <Icon
                           icon='mdi:chevron-up'
                           width={32}
                           height={32}
-                          className={`transition-transform duration-300 ${visibleOverlays[item.key] ? '-rotate-180' : 'rotate-0'}`}
+                          className={`transition-transform duration-300 ${visibleOverlays[idx] ? '-rotate-180' : 'rotate-0'}`}
                         />
                       </button>
                     </div>
@@ -177,11 +164,9 @@ export default function DeVeranderexperts() {
             </CarouselContent>
           </Carousel>
         </div>
-
         <WerkStappen title='Expertise in alle facetten van bedrijfsvoering' accordionItems={accordionItems} />
         <WatLevertHetOp omschrijving='De specialisten van Vosteq bieden:' steps={steps} />
         <BottomCta titel="Wil jij ervaren hoe onze verander-experts jouw bedrijf kunnen helpen groeien en innoveren? " paragraph="Neem vandaag nog contact met ons op en ontdek hoe wij complexe uitdagingen omzetten in duurzame oplossingen."/>
-        
       </div>
     )
 }
