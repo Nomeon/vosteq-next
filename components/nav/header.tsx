@@ -90,7 +90,9 @@ const AccordionSection: FC<AccordionSectionProps> = ({ title, href, links }) => 
   links.length > 1 ?
     <AccordionItem value={title}>
       <AccordionTrigger className='font-aktiv-grotesk text-base data-[state=open]:text-donkergroen data-[state=open]:font-semibold'>
-        {title}
+        <Link href={href!}>
+          {title}
+        </Link>
       </AccordionTrigger>
       <AccordionContent className='flex flex-col ml-8 gap-4 text-base'>
         {links.map((link, idx) => (

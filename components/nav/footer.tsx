@@ -15,7 +15,7 @@ const Footer = () => {
             <li><Link href='/diensten'>Diensten</Link></li>
             <li><Link href='/onze-aanpak'>Onze aanpak</Link></li>
             <li><Link href='/klant-cases'>Klant cases</Link></li>
-            <li><Link href='/over-vosteq'>Over vosteq</Link></li>
+            <li><Link href='/over-vosteq'>Over Vosteq</Link></li>
           </ul>
         </div>
         <div className="flex flex-row gap-4 items-center text-paars">

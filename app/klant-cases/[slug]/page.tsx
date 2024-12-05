@@ -19,13 +19,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function CasePage({ params }: { params: { slug: string } }) {
   const caseData = await getCaseData(params.slug);
   
-  const formattedText = caseData.procesaanpak 
-    ? caseData.procesaanpak.replace(/\n/g, '<br />') 
+  const procesaanpak = caseData.procesaanpak 
+    ? caseData.procesaanpak.replace(/\n/g, '<br/>') 
+    : '';
+  const achtergrond = caseData.achtergrond
+    ? caseData.achtergrond.replace(/\n/g, '<br/>')
     : '';
   const bulletOpsteken = caseData.bulletOpsteken 
     ? caseData.bulletOpsteken.split('\n').map(item => item.replace(/^\*\s*/, '').trim())
     : [];
-
   const bulletOpleveren = caseData.bulletOpleveren
     ? caseData.bulletOpleveren.split('\n').map(item => item.replace(/^\*\s*/, '').trim())
     : [];
@@ -38,7 +40,7 @@ export default async function CasePage({ params }: { params: { slug: string } })
           <h1 className="text-paars">De uitdaging</h1>
           <p className="text-paars font-aktiv-grotesk-extended">{caseData.uitdaging}</p>
           <h2 className='text-paars py-2'>De achtergrond</h2>
-          <p>{caseData.achtergrond}</p>
+          <p dangerouslySetInnerHTML={{__html: achtergrond}}></p>
         </div>
         <div className="md:w-1/2 relative flex p-8 -mt-8 justify-center">
           <DecoRight imageSrc={caseData.mainImage.responsiveImage.src} />
@@ -51,7 +53,7 @@ export default async function CasePage({ params }: { params: { slug: string } })
         </div>
         <div className='md:w-1/2'>
           <h2 className='text-paars pb-4'>De procesaanpak</h2>
-          <p>{formattedText}</p>
+          <p dangerouslySetInnerHTML={{__html: procesaanpak}}></p>
         </div>
       </div>
       <div className='container flex flex-col md:flex-row gap-16 md:gap-32 md:pt-32'>
