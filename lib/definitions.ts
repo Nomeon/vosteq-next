@@ -55,3 +55,11 @@ export type StepDienstenProps = {
   title: string;
   description: string;
 }
+
+export type FormError = {
+  naam?: string;
+  onderwerp?: string;
+  email?: string;
+  telefoonnummer?: string;
+  bericht?: string;
+}
