@@ -1,20 +1,29 @@
-"use client"
+'use client'
 
-import { useState, ChangeEvent, FormEvent } from "react";
-import { z } from "zod";
-import { formSchema } from "@/lib/validationSchema";
-import { FormError } from "@/lib/definitions";
+import { z } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { 
-  Select,
-  SelectContent,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { 
+  Select, 
+  SelectValue, 
+  SelectTrigger, 
+  SelectContent, 
   SelectItem,
   SelectGroup,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue
-} from "@/components/ui/select";
+  SelectLabel
+} from '@/components/ui/select'
 
-const interesseItems = [
+const topicItems = [
   {
     name: "Innovatie, markt en strategie",
     items: [
@@ -129,90 +138,131 @@ const interesseItems = [
   }
 ]
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    naam: "",
-    onderwerp: "",
-    email: "",
-    telefoonnummer: "",
-    bericht: "",
-  });
-  const [errors, setErrors] = useState({});
+export const formSchema = z.object({
+  topic: z.string({
+    required_error: 'Kies een topic',
+  }),
+  naam: z.string({
+    required_error: 'Vul je naam in',
+  }).min(3, {
+    message: 'Een naam moet minimaal 3 karakters lang zijn',
+  }).max(50, {
+    message: 'Een naam kan maximaal 50 karakters lang zijn',
+  }),
+  onderwerp: z.string({
+    required_error: 'Vul een onderwerp in',  
+  }).min(3, {
+    message: 'Een onderwerp moet minimaal 3 karakters lang zijn',
+  }).max(50, {
+    message: 'Een onderwerp kan maximaal 50 karakters lang zijn',
+  }),
+  email: z.string({
+    required_error: 'Vul je e-mailadres in',
+  }).email({
+    message: 'Dit is geen geldig e-mailadres',
+  }),
+  telefoonnummer: z.string(),
+  bericht: z.string().min(10, {
+    message: 'Een bericht moet minimaal 10 karakters lang zijn',
+  }).max(500, {
+    message: 'Een bericht kan maximaal 500 karakters lang zijn',
+  })
+})
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ 
-      ...formData, 
-      [e.target.name]: e.target.value 
-    });
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    try {
-      formSchema.parse(formData);
-      console.log("Formulier is geldig!");
-      setErrors("");
-    } catch (e) {
-      if (e instanceof z.ZodError) {
-        const errorObject = e.errors.reduce((acc: FormError, curr) => {
-          const key = curr.path[0] as keyof FormError;
-          acc[key] = curr.message;
-          return acc;
-        }, {});
-        setErrors(errorObject);
-        console.log(errorObject);
-      }
+export function ContactForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      topic: '',
+      naam: '',
+      onderwerp: '',
+      email: '',
+      telefoonnummer: '',
+      bericht: '',
     }
+  })
+
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    console.log('data: ', data)
   }
 
   return (
-      <form onSubmit={handleSubmit} className="flex flex-col gap-8 w-full md:w-2/3 border border-groen px-4 py-8 md:p-16">
-        <div className="flex flex-col md:flex-row pb-8 gap-2 md:justify-between md:items-center">
-          <h2 className="text-paars md:text-4xl text-3xl font-normal">Neem contact op</h2>
-          <p className="font-aktiv-grotesk-extended text-warning text-sm">*Invullen van dit veld is vereist</p>
-        </div>
-        {Object.values(errors).some(value => value) && (
-          <div className="w-full border-2 border-warning p-4 flex flex-col">
-            <p className="text-warning font-semibold pb-2">Let op! Wij konden uw bericht niet versturen vanwege foutmeldingen.</p>
-            <p className="">De volgende velden zijn leeg of niet goed ingevuld:</p>
-            <ul className="list-disc list-outside pl-6">
-              {Object.entries(errors).map(([key, value]) => (
-                <li key={key} className="">{String(value)}</li>
-              ))}
-            </ul>
+    <div className='xl:w-2/3 border border-donkergroen p-8 xl:p-16'>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-8">
+          <div className='flex w-full gap-4 items-center'>
+            <p className='text-paars text-base font-medium whitespace-nowrap font-aktiv-grotesk-extended'>Ik heb interesse in:</p>
+            <FormField control={form.control} name="topic" render={({ field }) => (
+              <FormItem className='w-full'>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Kies een topic" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {topicItems.map((item) => (
+                      <SelectGroup key={`select-${item.name}`}>
+                        <SelectLabel className='text-paars font-aptos'>{item.name}</SelectLabel>
+                        {item.items.map((subItem) => (
+                          <SelectItem className='font-aptos' value={subItem.value}>{subItem.itemName}</SelectItem>
+                        ))}
+                      </SelectGroup>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )} />
           </div>
-        )}
-        <div className="flex w-full gap-4 lg:gap-16 items-center flex-col lg:flex-row">
-          <h4 className="text-paars font-medium">Ik heb interesse in:</h4>
-          <Select>
-            <SelectTrigger className="">
-              <SelectValue placeholder="Selecteer een topic" />
-            </SelectTrigger>
-            <SelectContent>
-              {interesseItems.map((item) => (
-                <SelectGroup key={item.name}>
-                  <SelectLabel>{item.name}</SelectLabel>
-                  {item.items.map((subItem) => (
-                    <SelectItem value={subItem.value}>{subItem.itemName}</SelectItem>
-                  ))}
-                </SelectGroup>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="flex w-full flex-col md:flex-row justify-between gap-8 md:gap-16">
-          <input value={formData.naam} onChange={handleChange} required name='naam' id="naam" type="text" placeholder="Naam*" className='focus:outline-none py-2 border-b border-black w-full font-aktiv-grotesk-extended' />
-          <input value={formData.onderwerp} onChange={handleChange} required name='onderwerp' id="onderwerp" type="text" placeholder="Onderwerp*" className='focus:outline-none py-2 border-b border-black w-full font-aktiv-grotesk-extended' />
-        </div>
-        <input value={formData.email} onChange={handleChange} required name='email' id="email" type="email" placeholder="E-mailadres*" className='focus:outline-none py-2 border-b border-black w-full font-aktiv-grotesk-extended' />
-        <input value={formData.telefoonnummer} onChange={handleChange} name='telefoonnummer' id="telefoonnummer" type="tel" placeholder="Telefoonnummer" className='focus:outline-none py-2 border-b border-black w-full mb-8 font-aktiv-grotesk-extended' />
-        <h3 className="font-bold text-paars">Bericht</h3>
-        <textarea required name='bericht' id='bericht' value={formData.bericht} onChange={handleChange} className='focus:outline-none p-2 border border-groen w-full h-36' />
-        <div>
-          <button type='submit' className="btn-solid">Verzenden</button>
-        </div>
-      </form>
+          <div className='flex gap-16 w-full'>
+            <FormField control={form.control} name="naam" render={({ field }) => (
+              <FormItem className='w-full'>
+                <FormControl>
+                  <Input placeholder="Naam*" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField control={form.control} name="onderwerp" render={({ field }) => (
+              <FormItem className='w-full'>
+                <FormControl>
+                  <Input placeholder="Onderwerp*" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+          </div>
+          <FormField control={form.control} name="email" render={({ field }) => (
+            <FormItem className=''>
+              <FormControl>
+                <Input placeholder="E-mailadres*" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField control={form.control} name="telefoonnummer" render={({ field }) => (
+            <FormItem className=''>
+              <FormControl>
+                <Input placeholder="Telefoonnummer" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <h3 className='text-paars pt-8'>Bericht</h3>
+          <FormField control={form.control} name="bericht" render={({ field }) => (
+            <FormItem className='-mt-4'>
+              <FormControl>
+                <Textarea placeholder='...' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <div>
+            <button type='submit' className="btn-solid">Verzenden</button>
+          </div>
+        </form>
+      </Form>
+    </div>
   )
 }
-
-export { ContactForm };
