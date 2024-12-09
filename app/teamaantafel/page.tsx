@@ -17,7 +17,7 @@ export default async function TeamAanTafel() {
     <div className="flex flex-col items-center w-full">
       <div className="w-full md:h-96 max-md:py-16 max-md:container text-center flex flex-col items-center justify-center gap-16 bg-groen">
         <h1 className="text-paars">Haal meer uit mens en machine</h1>
-        <p className="text-paars text-lg w-2/3 text-center">Mensen en machines effectiever, efficiënter en slimmer laten werken, dat is onze expertise. Nodig ons team aan tafel voor een vrijblijvend gesprek, en we komen met oplossingen die zich in no-time terugverdienen.</p>
+        <p className="text-paars text-lg w-2/3 text-center md:container">Mensen en machines effectiever, efficiënter en slimmer laten werken, dat is onze expertise. Nodig ons team aan tafel voor een vrijblijvend gesprek, en we komen met oplossingen die zich in no-time terugverdienen.</p>
       </div>
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 md:pt-32 py-8">
         <div className="md:w-1/2 flex flex-col gap-4">

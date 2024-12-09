@@ -182,7 +182,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className='xl:w-2/3 border border-donkergroen p-8 xl:p-16'>
+    <div className='container xl:w-2/3 border border-donkergroen p-8 xl:p-16'>
       <div className='flex flex-col md:flex-row justify-between items-center gap-4 pb-16'>
         <h2 className='text-paars font-light'>Neem contact op</h2>
         <p className='text-destructive font-aktiv-grotesk-extended'>*Invullen van dit veld is vereist</p>

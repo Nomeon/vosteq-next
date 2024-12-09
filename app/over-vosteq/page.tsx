@@ -13,9 +13,9 @@ export default function OverVosteq() {
   return (
     <div className="flex flex-col items-center w-full">
       <Popup />
-      <div className="w-full md:h-96 max-md:py-16 flex flex-col items-center justify-center gap-16 bg-gradient-to-br from-paars to-groen from-60%">
+      <div className="w-full md:h-96 max-md:py-16 max-md:container text-center flex flex-col items-center justify-center gap-16 bg-gradient-to-br from-paars to-groen from-60%">
         <h1 className="text-wit">Over Vosteq</h1>
-        <p className="text-wit text-lg w-2/3 text-center">Bij Vosteq staan we voor duurzame groei en innovatie in de MKB-maakindustrie. Met meer dan 25 jaar ervaring helpen we bedrijven processen te optimaliseren, medewerkers te inspireren en technologie slim te benutten. Ons doel? Samen met jou bouwen aan een efficiëntere, toekomstbestendige organisatie die blijvend impact maakt.</p>
+        <p className="text-wit text-lg w-2/3 text-center md:container">Bij Vosteq staan we voor duurzame groei en innovatie in de MKB-maakindustrie. Met meer dan 25 jaar ervaring helpen we bedrijven processen te optimaliseren, medewerkers te inspireren en technologie slim te benutten. Ons doel? Samen met jou bouwen aan een efficiëntere, toekomstbestendige organisatie die blijvend impact maakt.</p>
       </div>
       {/* top */}
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 md:pt-32 py-8">

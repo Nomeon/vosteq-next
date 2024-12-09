@@ -15,7 +15,7 @@ export default function OnzeAanpak() {
       <Popup />
       <div className="w-full md:h-96 max-md:py-16 max-md:container text-center flex flex-col items-center justify-center gap-16 bg-gradient-to-br from-paars to-groen from-60%">
         <h1 className="text-wit">Onze aanpak in 5 fasen</h1>
-        <p className="text-wit text-lg w-2/3 text-center">Bij Vosteq geloven we in het benutten van potentieel door een gestructureerde aanpak. Onze werkwijze omvat vijf fasen die naadloos op elkaar aansluiten. </p>
+        <p className="text-wit text-lg w-2/3 text-center md:container">Bij Vosteq geloven we in het benutten van potentieel door een gestructureerde aanpak. Onze werkwijze omvat vijf fasen die naadloos op elkaar aansluiten. </p>
       </div>
       {/* top */}
       <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 md:pt-32 py-8">
