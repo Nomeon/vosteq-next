@@ -1,6 +1,7 @@
+import 'leaflet/dist/leaflet.css'
+import "./globals.css";
 import { LanguageProvider } from "@inlang/paraglide-next"
 import { languageTag } from "@/paraglide/runtime.js"
-import "./globals.css";
 import { Header } from "@/components/nav/header";
 import { Footer } from "@/components/nav/footer";
 import { SpeedInsights } from '@vercel/speed-insights/next';

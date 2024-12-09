@@ -275,3 +275,17 @@ a .leaflet-attribution-flag {
 .leaflet-left, .leaflet-bottom, .leaflet-control, .leaflet-pane {
   z-index: 1!important;
 }
+
+/* Style leaflet buttons */
+.leaflet-control-zoom-in span, .leaflet-control-zoom-out span {
+  color: #88268E;
+}
+
+.leaflet-control-zoom-in:hover span, .leaflet-control-zoom-out:hover span {
+  color: #6ABEC0;
+}
+
+.leaflet-bar a:hover, .leaflet-bar a:focus {
+  background-color: #FFF;
+}
+

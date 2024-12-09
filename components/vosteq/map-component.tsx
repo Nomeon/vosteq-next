@@ -3,7 +3,6 @@
 import { useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import L, { LatLngTuple} from 'leaflet'
-import 'leaflet/dist/leaflet.css'
 
 const position: LatLngTuple = [52.338306, 6.684023]
 const customIcon = L.divIcon({
@@ -33,7 +32,7 @@ const MapComponent = () => {
       <MapContainer center={position} zoom={13} className='w-full h-full'>
         <ForceResize />
         <TileLayer 
-          url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
         <Marker position={position} icon={customIcon}>
