@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/vosteq/contact-form";
 import DecoRight from "@/components/vosteq/deco-right";
 import { Icon } from "@iconify/react";
-import MapComponent from "@/components/vosteq/map";
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
   title: "Neem contact op met Vosteq | Vosteq",
   description: "Ontdek hoe Vosteq jouw bedrijf kan helpen met procesoptimalisatie en innovatie. Neem vandaag nog contact op voor een vrijblijvend gesprek en ontdek de mogelijkheden!",
 };
+
+const DynamicMapComponent = dynamic(() => import('@/components/vosteq/map-component'), { ssr: false });
 
 export default function Contact() {
   return (
@@ -28,12 +30,12 @@ export default function Contact() {
           <DecoRight imageSrc="/images/parttime-innovatieteam.webp" />
         </div>
       </div>
-      <div className="w-full flex items-center max-md:container justify-center pb-16">
+      <div className="w-full flex items-center max-md:container justify-center pb-32">
         <ContactForm />
       </div>
       <div className='bg-gradient-to-b from-paars to-groen from-30% w-full'>
-        <div className="container flex flex-row items-center w-full">
-          <div className="flex w-1/2 flex-col h-full justify-center gap-4 p-24">
+        <div className="container flex flex-col md:flex-row items-center w-full">
+          <div className="flex md:w-1/2 flex-col h-full justify-center gap-4 md:p-24 max-md:py-16">
             <h3 className="text-wit">Onze contactgegevens:</h3>
             <div className="flex gap-4 items-center">
               <Icon icon="mdi:location" className="text-wit w-6 h-6" />
@@ -56,8 +58,8 @@ export default function Contact() {
               <p className="text-wit font-aktiv-grotesk-extended">BTW-nummer: NL813420192B01</p>
             </div>
           </div>
-          <div className="w-1/2 h-full p-16">
-            <MapComponent />
+          <div className="md:w-1/2 w-full h-full md:p-16 max-md:pb-16">
+            <DynamicMapComponent />
           </div>
         </div>
       </div>

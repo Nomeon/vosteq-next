@@ -265,3 +265,13 @@ html body[data-scroll-locked] {
   margin-right: 0px!important;
   overflow: visible!important;
 }
+
+/* Hide Ukraine flag */
+a .leaflet-attribution-flag {
+  display: none!important;
+}
+
+/* Hide leaflet under nav-menu */
+.leaflet-left, .leaflet-bottom, .leaflet-control, .leaflet-pane {
+  z-index: 1!important;
+}

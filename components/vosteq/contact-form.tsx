@@ -50,10 +50,6 @@ const topicItems = [
       {
         itemName: 'Innovatie, toepassen nieuwe technologie',
         value: 'ims-innovatie'
-      },
-      {
-        itemName: 'Overig:',
-        value: 'ims-overig'
       }
     ]
   },
@@ -67,10 +63,6 @@ const topicItems = [
       {
         itemName: 'Digitalisering / data / AI in productie',
         value: 'dit-digitalisering'
-      },
-      {
-        itemName: 'Overig:',
-        value: 'dit-overig'
       }
     ]
   },
@@ -108,10 +100,6 @@ const topicItems = [
       {
         itemName: 'Industrie 4.0',
         value: 'ops-industrie40'
-      },
-      {
-        itemName: 'Overig:',
-        value: 'ops-overig'
       }
     ]
   },
@@ -130,9 +118,14 @@ const topicItems = [
         itemName: 'Expertise ondersteuning',
         value: 'ol-organisatieontwikkeling'
       },
+    ]
+  },
+  {
+    name: "Overig",
+    items: [
       {
-        itemName: 'Overig:',
-        value: 'ol-overig'
+        itemName: 'De vraag is omschreven in het bericht',
+        value: 'overig'
       }
     ]
   }
@@ -205,7 +198,7 @@ export function ContactForm() {
                       <SelectGroup key={`select-${item.name}`}>
                         <SelectLabel className='text-paars font-aptos'>{item.name}</SelectLabel>
                         {item.items.map((subItem) => (
-                          <SelectItem className='font-aptos' value={subItem.value}>{subItem.itemName}</SelectItem>
+                          <SelectItem className='font-aptos' key={`select-${item.name}-${subItem.value}`} value={subItem.value}>{subItem.itemName}</SelectItem>
                         ))}
                       </SelectGroup>
                     ))}
