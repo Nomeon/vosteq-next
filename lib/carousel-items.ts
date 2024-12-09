@@ -2,10 +2,8 @@ import Bob from "@/public/images/experts/Bob_Selker.webp";
 import Bram from '@/public/images/experts/Bram_van_der_Most.webp';
 import Christiaan from "@/public/images/experts/Christiaan_Kruims.webp";
 import Daniel from "@/public/images/experts/Daniel_Kiemeneij.webp";
-import Frank from "@/public/images/experts/Frank_van_Dijk.webp";
 import Harry from "@/public/images/experts/Harry_van_de_Vosse.webp";
 import Henno from "@/public/images/experts/Henno_Staal.webp";
-// Herman van Ommen
 import Ingrid from "@/public/images/experts/Ingrid_Genger.webp";
 // Jan-Willem Olde Kalter
 import Joost from "@/public/images/experts/Joost_ter_Doest.webp";
@@ -25,7 +23,6 @@ import Tom from "@/public/images/experts/Tom_Hassing.webp";
 import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
 import Wijbrand from '@/public/images/experts/Wijbrand_Medendorp.webp';
 // Willem Lenselink
-// Wim Brink
 
 export const carouselItems = [
     {
@@ -43,11 +40,11 @@ export const carouselItems = [
       description: "Van nature een optimistisch en resultaatgericht persoon. Ik weet snel en effectief te schakelen bij veranderende omstandigheden en combineer dit met een sterk creatief probleemoplossend vermogen.",
       imageSrc: Ronald
     },
-    // {
-    //   name: "Maarten Woertman",
-    //   description: "",
-    //   imageSrc: Maarten_Woertman
-    // },
+    {
+      name: "Maarten Woertman",
+      description: "Bedrijfseconoom en business architect met bijna 30 jaar ervaring in de maakindustrie. Creëert strategische verbeteringen en zorgt voor pragmatische oplossingen en optimalisatie van Productie en Logistiek.",
+      imageSrc: Maarten_Woertman
+    },
     {
       name: "Christiaan Kruims",
       description: "Als adviseur weet ik, geen bedrijf is hetzelfde. Mijn missie is, samen met directie en medewerkers te zoeken naar de beste organisatie inpassing, die aansluit bij de ontwikkeling van het bedrijf.",
@@ -78,20 +75,15 @@ export const carouselItems = [
       description: "Als IT-specialist zorg ik voor IT-oplossingen die bedrijfsprocessen versterken. Op het snijvlak tussen bedrijfskunde en informatica vertaal ik de klantvraag naar een passende oplossing.",
       imageSrc: Stijn
     },
-    // {
-    //   name: "Joyce Kloosterman",
-    //   description: "",
-    //   imageSrc: Joyce
-    // },
+    {
+      name: "Joyce Kloosterman",
+      description: "Als transitiemanager combineer ik mijn technische achtergrond met mijn passie voor persoonlijke ontwikkeling. Met een creatieve en hands-on aanpak en zet ik in op eigenaarschap, bewustwording, plezier en energie.",
+      imageSrc: Joyce
+    },
     // {
     //   name: "Daniel Kiemeneij",
     //   description: "",
     //   imageSrc: Daniel
-    // },
-    // {
-    //   name: "Frank van Dijk",
-    //   description: "",
-    //   imageSrc: Frank
     // },
     {
       name: "Bob Selker",
@@ -108,11 +100,11 @@ export const carouselItems = [
       description: "Als adviseur en interim-manager help ik bedrijven klantgericht te groeien. Met expertise in strategie, verkoop en service breng ik structuur, focus en resultaat. Ik vertaal visie naar actie.",
       imageSrc: Maarten_Wijnheijmer
     },
-    // {
-    //   name: "Patrick Overmaat",
-    //   description: "",
-    //   imageSrc: Patrick
-    // },
+    {
+      name: "Patrick Overmaat",
+      description: "Als automatiseringsspecialist breng ik mechatronica en bedrijfskunde samen om maatwerkoplossingen te ontwikkelen. Ik optimaliseer productieprocessen gedreven door technische innovatie en klantgerichte samenwerking.",
+      imageSrc: Patrick
+    },
     {
       name: "Ruud Pullen",
       description: "Met visie en als generalist, ervaringsdeskundige en rustgevend klankbord voor directies, plaatsen we samen de stip-op-de-horizon en pakken we door op de verdere organisatieontwikkeling. Lijden wordt leiden.",
@@ -128,11 +120,11 @@ export const carouselItems = [
       description: "Met 40 jaar ervaring help ik ondernemers met procesverbetering, ERP-optimalisatie en maatwerkoplossingen. Samen realiseren we duurzame groei, meer efficiëntie en een toekomstbestendige organisatie.",
       imageSrc: Rens
     },
-    // {
-    //   name: "Sibbele Douma",
-    //   description: "",
-    //   imageSrc: Sibbele
-    // },
+    {
+      name: "Sibbele Douma",
+      description: "Als adviseur en interim-manager creëer ik structuur en verandering om organisaties te versterken. Met mijn bedrijfskundige en technische ervaring vertaal ik strategie naar concrete resultaten op de werkvloer.",
+      imageSrc: Sibbele
+    },
     {
       name: "Wijbrand Medendorp",
       description: "Creatieve trouble-shooter met oog voor mens en machine. Ik verbeter bedrijfsresultaten duurzaam door voordoen, samen doen, laten doen en los hardnekkige problemen structureel op met statistische meet en analyse techniek.",

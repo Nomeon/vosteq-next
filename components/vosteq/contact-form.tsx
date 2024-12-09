@@ -124,7 +124,7 @@ const topicItems = [
     name: "Overig",
     items: [
       {
-        itemName: 'De vraag is omschreven in het bericht',
+        itemName: 'Omschrijf je vraag in het bericht',
         value: 'overig'
       }
     ]
@@ -134,20 +134,22 @@ const topicItems = [
 export const formSchema = z.object({
   topic: z.string({
     required_error: 'Kies een topic',
+  }).min(1, {
+    message: 'Kies een topic',
   }),
   naam: z.string({
     required_error: 'Vul je naam in',
   }).min(3, {
-    message: 'Een naam moet minimaal 3 karakters lang zijn',
+    message: 'Naam moet minimaal 3 tekens bevatten',
   }).max(50, {
-    message: 'Een naam kan maximaal 50 karakters lang zijn',
+    message: 'Naam kan maximaal 50 tekens bevatten',
   }),
   onderwerp: z.string({
     required_error: 'Vul een onderwerp in',  
   }).min(3, {
-    message: 'Een onderwerp moet minimaal 3 karakters lang zijn',
+    message: 'Onderwerp moet minimaal 3 tekens bevatten',
   }).max(50, {
-    message: 'Een onderwerp kan maximaal 50 karakters lang zijn',
+    message: 'Onderwerp kan maximaal 50 tekens bevatten',
   }),
   email: z.string({
     required_error: 'Vul je e-mailadres in',
@@ -156,9 +158,9 @@ export const formSchema = z.object({
   }),
   telefoonnummer: z.string(),
   bericht: z.string().min(10, {
-    message: 'Een bericht moet minimaal 10 karakters lang zijn',
+    message: 'Bericht moet minimaal 10 tekens bevatten',
   }).max(500, {
-    message: 'Een bericht kan maximaal 500 karakters lang zijn',
+    message: 'Bericht kan maximaal 500 tekens lang zijn',
   })
 })
 
@@ -181,10 +183,14 @@ export function ContactForm() {
 
   return (
     <div className='xl:w-2/3 border border-donkergroen p-8 xl:p-16'>
+      <div className='flex flex-col md:flex-row justify-between items-center gap-4 pb-16'>
+        <h2 className='text-paars font-light'>Neem contact op</h2>
+        <p className='text-destructive font-aktiv-grotesk-extended'>*Invullen van dit veld is vereist</p>
+      </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-8">
-          <div className='flex w-full gap-4 items-center'>
-            <p className='text-paars text-base font-medium whitespace-nowrap font-aktiv-grotesk-extended'>Ik heb interesse in:</p>
+          <div className='flex flex-col md:flex-row w-full gap-4 items-center'>
+            <p className='text-paars text-base font-medium whitespace-nowrap font-aktiv-grotesk-extended'>Ik heb interesse in:*</p>
             <FormField control={form.control} name="topic" render={({ field }) => (
               <FormItem className='w-full'>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -204,17 +210,17 @@ export function ContactForm() {
                     ))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage className='absolute' />
               </FormItem>
             )} />
           </div>
-          <div className='flex gap-16 w-full'>
+          <div className='flex flex-col md:flex-row gap-8 md:gap-16 w-full'>
             <FormField control={form.control} name="naam" render={({ field }) => (
               <FormItem className='w-full'>
                 <FormControl>
                   <Input placeholder="Naam*" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage className='absolute'/>
               </FormItem>
             )} />
             <FormField control={form.control} name="onderwerp" render={({ field }) => (
@@ -222,7 +228,7 @@ export function ContactForm() {
                 <FormControl>
                   <Input placeholder="Onderwerp*" {...field} />
                 </FormControl>
-                <FormMessage />
+                <FormMessage className='absolute' />
               </FormItem>
             )} />
           </div>
@@ -231,7 +237,7 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="E-mailadres*" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className='absolute'/>
             </FormItem>
           )} />
           <FormField control={form.control} name="telefoonnummer" render={({ field }) => (
@@ -248,10 +254,10 @@ export function ContactForm() {
               <FormControl>
                 <Textarea placeholder='...' {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className='absolute' />
             </FormItem>
           )} />
-          <div>
+          <div className='pt-8'>
             <button type='submit' className="btn-solid">Verzenden</button>
           </div>
         </form>
