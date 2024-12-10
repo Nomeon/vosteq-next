@@ -5,13 +5,11 @@ import WatLevertHetOp from '@/components/vosteq/wat-levert-het-op';
 import BottomCta from '@/components/vosteq/bottom-cta';
 
 export const metadata: Metadata = {
-  title: "Vosteq | MVO-beleid",
-  description: "Aan het bouwen!",
+  title: "Werken bij Vosteq: Bouw aan Innovatie in de Maakindustrie | Vosteq",
+  description: "Wil jij werken bij Vosteq? Sluit je aan bij een innovatief team dat bedrijven helpt groeien en innoveren. Bekijk onze vacatures in de maakindustrie.",
 };
 
-export default function MVOBeleid() {
-
-
+export default function WerkenBijVosteq() {
   const steps = [
     {
     icon: 'mdi:heart',
@@ -29,7 +27,6 @@ export default function MVOBeleid() {
     description: 'in een dynamische omgeving'
     }
   ];
-
 
   return (
     <div className='flex flex-col'>

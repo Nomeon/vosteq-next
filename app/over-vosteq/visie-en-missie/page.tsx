@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import { Popup } from '@/components/ui/popup';
 import type { Metadata } from "next";
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
+import DecoRight from '@/components/vosteq/deco-right';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function VisieEnMissie() {
           <p>Wij zijn jouw betrouwbare partner die niet alleen adviseert, maar ook actief bijdraagt aan de uitvoering en het succes van jouw projecten.</p>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc="/images/parttime-innovatieteam.webp" />
         </div>
       </div>
       <WatLevertHetOp omschrijving='Hoe wij invulling geven aan onze visie en missie:' steps={steps} />

@@ -1,24 +1,16 @@
-import Image from 'next/image';
 import { Popup } from '@/components/ui/popup';
 import type { Metadata } from "next";
 import { WatLevertHetOp } from "@/components/vosteq/wat-levert-het-op";
+import DecoRight from '@/components/vosteq/deco-right';
 import { WerkStappen } from '@/components/vosteq/werk-stappen';
 import { BottomCta } from '@/components/vosteq/bottom-cta';
 
 export const metadata: Metadata = {
-  title: "Vosteq | Waarden en normen",
-  description: "Aan het bouwen!",
+  title: "Waarden en Normen: Betrouwbare Partner voor MKB-Maakbedrijven | Vosteq ",
+  description: "Ontdek hoe de waarden en normen van Vosteq bijdragen aan duurzame groei en succes voor MKB-maakbedrijven. Lees meer over onze werkwijze. ",
 };
 
 export default function WaardenEnNormen() {
-//   Betrouwbaarheid: Je kunt rekenen op een partner die zijn beloftes nakomt.
-// Betrokkenheid: Wij zetten ons volledig in voor jouw succes.
-// Innovatie: Wij bieden oplossingen die jouw bedrijf helpen voorop te blijven lopen.
-// Duurzame groei: Onze aanpak is gericht op blijvende waarde en maatschappelijke verantwoordelijkheid.
-
-
-
-
   const steps = [
     {
       'icon': 'mdi:verified',
@@ -92,7 +84,7 @@ export default function WaardenEnNormen() {
           </div>
         </div>
         <div className="md:w-1/2 container relative pb-16">
-          <Image className='object-cover' src="/images/deskundigen.webp" alt='Deskundigen' width={650} height={550} />
+          <DecoRight imageSrc="/images/oplossingen.webp" />
         </div>
       </div>
       <WerkStappen title='Onze normen:' accordionItems={accordionItems} />

@@ -37,7 +37,7 @@ export default function OnzeAanpak() {
               <p className="font-aktiv-grotesk-extended text-paars">Wendbare richting</p>
               <p className="grow">Met een helder inzicht ontwikkelen we een flexibel strategisch plan. Door de sprint-methode zorgen we voor snelle resultaten en een wendbare aanpak, zodat jouw organisatie zich kan aanpassen aan veranderende omstandigheden en kansen optimaal benut.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/diensten/projectmanagement'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/onze-aanpak/strategisch-plan'}>Lees verder</Link></button>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function OnzeAanpak() {
               <p className="font-aktiv-grotesk-extended text-paars">Meetbaar succes</p>
               <p className="grow">Het eindpunt van onze aanpak is het behalen van tastbare resultaten. Verbeterde efficiëntie, verhoogde winstgevendheid en een toekomstbestendige organisatie zijn slechts enkele van de voordelen die onze klanten ervaren.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/onze-aanpak/inzicht'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/onze-aanpak/resultaat'}>Lees verder</Link></button>
               </div>
             </div>
           </div>

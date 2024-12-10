@@ -29,7 +29,7 @@ export default function OverVosteq() {
               <p className="font-aktiv-grotesk-extended text-paars">Het doel van Vosteq</p>
               <p className="grow">Ontdek hoe wij werken aan een bloeiende MKB-maakindustrie met praktische oplossingen en duurzame groei.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/onze-aanpak/inzicht'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/over-vosteq/visie-en-missie'}>Lees verder</Link></button>
               </div>
             </div>
             <div className="flex flex-col md:w-1/2 gap-4">
@@ -37,7 +37,7 @@ export default function OverVosteq() {
               <p className="font-aktiv-grotesk-extended text-paars">De kernwaarden van Vosteq</p>
               <p className="grow">Leer over de kernwaarden die onze aanpak onderscheiden, zoals integriteit, betrokkenheid en duurzaamheid.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/diensten/projectmanagement'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/over-vosteq/waarden-en-normen'}>Lees verder</Link></button>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function OverVosteq() {
               <p className="font-aktiv-grotesk-extended text-paars">Team van specialisten</p>
               <p className="grow">Maak kennis met ons team van specialisten die jouw organisatie helpen transformeren.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/onze-aanpak/inspiratie'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/over-vosteq/de-veranderexperts'}>Lees verder</Link></button>
               </div>
             </div>
             <div className="flex flex-col md:w-1/3 gap-4">
@@ -66,7 +66,7 @@ export default function OverVosteq() {
               <p className="font-aktiv-grotesk-extended text-paars">Het innovatie-team</p>
               <p className="grow"> Wil je deel uitmaken van ons innovatie-team? We komen graag met je in contact!</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/onze-aanpak/begeleiding'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/over-vosteq/werken-bij-vosteq'}>Lees verder</Link></button>
               </div>
             </div>
             <div className="flex flex-col md:w-1/3 gap-4">
@@ -74,7 +74,7 @@ export default function OverVosteq() {
               <p className="font-aktiv-grotesk-extended text-paars">Maatschappelijk verantwoord ondernemen</p>
               <p className="grow">Lees hoe wij maatschappelijk verantwoord ondernemen omarmen en bijdragen aan een duurzamere toekomst.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/onze-aanpak/inzicht'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/over-vosteq/mvo-beleid'}>Lees verder</Link></button>
               </div>
             </div>
           </div>

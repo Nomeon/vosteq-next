@@ -37,7 +37,7 @@ export default function Diensten() {
               <p className="font-aktiv-grotesk-extended text-paars">Van onbenut potentieel naar concreet succes</p>
               <p className="grow">Vosteq helpt jouw organisatie om verborgen kansen te benutten en groeibarrières te doorbreken. Samen realiseren we een toekomstgerichte aanpak voor duurzame resultaten.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/diensten/projectmanagement'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/diensten/innovatie-en-verandertrajecten'}>Lees verder</Link></button>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Diensten() {
               <p className="font-aktiv-grotesk-extended text-paars">Hands-on begeleiding voor elk bedrijfsproces</p>
               <p className="grow">Waar je team behoefte heeft aan kennis en ervaring, bieden wij praktische ondersteuning. Met onze multidisciplinaire expertise vullen we tijdelijk jouw capaciteit aan en zorgen we voor structurele verbeteringen.</p>
               <div className="pt-4 md:pt-8">
-                <button className="btn-outline"><Link href={'/diensten/interim-management'}>Lees verder</Link></button>
+                <button className="btn-outline"><Link href={'/diensten/expertise-on-demand'}>Lees verder</Link></button>
               </div>
             </div>
             <div className="flex flex-col w-full md:w-1/2 gap-4">

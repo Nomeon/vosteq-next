@@ -7,6 +7,7 @@ import { NewsForm } from "@/components/vosteq/news-form";
 import { Experts } from "@/components/vosteq/experts";
 import { Popup } from "@/components/ui/popup";
 import { datoFetch, PAGE_CONTENT_QUERY } from '@/lib/datocms';
+import BottomCta from "@/components/vosteq/bottom-cta";
 
 export const metadata: Metadata = {
   title: "Optimaliseer jouw MKB-bedrijf | Vosteq",
@@ -24,7 +25,8 @@ export default async function Home() {
       <Verbeteren />
       <Experts />
       <VosteqCarousel cases={allCases} />
-      <NewsForm />
+      {/* <NewsForm /> */}
+      <BottomCta titel="Neem contact met ons op" paragraph="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen? Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig."/>
     </div>
   );
 }

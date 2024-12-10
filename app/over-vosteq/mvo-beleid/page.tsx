@@ -5,12 +5,11 @@ import WatLevertHetOp from '@/components/vosteq/wat-levert-het-op';
 import BottomCta from '@/components/vosteq/bottom-cta';
 
 export const metadata: Metadata = {
-  title: "Vosteq | MVO-beleid",
-  description: "Aan het bouwen!",
+  title: "MVO-beleid: Duurzaam Ondernemen | Vosteq",
+  description: "Lees hoe Vosteq met maatschappelijk verantwoord ondernemen werkt aan duurzaamheid, ethisch ondernemen en maatschappelijke impact in de maakindustrie.",
 };
 
 export default function MVOBeleid() {
-
   const steps = [
     {
     icon: 'mdi:heart',

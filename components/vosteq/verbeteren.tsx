@@ -14,18 +14,15 @@ import { StepCardProps } from "@/lib/definitions";
 
 const Verbeteren = () => {
   const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description, href }) => (
-    <Link href={href} className="max-md:h-full w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
+    <div className="max-md:h-full w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
       <div className="flex items-center justify-center h-32">
         <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon={icon} width={60} height={60} />
       </div>
       <h4 className="text-paars text-xl">{title}</h4>
       <Separator className="bg-paars my-2" />
       <p className="text-donkergroen font-aktiv-grotesk-extended font-semibold mb-4 group-hover:text-wit transition-all duration-200">{subtitle}</p>
-      <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200 grow">{description}</p>
-      <div className='mt-auto py-4'>
-        <p className="font-aktiv-grotesk-extended text-base text-paars group-hover:text-wit transition-all duration-200">Meer {">"}</p>
-      </div>
-    </Link>
+      <p className="text-diepgrijs font-aktiv-grotesk-extended group-hover:text-wit transition-all duration-200 grow pb-8">{description}</p>      
+    </div>
   );
 
   const steps = [
