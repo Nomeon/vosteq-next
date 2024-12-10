@@ -46,7 +46,7 @@ const VeranderExperts = () => {
                     </div>
                 ))}
             </div>
-            <Carousel className="w-full" setApi={setApi}>
+            <Carousel className="w-full md:hidden" setApi={setApi}>
                 <CarouselContent>
                 {carouselItems.map((item, idx) => (
                     <CarouselItem key={idx} className="basis-2/3 md:basis-1/4 flex flex-col relative">
