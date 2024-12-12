@@ -65,8 +65,8 @@ export default function WaardenEnNormen() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>De basis van ons succes</p>
           <h1 className="text-paars">Waarden en normen</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq vormen onze waarden de ruggengraat van alles wat we doen. Ze sturen onze beslissingen, ons gedrag en de manier waarop we samenwerken met onze klanten in de maakindustrie. Deze waarden zijn diepgeworteld in onze bedrijfscultuur en onderscheiden ons als een betrouwbare partner voor MKB-maakbedrijven.</p>
@@ -83,7 +83,7 @@ export default function WaardenEnNormen() {
               <p>Wij geloven in duurzame oplossingen die niet alleen vandaag impact maken, maar ook bijdragen aan een betere toekomst.</p>
           </div>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc="/images/oplossingen.webp" />
         </div>
       </div>

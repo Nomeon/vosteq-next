@@ -65,15 +65,15 @@ export default function StrategischPlan() {
     return (
         <div className='flex flex-col'>
             <Popup />
-            <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-                <div className="md:w-1/2 flex flex-col gap-4">
+            <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+                <div className="lg:w-1/2 flex flex-col gap-4">
                     <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Wendbaar naar succes</p>
                     <h1 className="text-paars">Strategisch plan</h1>
                     <p className="font-aktiv-grotesk-extended text-paars">Na het verkrijgen van een diepgaand inzicht in jouw bedrijf, gaan we bij Vosteq aan de slag met een strategisch plan dat fungeert als routekaart naar jouw bedrijfsdoelen. Onze plannen zijn niet alleen theoretisch sterk, maar ook praktisch uitvoerbaar en afgestemd op de realiteit van jouw MKB-maakbedrijf.</p>
-                    <h3 className='pt-8 text-paars max-md:text-2xl'>Flexibele en wendbare aanpak</h3>
+                    <h3 className='pt-8 text-paars max-lg:text-2xl'>Flexibele en wendbare aanpak</h3>
                     <p className='text-diepgrijs'>Wij geloven dat een succesvol strategisch plan flexibel en wendbaar moet zijn, vooral bij complexe projecten. Daarom werken we met de sprint-methode: korte, intensieve werkperiodes waarin we ons richten op de deelprojecten met de hoogste prioriteit. Hierdoor realiseren we snel zichtbare resultaten, blijven we dynamisch en kunnen we inspelen op veranderende omstandigheden.</p>
                 </div>
-                <div className="md:w-1/2 container relative pb-16">
+                <div className="lg:w-1/2 container relative pb-16">
                     <DecoRight imageSrc='/images/strategischplan.webp' />
                 </div>
             </div>

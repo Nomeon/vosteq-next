@@ -2,7 +2,7 @@ export default function DecoRight(props: {
     imageSrc: string;
 }) {
     return (
-      <div className="relative w-full aspect-[18/21]">
+      <div className="relative sm:w-full md:w-2/3 lg:w-full aspect-[18/21]">
         <div
             className="absolute left-[7.1%] right-[9.33%] top-0 bottom-0 bg-gradient-to-r from-[#6ABEC0] to-[#88268E]"
         />

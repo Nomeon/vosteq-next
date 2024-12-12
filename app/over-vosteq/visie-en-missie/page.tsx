@@ -36,12 +36,12 @@ export default function VisieEnMissie() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Samenwerken aan een duurzame toekomst</p>
           <h1 className="text-paars">Onze visie: florerende MKB-maakbedrijven</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq zien we een toekomst waarin MKB-maakbedrijven niet alleen overleven, maar juist floreren. Wij geloven dat elk MKB-maakbedrijf de kracht heeft om te innoveren, groeien en een duurzame impact te maken in een wereld die constant verandert. Met de juiste inzet van technologie, mensen en processen kunnen MKB-maakbedrijven hun volledige potentieel bereiken en concurreren in een globaliserende markt.</p>
-          <h3 className='pt-8 text-paars max-md:text-2xl'>Onze missie: jouw partner in groei en innovatie</h3>
+          <h3 className='pt-8 text-paars max-lg:text-2xl'>Onze missie: jouw partner in groei en innovatie</h3>
           <p className='text-diepgrijs'>Bij Vosteq willen we MKB-maakbedrijven ondersteunen bij het realiseren van hun ambities. Onze missie is:</p>
           <ul className="flex flex-col gap-1 font-aptos text-base">
             <li className='list-disc list-inside'><b>Oplossingen op maat</b> bieden voor procesoptimalisatie</li>
@@ -50,7 +50,7 @@ export default function VisieEnMissie() {
           </ul>
           <p>Wij zijn jouw betrouwbare partner die niet alleen adviseert, maar ook actief bijdraagt aan de uitvoering en het succes van jouw projecten.</p>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc="/images/parttime-innovatieteam.webp" />
         </div>
       </div>

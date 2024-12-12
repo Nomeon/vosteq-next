@@ -69,19 +69,19 @@ export default function ExpertiseOnDemand() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Tijdelijke expertise op maat</p>
           <h1 className="text-paars">Expertise on demand</h1>
           <p className="font-aktiv-grotesk-extended text-paars">In de dynamische wereld van de maakindustrie kan tijdelijke versterking hét verschil maken. Bij Vosteq bieden we interim-specialisten die jouw MKB-maakbedrijf ondersteunen op cruciale momenten. Van technologische innovatie tot procesoptimalisatie: onze ervaren experts helpen jouw bedrijf vooruit, zonder de verplichting van een fulltime aanstelling.</p>
-          <h3 className='pt-8 text-paars max-md:text-2xl'>Tijdelijke versterking voor cruciale momenten</h3>
+          <h3 className='pt-8 text-paars max-lg:text-2xl'>Tijdelijke versterking voor cruciale momenten</h3>
           <p className='text-diepgrijs'>Bij Vosteq begrijpen we de uitdagingen waarmee MKB-maakbedrijven te maken hebben. Daarom bieden wij ervaren interim-managers en hoogopgeleide experts die jouw organisatie ondersteunen op momenten dat het écht nodig is.</p>
           <p className='pt-4 font-semibold'>Interim-managers: ervaren leiders in uitdagende situaties</p>
           <p className='text-diepgrijs'>Onze interim-managers zijn bewezen leiders met jarenlange ervaring in het succesvol navigeren van bedrijven door complexe en uitdagende omstandigheden. Ze bieden jouw organisatie tijdelijke versterking wanneer het erom gaat: bij transformaties die een sterke sturing vereisen, tijdens de implementatie van innovatieve processen of technologieën, of bij het aanpakken van complexe organisatorische uitdagingen. Met een combinatie van strategisch inzicht, praktische aanpak en leiderschap voegen onze interim-managers direct waarde toe. Ze weten precies wat er nodig is om impact te maken en resultaten te behalen.</p>
           <p className='pt-4 font-semibold'>Interim-experts: specialistische kennis op maat</p>
           <p className='text-diepgrijs'>Onze interim-experts zijn hoogopgeleide specialisten met diepgaande ervaring in de maakindustrie. Ze brengen de specifieke expertise mee die jouw organisatie nodig heeft om ambitieuze innovaties en projecten succesvol te realiseren. Of het nu gaat om technische vraagstukken, procesoptimalisatie of het ontwikkelen van nieuwe producten, onze interim-experts sluiten naadloos aan bij jouw team. Zo profiteer je direct van hun kennis en vaardigheden, zonder de verplichting van een langdurige aanstelling.</p>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc='/images/interimmanagement.webp' />
         </div>
       </div>

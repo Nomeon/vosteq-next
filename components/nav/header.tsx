@@ -173,7 +173,12 @@ const Header = () => {
           <div className='h-24 bg-groen flex flex-row items-center container'>
             <Link href='/contact' className='font-aktiv-grotesk text-wit font-bold w-1/3 flex justify-start'>Contact</Link>
             {/* <button className='h-8 w-1/3 flex justify-center'> */}
-            <Link href='https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Edisonstraat+11,+7601+PS+Almelo,+Nederland' className='h-8 w-1/3 flex justify-center'>
+            <Link 
+              href='https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Edisonstraat+11,+7601+PS+Almelo,+Nederland' 
+              target="_blank"
+              rel="noopener noreferrer" 
+              className='h-8 w-1/3 flex justify-center'
+            >
               <Icon icon='mdi:location-outline' className='text-wit w-8 h-8' />
             </Link>
             {/* </button> */}

@@ -36,8 +36,8 @@ export default function MVOBeleid() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Maatschappelijk verantwoord ondernemen bij Vosteq</p>
           <h1 className="text-paars">MVO-beleid</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq zien we maatschappelijk verantwoord ondernemen (MVO) als een integraal onderdeel van onze bedrijfsvoering. We nemen onze verantwoordelijkheid voor mens en milieu serieus en streven naar een positieve impact op de samenleving. Ons MVO-beleid richt zich op duurzaamheid, ethisch ondernemen en het ondersteunen van de gemeenschappen waarin we actief zijn.</p>
@@ -47,7 +47,7 @@ export default function MVOBeleid() {
             Met ons MVO-beleid zetten we ons actief in voor een betere toekomst. We creëren waarde op een duurzame manier, met oog voor de behoeften van toekomstige generaties. Daarnaast tonen we betrokkenheid door maatschappelijke initiatieven actief te ondersteunen en nemen we verantwoordelijkheid door in al onze activiteiten verantwoorde keuzes te maken.
           </p>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc='/images/Vosteq-Hapert-2018-1.webp'/>
         </div>
       </div>

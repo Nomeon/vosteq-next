@@ -64,15 +64,15 @@ export default function Directieadvies() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Organisatie verbetering</p>
           <h1 className="text-paars">Directie advies</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Succesvolle groei en duurzame winstgevendheid beginnen bij een solide interne basis. Bij Vosteq bieden we directieadvies op maat, gericht op het versterken van jouw organisatie van binnenuit. Door te focussen op jouw unieke kernkwaliteiten helpen we je om externe uitdagingen te overwinnen en kansen te benutten. Hierbij nemen we jouw organisatie en haar onderscheidende krachten als uitgangspunt.</p>
-          <h3 className='pt-8 text-paars max-md:text-2xl'>Diepgaande analyse</h3>
+          <h3 className='pt-8 text-paars max-lg:text-2xl'>Diepgaande analyse</h3>
           <p className='text-diepgrijs'>We beginnen met een diepgaande “inside-out” analyse van de interne processen, de bedrijfscultuur en de middelen in jouw organisatie. In plaats van veel nadruk te leggen op externe trends en bedreigingen, richten we ons eerst op wat jouw bedrijf uniek maakt en hoe je deze interne krachten kunt versterken om zo een concurrentievoordeel te creëren.</p>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc="/images/directieadvies.webp" />
         </div>
       </div>

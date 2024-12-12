@@ -69,15 +69,15 @@ export default function InnovatieEnVerandertrajecten() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Verandering zonder verstoring</p>
           <h1 className="text-paars">Innovatie- en verandertrajecten op maat</h1>
           <p className="font-aktiv-grotesk-extended text-paars">In de maakindustrie is het vinden van balans tussen dagelijkse operaties en innovatie cruciaal. Bij Vosteq begrijpen we dat verandertrajecten en nieuwe projecten een druk kunnen leggen op jouw team en processen. Daarom bieden we kosteneffectieve, parttime innovatie- en verbetertrajecten die jouw organisatie helpen groeien, zonder de kernactiviteiten te verstoren.</p>
-          <h3 className='pt-8 text-paars max-md:text-2xl'>Een parttime innovatieteam voor maximale impact tegen minimale kosten</h3>
+          <h3 className='pt-8 text-paars max-lg:text-2xl'>Een parttime innovatieteam voor maximale impact tegen minimale kosten</h3>
           <p className='text-diepgrijs'>Bij complexe transformaties is een geïntegreerde aanpak essentieel. Ons parttime innovatieteam bestaat uit directieadviseurs, projectmanagers, interim-managers en specialistische experts. Samen leveren we de kennis en kunde die nodig zijn om jouw doelen te realiseren – zonder de kosten van fulltime rollen.</p>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc='/images/projectmanagement.webp' />
         </div>
       </div>

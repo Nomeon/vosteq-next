@@ -60,15 +60,15 @@ export default function Begeleiding() {
     return (
         <div className='flex flex-col'>
             <Popup />
-            <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-                <div className="md:w-1/2 flex flex-col gap-4">
+            <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+                <div className="lg:w-1/2 flex flex-col gap-4">
                     <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Hands-on ondersteuning voor succesvolle verandering</p>
                     <h1 className="text-paars">Begeleiding</h1>
                     <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq begrijpen we dat verandering alleen slaagt met effectieve en praktische ondersteuning. Onze hands-on begeleiding zorgt ervoor dat jouw organisatie niet alleen weet wat er moet gebeuren, maar ook daadwerkelijk stappen zet om veranderingen door te voeren. <Link className="underline hover:text-donkergroen" href='/over-vosteq/de-veranderexperts'>Onze experts</Link> staan zij aan zij met jouw team om obstakels te overwinnen en duurzame resultaten te bereiken.</p>
-                    <h3 className='pt-8 text-paars max-md:text-2xl'>Adviseren en implementeren</h3>
+                    <h3 className='pt-8 text-paars max-lg:text-2xl'>Adviseren en implementeren</h3>
                     <p className='text-diepgrijs'>In de begeleidingsfase werken we nauw samen met jouw team om veranderingen soepel te laten verlopen. Wij gaan verder dan alleen adviseren: onze experts zijn actief betrokken bij de implementatie en bieden de nodige begeleiding om nieuwe processen en strategieën succesvol uit te rollen. Met onze aanpak leren jouw medewerkers niet alleen wát er moet veranderen, maar ook hóe ze deze veranderingen kunnen toepassen en borgen in de praktijk.</p>
                 </div>
-                <div className="md:w-1/2 container relative pb-16">
+                <div className="lg:w-1/2 container relative pb-16">
                     <DecoRight imageSrc='/images/begeleiding.webp' />
                 </div>
             </div>

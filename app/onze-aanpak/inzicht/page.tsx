@@ -53,12 +53,12 @@ export default function Inzicht() {
     return (
         <div className='flex flex-col'>
             <Popup />
-            <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-                <div className="md:w-1/2 flex flex-col gap-4">
+            <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+                <div className="lg:w-1/2 flex flex-col gap-4">
                     <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Basis voor succesvolle verbetering</p>
                     <h1 className="text-paars">Inzicht</h1>
                     <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat elke succesvolle transformatie begint met een grondig inzicht in jouw organisatie. Onze aanpak start daarom altijd met het volledig begrijpen van jouw MKB-maakbedrijf: van processen en structuren tot bedrijfscultuur en marktpositie. Door deze diepgaande analyse leggen we een stevig fundament voor oplossingen op maat die echt werken en blijvend resultaat opleveren.</p>
-                    <h2 className='pt-8 text-paars max-md:text-2xl text-3xl'>Gedetailleerde bedrijfsanalyse</h2>
+                    <h2 className='pt-8 text-paars max-lg:text-2xl text-3xl'>Gedetailleerde bedrijfsanalyse</h2>
                     <p>Onze "inzicht-fase" gaat verder dan een oppervlakkige blik. We duiken diep in jouw organisatie om helder te krijgen waar de kansen en uitdagingen liggen. Hierbij richten we ons op vier cruciale aspecten:</p>
                     <div className="flex flex-col gap-1 font-aptos text-base">
                         <p className='font-bold'>Bedrijfsprocessen:</p>
@@ -71,7 +71,7 @@ export default function Inzicht() {
                         <p>Waar staat jouw bedrijf in de markt? Welke kansen en bedreigingen spelen een rol?</p>
                     </div>
                 </div>
-                <div className="md:w-1/2 container relative pb-16">
+                <div className="lg:w-1/2 container relative pb-16">
                     <DecoRight imageSrc='/images/inzicht.webp' />
                 </div>
             </div>

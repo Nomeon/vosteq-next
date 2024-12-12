@@ -14,7 +14,7 @@ import { StepCardProps } from "@/lib/definitions";
 
 const Verbeteren = () => {
   const StepCard: FC<StepCardProps> = ({ icon, title, subtitle, description, href }) => (
-    <div className="max-md:h-full w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
+    <div className="max-lg:h-full w-56 outline outline-1 outline-groen px-4 flex flex-col flex-1 group hover:bg-groen transition-all duration-200">
       <div className="flex items-center justify-center h-32">
         <Icon className='text-groen group-hover:text-paars transition-all duration-200' icon={icon} width={60} height={60} />
       </div>
@@ -58,14 +58,14 @@ const Verbeteren = () => {
 
   return (
     <div className="container flex flex-col items-center py-16">
-    <h2 className="text-paars max-md:text-xl text-left md:text-center w-full">Verbeteren in 4 stappen</h2>
-    <div className="flex flex-row gap-4 py-12 max-md:hidden md:px-16 md:pb-16">
+    <h2 className="text-paars max-lg:text-xl text-left lg:text-center w-full">Verbeteren in 4 stappen</h2>
+    <div className="flex flex-row gap-4 py-12 max-lg:hidden lg:px-16 lg:pb-16">
       {steps.map((step, index) => (
         <StepCard key={index} icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} href={step.href} />
       ))}
     </div>
     {/* Mobile Carousel */}
-    <div className="w-full pt-4 md:hidden">
+    <div className="w-full pt-4 lg:hidden">
       <Carousel className="py-4">
         <CarouselContent>
           {steps.map((step, index) => (

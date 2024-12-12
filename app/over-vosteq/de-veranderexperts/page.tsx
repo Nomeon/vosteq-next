@@ -76,17 +76,17 @@ export default function DeVeranderexperts() {
     return (
       <div className='flex flex-col'>
         <div className="container">
-          <div className="flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-            <div className="md:w-1/2 flex flex-col gap-4">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+            <div className="lg:w-1/2 flex flex-col gap-4">
               <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Veranderexperts voor MKB-maakbedrijven</p>
               <h1 className="text-paars">De veranderexperts van Vosteq</h1>
               <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq werken we met een toegewijd team van ervaren verander-experts die jouw MKB-maakbedrijf helpen bij transformatie en groei. Onze specialisten brengen niet alleen diepgaande kennis en ervaring mee, maar ook een frisse blik en innovatieve ideeën.<br /><br />Wij gaan verder dan alleen adviseren: we staan naast jouw team om veranderingen door te voeren die écht werken en blijvend resultaat opleveren.</p>
             </div>
-            <div className="md:w-1/2 container relative pb-16">
+            <div className="lg:w-1/2 container relative pb-16">
               <DecoRight imageSrc="/images/Vosteq-Hapert-2018-1.webp" />
             </div>
           </div>
-          <h2 className="md:pb-16 pb-8 text-paars max-md:text-xl">Ons team van specialisten</h2>
+          <h2 className="lg:pb-16 pb-8 text-paars max-lg:text-xl">Ons team van specialisten</h2>
         </div>
         <VeranderExperts />
         <WerkStappen title='Expertise in alle facetten van bedrijfsvoering' accordionItems={accordionItems} />

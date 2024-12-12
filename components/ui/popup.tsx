@@ -16,7 +16,7 @@ const Popup = () => {
   return (
     <div>
       {isPopupVisible && (
-        <div className="z-30 fixed right-0 top-1/3 w-44 bg-geel  text-paars group hover:bg-groen hover:text-wit transition-all duration-200 max-md:hidden">
+        <div className="z-30 fixed right-0 top-1/3 w-44 bg-geel  text-paars group hover:bg-groen hover:text-wit transition-all duration-200 max-lg:hidden">
             <button onClick={closePopup} className="absolute top-0 right-0 p-2">
                 <Icon icon='mdi:close' className='text-paars group-hover:text-wit'/>
             </button>

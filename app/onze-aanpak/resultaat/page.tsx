@@ -60,12 +60,12 @@ export default function Resultaat() {
     return (
         <div className='flex flex-col'>
             <Popup />
-            <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-                <div className="md:w-1/2 flex flex-col gap-4">
+            <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+                <div className="lg:w-1/2 flex flex-col gap-4">
                     <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Duurzame veranderingen die werken</p>
                     <h1 className="text-paars">Resultaat</h1>
                     <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq draait alles om blijvende verbetering. Het doorvoeren van veranderingen is slechts de eerste stap; ons doel is om ervoor te zorgen dat nieuwe processen, systemen en strategieën duurzaam en succesvol blijven werken binnen jouw MKB-maakbedrijf.</p>
-                    <h3 className='pt-8 text-paars max-md:text-2xl'>Daadwerkelijk en blijvend effect</h3>
+                    <h3 className='pt-8 text-paars max-lg:text-2xl'>Daadwerkelijk en blijvend effect</h3>
                     <div className="flex flex-col gap-1 font-aptos text-base">
                         <p className='font-bold'>Bewaking van continuïteit:</p>
                         <p>We volgen de integratie van veranderingen en passen aan waar nodig om blijvende resultaten te waarborgen.</p>
@@ -75,7 +75,7 @@ export default function Resultaat() {
                         <p>Door regelmatig te evalueren, identificeren we kansen voor verdere verbetering en maximalisatie van resultaten.</p>
                     </div>
                 </div>
-                <div className="md:w-1/2 container relative pb-16">
+                <div className="lg:w-1/2 container relative pb-16">
                     <DecoRight imageSrc='/images/verbetering.webp' />
                 </div>
             </div>

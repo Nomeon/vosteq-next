@@ -53,12 +53,12 @@ export default function Inspiratie() {
   return (
     <div className='flex flex-col'>
       <Popup />
-      <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 py-4">
-        <div className="md:w-1/2 flex flex-col gap-4">
+      <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>De mens centraal</p>
           <h1 className="text-paars">Inspiratie</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq geloven we dat mensen het hart vormen van elk succesvol bedrijf. Of het nu gaat om onze eigen medewerkers, partners, of klanten: wij stellen mensen altijd centraal in alles wat we doen. Door mensen te ondersteunen, waarderen en betrekken, helpen we hen hun volledige potentieel te benutten. Dit leidt niet alleen tot hogere betrokkenheid en motivatie, maar ook tot duurzame groei en innovatie.</p>
-          <h3 className='pt-8 text-paars max-md:text-2xl'>De mens centraal bij Vosteq</h3>
+          <h3 className='pt-8 text-paars max-lg:text-2xl'>De mens centraal bij Vosteq</h3>
           <p className="">Onze benadering is gebaseerd op drie kernprincipes:</p>
           <div className="flex flex-col gap-1 font-aptos text-base">
             <p className='font-bold'>Respect en waardering:</p>
@@ -69,7 +69,7 @@ export default function Inspiratie() {
             <p>Door mensen actief te betrekken bij het veranderingsproces zorgen we voor eigenaarschap en betrokkenheid. Hun ideeën en inzichten zijn essentieel voor het succes van elke transformatie.</p>
           </div>
         </div>
-        <div className="md:w-1/2 container relative pb-16">
+        <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc='/images/inspiratie.webp' />
         </div>
       </div>

@@ -20,8 +20,8 @@ export default async function KlantCases() {
                 <h1 className="text-wit">Klant cases</h1>
                 <p className="text-wit text-lg w-2/3 text-center">Bij Vosteq helpen we MKB-maakbedrijven om hun volledige potentieel te benutten. Met onze diepgaande kennis en ervaring in procesoptimalisatie, innovatie en strategie, ondersteunen we bedrijven bij transformaties die duurzame resultaten opleveren.</p>
             </div>
-            <div className="container flex flex-col md:flex-row gap-16 md:gap-32 md:py-16 md:pt-32 py-4">
-                <div className="md:w-1/2 flex flex-col gap-4">
+            <div className="container flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 lg:pt-32 py-4">
+                <div className="lg:w-1/2 flex flex-col gap-4">
                     <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Klant cases</p>
                     <h2 className="text-paars">Succesverhalen uit de maakindustrie</h2>
                     <p className="font-aktiv-grotesk-extended text-paars">Ontdek hoe wij samen met onze klanten veranderingen hebben gerealiseerd die niet alleen werken, maar ook bijdragen aan een toekomstbestendige maakindustrie. Laat je inspireren door onze cases en zie wat mogelijk is met de juiste begeleiding en expertise.</p>
@@ -36,11 +36,11 @@ export default async function KlantCases() {
                     </div>
 
                 </div>
-                <div className="md:w-1/2 container relative pb-16">
+                <div className="lg:w-1/2 container relative pb-16">
                 <DecoRight imageSrc="/images/diensten.webp" />
                 </div>
             </div>
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 container justify-center pt-8 pb-32">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4 container justify-center pt-8 pb-32">
                 {allCases.map((caseData) => (
                     <div key={caseData.id} className="flex flex-col border border-donkergroen p-8 gap-4">
                         <div>
