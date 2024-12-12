@@ -39,8 +39,8 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
           <div className="flex flex-row gap-8">
             <p className="text-5xl text-paars font-extralight font-aktiv-grotesk-extended">{current}/{count}</p>
             <div className="flex flex-row items-center gap-2">
-              <button onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
-              <button onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
+              <button aria-label="carousel previous" onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
+              <button aria-label="carousel next" onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
                     "{caseItem.quote}"
                   </p>
                   <div className="flex-none">
-                    <button className="btn-outline font-semibold"><Link href={`/klant-cases/${caseItem.slug}`}>Bekijk case</Link></button>
+                    <button aria-label="bekijk case" className="btn-outline font-semibold"><Link href={`/klant-cases/${caseItem.slug}`}>Bekijk case</Link></button>
                   </div>
                 </div>
               </CarouselItem>
@@ -72,8 +72,8 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
         <div className="flex flex-row justify-between w-full lg:hidden pt-8">
           <p className="text-5xl text-paars font-extralight font-aktiv-grotesk-extended">{current}/{count}</p>
           <div className="flex flex-row items-center gap-2">
-            <button onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
-            <button onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
+            <button aria-label="carousel previous" onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
+            <button aria-label="carousel next" onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
           </div>
         </div>
       </div>

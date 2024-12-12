@@ -30,8 +30,8 @@ const Experts = () => {
         <h2 className="text-paars max-md:text-xl">De veranderexperts</h2>
         <div className="flex flex-row gap-8">
           <div className="flex flex-row items-center gap-2 max-md:hidden">
-            <button onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
-            <button onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
+            <button aria-label="previous in carousel" onClick={() => api?.scrollPrev()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-left" height={32}/></button>
+            <button aria-label="next in carousel" onClick={() => api?.scrollNext()} className="transition-all duration-200 outline-paars outline-1 outline h-10 w-10 flex items-center justify-center text-wit bg-paars hover:outline-groen hover:text-wit hover:bg-groen"><Icon icon="mdi:chevron-right" height={32}/></button>
           </div>
         </div>
       </div>
@@ -56,6 +56,7 @@ const Experts = () => {
                 <div className="w-full h-12 absolute bottom-0 flex flex-row justify-between items-center p-2 md:hidden">
                   <p className={`text-white font-aptos transition-all duration-300" pl-2 ${visibleOverlays[idx] ? 'opacity-0' : 'opacity-100'}`}></p>
                   <button
+                    aria-label="toggle overlay"
                     className="text-wit md:hidden"
                     onClick={() => toggleOverlay(idx)}
                   >

@@ -11,7 +11,7 @@ export default function BottomCta(props: {
           <h2 className='text-wit'>{props.titel}</h2>
           <p className='text-wit'>{props.paragraph}</p>
           <Link href='/contact'>
-            <button className='btn-solid'>Neem contact op</button>
+            <button aria-label='contact' className='btn-solid'>Neem contact op</button>
           </Link>
         </div>
       </div>
