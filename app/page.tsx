@@ -61,6 +61,7 @@ const jsonLd: (WithContext<Organization> | WithContext<WebSite> | WithContext<We
     "name": "Vosteq",
     "url": siteURL,
     "logo": `${siteURL}/logo.svg`,
+    "image": `${siteURL}/images/Vosteq-Hapert-2018-1.webp`,
     "description": description,
     "address": {
       "@type": "PostalAddress",
