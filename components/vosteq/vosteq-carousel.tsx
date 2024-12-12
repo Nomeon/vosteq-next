@@ -50,7 +50,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
               <CarouselItem key={idx} className="w-full flex md:gap-8 flex-col md:flex-row">
                 <div className="flex md:w-1/2 w-full">
                   <Image 
-                    className="object-cover"
+                    objectFit="cover"
                     data={caseItem.mainImage.responsiveImage}
                   />
                 </div>
