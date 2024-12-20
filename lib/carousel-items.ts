@@ -1,7 +1,7 @@
 import Bob from "@/public/images/experts/Bob_Selker.webp";
 import Bram from '@/public/images/experts/Bram_van_der_Most.webp';
 import Christiaan from "@/public/images/experts/Christiaan_Kruims.webp";
-import Daniel from "@/public/images/experts/Daniel_Kiemeneij.webp";
+// import Daniel from "@/public/images/experts/Daniel_Kiemeneij.webp";
 import Harry from "@/public/images/experts/Harry_van_de_Vosse.webp";
 import Henno from "@/public/images/experts/Henno_Staal.webp";
 import Ingrid from "@/public/images/experts/Ingrid_Genger.webp";
@@ -20,9 +20,9 @@ import Ruud from "@/public/images/experts/Ruud_Pullen.webp";
 import Sibbele from "@/public/images/experts/Sibbele_Douma.webp";
 import Stijn from "@/public/images/experts/Stijn_Nijhuis.webp";
 import Tom from "@/public/images/experts/Tom_Hassing.webp";
-import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
+// import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
 import Wijbrand from '@/public/images/experts/Wijbrand_Medendorp.webp';
-// Willem Lenselink
+import Willem from "@/public/images/experts/Willem_Lenselink.webp";
 
 export const carouselItems = [
     {
@@ -30,11 +30,11 @@ export const carouselItems = [
       description: "Betrokken directieadviseur en werktuigbouwkundige met passie voor innovatie, automatisering en robotisering. Graag realiseer ik meerwaarde en duurzaam resultaat, samen met ondernemers en onze teams.",
       imageSrc: Harry
     },
-    // {
-    //   name: "Willem Lenselink",
-    //   description: "Betrokken en resultaatgerichte directieadviseur, gespecialiseerd in procesoptimalisatie en organisatieontwikkeling. Samen met ondernemers en het team doe ik wat nodig is voor duurzame oplossingen en strategische verbeteringen.",
-    //   imagesrc: Willem
-    // },
+    {
+      name: "Willem Lenselink",
+      description: "Betrokken en resultaatgerichte directieadviseur, gespecialiseerd in procesoptimalisatie en organisatieontwikkeling. Samen met ondernemers en het team doe ik wat nodig is voor duurzame oplossingen en strategische verbeteringen.",
+      imageSrc: Willem
+    },
     {
       name: "Ronald de Witte",
       description: "Van nature een optimistisch en resultaatgericht persoon. Ik weet snel en effectief te schakelen bij veranderende omstandigheden en combineer dit met een sterk creatief probleemoplossend vermogen.",

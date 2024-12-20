@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -17,6 +17,14 @@ const Experts = () => {
   const [visibleOverlays, setVisibleOverlays] = useState(
     Array(carouselItems.length).fill(false)
   );
+
+  const [shuffledItems, setShuffledItems] = useState([...carouselItems]);
+
+  useEffect(() => {
+    const itemsCopy = [...carouselItems];
+    itemsCopy.sort(() => Math.random() - 0.5);
+    setShuffledItems(itemsCopy);
+  }, []);
 
   const toggleOverlay = (index: number) => {
     setVisibleOverlays((prev) =>
@@ -37,11 +45,11 @@ const Experts = () => {
       </div>
       <Carousel className="w-full" setApi={setApi}>
         <CarouselContent>
-          {carouselItems.map((item, idx) => (
+          {shuffledItems.map((item, idx) => (
             <CarouselItem key={idx} className="basis-2/3 md:basis-1/4 flex flex-col relative">
             <div className="relative group">
               <div className="relative overflow-hidden">
-                <Image className="w-full h-full" src={item.imageSrc} alt={item.name} />
+                <Image className="w-full h-full" src={item.imageSrc!} alt={item.name} />
             
                 {/* Overlay */}
                 <div

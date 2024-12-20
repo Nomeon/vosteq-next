@@ -1,7 +1,7 @@
 'use client'
 
 import { carouselItems } from "@/lib/carousel-items";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { 
     Carousel,
     CarouselApi,
@@ -17,6 +17,14 @@ const VeranderExperts = () => {
       Array(carouselItems.length).fill(false)
     );
 
+    const [shuffledItems, setShuffledItems] = useState([...carouselItems]);
+    
+    useEffect(() => {
+        const itemsCopy = [...carouselItems];
+        itemsCopy.sort(() => Math.random() - 0.5);
+        setShuffledItems(itemsCopy);
+    }, []);
+
     const toggleOverlay = (index: number) => {
         setVisibleOverlays((prev) =>
           prev.map((isVisible, i) => (i === index ? !isVisible : isVisible))
@@ -26,11 +34,11 @@ const VeranderExperts = () => {
     return (
         <div className="container pb-16 md:pb-32">
             <div className="grid md:grid-cols-4 grid-cols-1 gap-8 max-md:hidden">
-                {carouselItems.map((item, idx) => (
+                {shuffledItems.map((item, idx) => (
                     <div key={idx} className="basis-2/3 md:basis-1/4 flex flex-col relative">
                         <div className="relative group">
                             <div className="relative overflow-hidden">
-                                <Image className="w-full h-full" src={item.imageSrc} alt={item.name} />
+                                <Image className="w-full h-full" src={item.imageSrc!} alt={item.name} />
 
                                 {/* Overlay */}
                                 <div
@@ -48,11 +56,11 @@ const VeranderExperts = () => {
             </div>
             <Carousel className="w-full md:hidden" setApi={setApi}>
                 <CarouselContent>
-                {carouselItems.map((item, idx) => (
+                {shuffledItems.map((item, idx) => (
                     <CarouselItem key={idx} className="basis-2/3 md:basis-1/4 flex flex-col relative">
                     <div className="relative group">
                     <div className="relative overflow-hidden">
-                        <Image className="w-full h-full" src={item.imageSrc} alt={item.name} />
+                        <Image className="w-full h-full" src={item.imageSrc!} alt={item.name} />
                     
                         {/* Overlay */}
                         <div
