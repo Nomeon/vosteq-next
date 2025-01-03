@@ -20,7 +20,7 @@ import Ruud from "@/public/images/experts/Ruud_Pullen.webp";
 import Sibbele from "@/public/images/experts/Sibbele_Douma.webp";
 import Stijn from "@/public/images/experts/Stijn_Nijhuis.webp";
 import Tom from "@/public/images/experts/Tom_Hassing.webp";
-// import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
+import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
 import Wijbrand from '@/public/images/experts/Wijbrand_Medendorp.webp';
 import Willem from "@/public/images/experts/Willem_Lenselink.webp";
 
@@ -134,10 +134,10 @@ export const carouselItems = [
       name: "Tom Hassing",
       description: "Ervaren hands-on C-level manager die duurzaam rendement zal realiseren. Brengt inzicht, inspiratie, motivatie en plezier. Zorgt met passie voor visie, strategie, structuur en flow. Verbetert dagelijks op alle niveaus.",
       imageSrc: Tom
-    }
-    // {
-    //   name: "Wessel van Zwolle",
-    //   description: "",
-    //   imageSrc: Wessel
-    // },
+    },
+    {
+      name: "Wessel van Zwolle",
+      description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
+      imageSrc: Wessel
+    },
 ]
