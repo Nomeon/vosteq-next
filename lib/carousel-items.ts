@@ -1,20 +1,21 @@
 import Bob from "@/public/images/experts/Bob_Selker.webp";
 import Bram from '@/public/images/experts/Bram_van_der_Most.webp';
 import Christiaan from "@/public/images/experts/Christiaan_Kruims.webp";
-// import Daniel from "@/public/images/experts/Daniel_Kiemeneij.webp";
+import Daniel from "@/public/images/experts/Daniel_Kiemeneij.webp";
 import Harry from "@/public/images/experts/Harry_van_de_Vosse.webp";
 import Henno from "@/public/images/experts/Henno_Staal.webp";
 import Ingrid from "@/public/images/experts/Ingrid_Genger.webp";
 // Jan-Willem Olde Kalter
 import Joost from "@/public/images/experts/Joost_ter_Doest.webp";
 import Joyce from "@/public/images/experts/Joyce_Kloosterman.webp";
+import Lars from "@/public/images/experts/Lars_Theunissen.webp";
 import Maarten_Wijnheijmer from "@/public/images/experts/Maarten_Wijnheijmer.webp";
 import Maarten_Woertman from "@/public/images/experts/Maarten_Woertman.webp";
 import Marijke from "@/public/images/experts/Marijke_Oosterveld.webp";
 import Patrick from "@/public/images/experts/Patrick_Overmaat.webp";
 import Ramon from "@/public/images/experts/Ramon_Huiskamp.webp";
 import Rens from "@/public/images/experts/Rens_Hofstede.webp";
-// Rob ter Meulen
+import Rob from "@/public/images/experts/Rob_ter_Meulen.webp";
 import Ronald from "@/public/images/experts/Ronald_de_Witte.webp";
 import Ruud from "@/public/images/experts/Ruud_Pullen.webp";
 import Sibbele from "@/public/images/experts/Sibbele_Douma.webp";
@@ -22,7 +23,7 @@ import Stijn from "@/public/images/experts/Stijn_Nijhuis.webp";
 import Tom from "@/public/images/experts/Tom_Hassing.webp";
 import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
 import Wijbrand from '@/public/images/experts/Wijbrand_Medendorp.webp';
-import Willem from "@/public/images/experts/Willem_Lenselink.webp";
+import Willem from '@/public/images/experts/Willem_Lenselink.webp';
 
 export const carouselItems = [
     {
@@ -95,6 +96,11 @@ export const carouselItems = [
       description: "Ondersteunt maakbedrijven als adviseur, coach, projectmanager en lean expert. Voor nieuwe productieconcepten in Operations en Supply Chain waarbij verbetering en verandering hand in hand gaan.",
       imageSrc: Henno
     },
+    // {
+    //   name: "Lars Theunissen",
+    //   description: "",
+    //   imageSrc: Lars
+    // },
     {
       name: "Maarten Wijnheijmer",
       description: "Als adviseur en interim-manager help ik bedrijven klantgericht te groeien. Met expertise in strategie, verkoop en service breng ik structuur, focus en resultaat. Ik vertaal visie naar actie.",
@@ -119,6 +125,11 @@ export const carouselItems = [
       name: "Rens Hofstede",
       description: "Met 40 jaar ervaring help ik ondernemers met procesverbetering, ERP-optimalisatie en maatwerkoplossingen. Samen realiseren we duurzame groei, meer efficiëntie en een toekomstbestendige organisatie.",
       imageSrc: Rens
+    },
+    {
+      name: "Rob ter Meulen",
+      description: "Als interimmanager zorg ik voor continuïteit en begeleid ik organisaties bij veranderingen. Met mijn bedrijfskundige expertise verbeter ik processen en structuren. Daarmee verzorg ik een soepele overgang naar een volgende fase.",
+      imageSrc: Rob
     },
     {
       name: "Sibbele Douma",

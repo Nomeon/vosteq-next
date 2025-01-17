@@ -44,7 +44,7 @@ export default function VisieEnMissie() {
           <h3 className='pt-8 text-paars max-lg:text-2xl'>Onze missie: jouw partner in groei en innovatie</h3>
           <p className='text-diepgrijs'>Bij Vosteq willen we MKB-maakbedrijven ondersteunen bij het realiseren van hun ambities. Onze missie is:</p>
           <ul className="flex flex-col gap-1 font-aptos text-base">
-            <li className='list-disc list-inside'><b>Oplossingen op maat</b> bieden voor procesoptimalisatie</li>
+            <li className='list-disc list-inside'><b>Oplossingen op maat</b> bieden voor procesoptimalisatie.</li>
             <li className='list-disc list-inside'><b>Innovatieve technologieën</b> implementeren.</li>
             <li className='list-disc list-inside'><b>Menselijk kapitaal versterken</b> binnen jouw organisatie.</li>
           </ul>
