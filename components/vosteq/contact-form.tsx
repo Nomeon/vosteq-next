@@ -8,7 +8,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
@@ -22,6 +21,8 @@ import {
   SelectGroup,
   SelectLabel
 } from '@/components/ui/select'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useRef, useState } from 'react'
 
 const topicItems = [
   {
@@ -164,7 +165,11 @@ export const formSchema = z.object({
   })
 })
 
-export function ContactForm() {
+export function ContactForm() {  
+  const [submitted, setSubmitted] = useState(false)
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isVerified, setIsVerified] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -177,8 +182,47 @@ export function ContactForm() {
     }
   })
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log('data: ', data)
+  async function handleCaptchaSubmission(token: string | null) {
+    try {
+      if (token) {
+        await fetch("/api/captcha", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        });
+        setIsVerified(true);
+      }
+    } catch (e) {
+      setIsVerified(false);
+    }
+  }
+
+  const handleChange = (token: string | null) => {
+    handleCaptchaSubmission(token);
+  };
+
+  function handleExpired() {
+    setIsVerified(false);
+  }
+
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+
+    if (response.status === 200) {
+      setSubmitted(true)
+      console.log('Email sent successfully')
+    } else {
+      console.log(response)
+    }
   }
 
   return (
@@ -257,8 +301,17 @@ export function ContactForm() {
               <FormMessage className='absolute' />
             </FormItem>
           )} />
-          <div className='pt-8'>
-            <button type='submit' className="btn-solid">Verzenden</button>
+          <div className='pt-8 flex md:flex-row'>
+            <button type='submit' disabled={!isVerified} className="btn-solid">Verzenden</button>
+            <ReCAPTCHA 
+              className='z-50'
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+              size='invisible'
+              badge='bottomright'
+              ref={recaptchaRef}
+              onChange={handleChange}
+              onExpired={handleExpired}
+            />
           </div>
         </form>
       </Form>
