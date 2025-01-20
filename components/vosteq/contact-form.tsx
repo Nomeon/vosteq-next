@@ -1,6 +1,6 @@
 'use client'
 
-import { z } from 'zod'
+import { set, z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { 
@@ -22,7 +22,7 @@ import {
   SelectLabel
 } from '@/components/ui/select'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const topicItems = [
   {
@@ -219,7 +219,6 @@ export function ContactForm() {
 
     if (response.status === 200) {
       setSubmitted(true)
-      console.log('Email sent successfully')
     } else {
       console.log(response)
     }
@@ -231,90 +230,90 @@ export function ContactForm() {
         <h2 className='text-paars font-light'>Neem contact op</h2>
         <p className='text-destructive font-aktiv-grotesk-extended'>*Invullen van dit veld is vereist</p>
       </div>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-8">
-          <div className='flex flex-col md:flex-row w-full gap-4 items-center'>
-            <p className='text-paars text-base font-medium whitespace-nowrap font-aktiv-grotesk-extended'>Ik heb interesse in:*</p>
-            <FormField control={form.control} name="topic" render={({ field }) => (
-              <FormItem className='w-full'>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+      {submitted ? <p className='text-paars px-4 md:px-32 py-32 items-center flex justify-center text-lg'>Bedankt voor je bericht. We nemen zo snel mogelijk contact met je op.</p> :
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-8">
+            <div className='flex flex-col md:flex-row w-full gap-4 items-center'>
+              <p className='text-paars text-base font-medium whitespace-nowrap font-aktiv-grotesk-extended'>Ik heb interesse in:*</p>
+              <FormField control={form.control} name="topic" render={({ field }) => (
+                <FormItem className='w-full'>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Kies een topic" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {topicItems.map((item) => (
+                        <SelectGroup key={`select-${item.name}`}>
+                          <SelectLabel className='text-paars font-aptos'>{item.name}</SelectLabel>
+                          {item.items.map((subItem) => (
+                            <SelectItem className='font-aptos' key={`select-${item.name}-${subItem.value}`} value={subItem.value}>{subItem.itemName}</SelectItem>
+                          ))}
+                        </SelectGroup>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage className='absolute' />
+                </FormItem>
+              )} />
+            </div>
+            <div className='flex flex-col md:flex-row gap-8 md:gap-16 w-full'>
+              <FormField control={form.control} name="naam" render={({ field }) => (
+                <FormItem className='w-full'>
                   <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Kies een topic" />
-                    </SelectTrigger>
+                    <Input placeholder="Naam*" {...field} />
                   </FormControl>
-                  <SelectContent>
-                    {topicItems.map((item) => (
-                      <SelectGroup key={`select-${item.name}`}>
-                        <SelectLabel className='text-paars font-aptos'>{item.name}</SelectLabel>
-                        {item.items.map((subItem) => (
-                          <SelectItem className='font-aptos' key={`select-${item.name}-${subItem.value}`} value={subItem.value}>{subItem.itemName}</SelectItem>
-                        ))}
-                      </SelectGroup>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage className='absolute' />
-              </FormItem>
-            )} />
-          </div>
-          <div className='flex flex-col md:flex-row gap-8 md:gap-16 w-full'>
-            <FormField control={form.control} name="naam" render={({ field }) => (
-              <FormItem className='w-full'>
+                  <FormMessage className='absolute'/>
+                </FormItem>
+              )} />
+              <FormField control={form.control} name="onderwerp" render={({ field }) => (
+                <FormItem className='w-full'>
+                  <FormControl>
+                    <Input placeholder="Onderwerp*" {...field} />
+                  </FormControl>
+                  <FormMessage className='absolute' />
+                </FormItem>
+              )} />
+            </div>
+            <FormField control={form.control} name="email" render={({ field }) => (
+              <FormItem className=''>
                 <FormControl>
-                  <Input placeholder="Naam*" {...field} />
+                  <Input placeholder="E-mailadres*" {...field} />
                 </FormControl>
                 <FormMessage className='absolute'/>
               </FormItem>
             )} />
-            <FormField control={form.control} name="onderwerp" render={({ field }) => (
-              <FormItem className='w-full'>
+            <FormField control={form.control} name="telefoonnummer" render={({ field }) => (
+              <FormItem className=''>
                 <FormControl>
-                  <Input placeholder="Onderwerp*" {...field} />
+                  <Input placeholder="Telefoonnummer" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <h3 className='text-paars pt-8'>Bericht</h3>
+            <FormField control={form.control} name="bericht" render={({ field }) => (
+              <FormItem className='-mt-4'>
+                <FormControl>
+                  <Textarea placeholder='...' {...field} />
                 </FormControl>
                 <FormMessage className='absolute' />
               </FormItem>
             )} />
-          </div>
-          <FormField control={form.control} name="email" render={({ field }) => (
-            <FormItem className=''>
-              <FormControl>
-                <Input placeholder="E-mailadres*" {...field} />
-              </FormControl>
-              <FormMessage className='absolute'/>
-            </FormItem>
-          )} />
-          <FormField control={form.control} name="telefoonnummer" render={({ field }) => (
-            <FormItem className=''>
-              <FormControl>
-                <Input placeholder="Telefoonnummer" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )} />
-          <h3 className='text-paars pt-8'>Bericht</h3>
-          <FormField control={form.control} name="bericht" render={({ field }) => (
-            <FormItem className='-mt-4'>
-              <FormControl>
-                <Textarea placeholder='...' {...field} />
-              </FormControl>
-              <FormMessage className='absolute' />
-            </FormItem>
-          )} />
-          <div className='pt-8 flex md:flex-row'>
-            <button type='submit' disabled={!isVerified} className="btn-solid">Verzenden</button>
-            <ReCAPTCHA 
-              className='z-50'
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-              size='invisible'
-              badge='bottomright'
-              ref={recaptchaRef}
-              onChange={handleChange}
-              onExpired={handleExpired}
-            />
-          </div>
-        </form>
-      </Form>
+            <div className='pt-8 flex flex-col md:flex-row items-start md:items-end gap-4 justify-between'>
+              <button type='submit' disabled={!isVerified} className="btn-solid">Verzenden</button>
+              <ReCAPTCHA 
+                className='z-50 max-md:scale-75 origin-left'
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                ref={recaptchaRef}
+                onChange={handleChange}
+                onExpired={handleExpired}
+              />
+            </div>
+          </form>
+        </Form>
+      }
     </div>
   )
 }

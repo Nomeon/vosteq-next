@@ -4,15 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
     const { naam, topic, onderwerp, email, telefoonnummer, bericht } = await request.json();
 
-
-    // For testing purposes
-    console.log('Naam:', naam);
-    console.log('Topic:', topic);
-    console.log('Onderwerp:', onderwerp);
-    console.log('Email:', email);
-    console.log('Telefoonnummer:', telefoonnummer);
-    console.log('Bericht:', bericht);
-
+    // Testing
     return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
 
     const transporter = nodemailer.createTransport({
