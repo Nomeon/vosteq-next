@@ -48,7 +48,7 @@ export default function MVOBeleid() {
           </p>
         </div>
         <div className="lg:w-1/2 container relative pb-16">
-          <DecoRight imageSrc='/images/Vosteq-Hapert-2018-1.webp'/>
+          <DecoRight imageSrc='/images/home2.webp'/>
         </div>
       </div>
       <WatLevertHetOp title='Wat betekent MVO voor ons?' omschrijving='Ons MVO-beleid is gebaseerd op de volgende pijlers:' steps={steps} />

@@ -83,7 +83,7 @@ export default function DeVeranderexperts() {
               <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq werken we met een toegewijd team van ervaren verander-experts die jouw MKB-maakbedrijf helpen bij transformatie en groei. Onze specialisten brengen niet alleen diepgaande kennis en ervaring mee, maar ook een frisse blik en innovatieve ideeën.<br /><br />Wij gaan verder dan alleen adviseren: we staan naast jouw team om veranderingen door te voeren die écht werken en blijvend resultaat opleveren.</p>
             </div>
             <div className="lg:w-1/2 container relative pb-16">
-              <DecoRight imageSrc="/images/Vosteq-Hapert-2018-1.webp" />
+              <DecoRight imageSrc="/images/interimexperts.webp" />
             </div>
           </div>
           <h2 className="lg:pb-16 pb-8 text-paars max-lg:text-xl">Ons team van specialisten</h2>

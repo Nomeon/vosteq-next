@@ -16,7 +16,8 @@ const Popup = () => {
   return (
     <div>
       {isPopupVisible && (
-        <div className="z-30 fixed right-0 top-1/3 w-44 bg-geel  text-paars group hover:bg-groen hover:text-wit transition-all duration-200 max-lg:hidden">
+        // Set to hidden for now, as the correct link is not ready yet
+        <div className="z-30 fixed right-0 top-1/3 w-44 bg-geel  text-paars group hover:bg-groen hover:text-wit transition-all duration-200 max-lg:hidden hidden">
             <button onClick={closePopup} className="absolute top-0 right-0 p-2">
                 <Icon icon='mdi:close' className='text-paars group-hover:text-wit'/>
             </button>

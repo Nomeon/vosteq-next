@@ -130,7 +130,7 @@ export default async function Home() {
       <Verbeteren />
       <Experts />
       <VosteqCarousel cases={allCases} />
-      <BottomCta titel="Neem contact met ons op" paragraph="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen? Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig."/>
+      <BottomCta titel="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen?" paragraph="Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig."/>
     </div>
   );
 }

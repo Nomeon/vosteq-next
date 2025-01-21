@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import DecoRight from "@/components/vosteq/deco-right";
 import DecoLeft from "@/components/vosteq/deco-left";
+import BottomCta from "@/components/vosteq/bottom-cta";
 
 export const metadata: Metadata = {
   title: "Organisatieverbetering voor MKB-maakbedrijven | Vosteq",
@@ -71,6 +72,7 @@ export default function Diensten() {
           <DecoLeft imageSrc="/images/home2.webp" />
         </div>
       </div>
+      <BottomCta titel="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen?" paragraph="Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig."/>
     </div>
   )
 }

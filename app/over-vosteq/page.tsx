@@ -55,7 +55,7 @@ export default function OverVosteq() {
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex pt-8 gap-16 lg:gap-8">
             <div className="flex flex-col lg:w-1/3 gap-4">
               <h4 className="text-paars">De Verander-experts</h4>
-              <p className="font-aktiv-grotesk-extended text-paars">Team van specialisten</p>
+              {/* <p className="font-aktiv-grotesk-extended text-paars">Team van specialisten</p> */}
               <p className="grow">Maak kennis met ons team van specialisten die jouw organisatie helpen transformeren.</p>
               <div className="pt-4 lg:pt-8">
                 <button className="btn-outline"><Link href={'/over-vosteq/de-veranderexperts'}>Lees verder</Link></button>
@@ -63,7 +63,7 @@ export default function OverVosteq() {
             </div>
             <div className="flex flex-col lg:w-1/3 gap-4">
               <h4 className="text-paars">Werken bij Vosteq</h4>
-              <p className="font-aktiv-grotesk-extended text-paars">Het innovatie-team</p>
+              {/* <p className="font-aktiv-grotesk-extended text-paars">Het innovatie-team</p> */}
               <p className="grow"> Wil je deel uitmaken van ons innovatie-team? We komen graag met je in contact!</p>
               <div className="pt-4 lg:pt-8">
                 <button className="btn-outline"><Link href={'/over-vosteq/werken-bij-vosteq'}>Lees verder</Link></button>
@@ -71,7 +71,7 @@ export default function OverVosteq() {
             </div>
             <div className="flex flex-col lg:w-1/3 gap-4">
               <h4 className="text-paars">MVO-beleid</h4>
-              <p className="font-aktiv-grotesk-extended text-paars">Maatschappelijk verantwoord ondernemen</p>
+              {/* <p className="font-aktiv-grotesk-extended text-paars">Maatschappelijk verantwoord ondernemen</p> */}
               <p className="grow">Lees hoe wij maatschappelijk verantwoord ondernemen omarmen en bijdragen aan een duurzamere toekomst.</p>
               <div className="pt-4 lg:pt-8">
                 <button className="btn-outline"><Link href={'/over-vosteq/mvo-beleid'}>Lees verder</Link></button>
