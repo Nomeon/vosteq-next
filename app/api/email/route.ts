@@ -4,13 +4,13 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
     const { naam, topic, onderwerp, email, telefoonnummer, bericht } = await request.json();
 
-    // Testing
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
-
     const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_SERVER_HOST,
-        port: 465,
-        secure: true,
+        host: 'smtp.office365.com',
+        port: 587,
+        secure: false,
+        tls: {
+            rejectUnauthorized: true,
+        },
         auth: {
             user: process.env.SMTP_SERVER_USERNAME,
             pass: process.env.SMTP_SERVER_PASSWORD
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     })
 
     const mailOptions = {
-        from: process.env.SMTP_SERVER_USERNAME,
+        from: `Contactformulier Vosteq.nl <${process.env.SMTP_SERVER_USERNAME}>`,
         to: process.env.MAIL_RECEIVER,
         subject: `Nieuw bericht van ${naam}`,
         text: `
