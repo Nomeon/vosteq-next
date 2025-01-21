@@ -312,7 +312,7 @@ export function ContactForm() {
             )} />
             <div className='pt-8 flex flex-col md:flex-row items-start md:items-end gap-4 justify-between'>
               <button type='submit' disabled={!isVerified} className="btn-solid">Verzenden</button>
-              <button onClick={testMail} type='button' className="btn-solid">Test mail</button>
+              {/* <button onClick={testMail} type='button' className="btn-solid">Test mail</button> */}
               <ReCAPTCHA 
                 className='z-50 max-md:scale-75 origin-left'
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
