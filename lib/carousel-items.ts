@@ -81,11 +81,11 @@ export const carouselItems = [
       description: "Als transitiemanager combineer ik mijn technische achtergrond met mijn passie voor persoonlijke ontwikkeling. Met een creatieve en hands-on aanpak en zet ik in op eigenaarschap, bewustwording, plezier en energie.",
       imageSrc: Joyce
     },
-    // {
-    //   name: "Daniel Kiemeneij",
-    //   description: "",
-    //   imageSrc: Daniel
-    // },
+    {
+      name: "Daniel Kiemeneij",
+      description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
+      imageSrc: Daniel
+    },
     {
       name: "Bob Selker",
       description: "Proces engineer die productieprocessen optimaliseert en innoveert, met aandacht voor opleiding, begeleiding en draagvlak. Met een toekomstgerichte aanpak ondersteun ik technische en organisatorische transities.",
@@ -96,11 +96,11 @@ export const carouselItems = [
       description: "Ondersteunt maakbedrijven als adviseur, coach, projectmanager en lean expert. Voor nieuwe productieconcepten in Operations en Supply Chain waarbij verbetering en verandering hand in hand gaan.",
       imageSrc: Henno
     },
-    // {
-    //   name: "Lars Theunissen",
-    //   description: "",
-    //   imageSrc: Lars
-    // },
+    {
+      name: "Lars Theunissen",
+      description: "Met visie en als generalist, ervaringsdeskundige en rustgevend klankbord voor directies, plaatsen we samen de stip-op-de-horizon en pakken we door op de verdere organisatieontwikkeling. Lijden wordt leiden.",
+      imageSrc: Lars
+    },
     {
       name: "Maarten Wijnheijmer",
       description: "Als adviseur en interim-manager help ik bedrijven klantgericht te groeien. Met expertise in strategie, verkoop en service breng ik structuur, focus en resultaat. Ik vertaal visie naar actie.",
