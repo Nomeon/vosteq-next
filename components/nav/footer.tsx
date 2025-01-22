@@ -27,8 +27,8 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row bg-groen py-12 items-center justify-center font-aptos text-wit gap-4">
         <p>© 2025 Vosteq. Alle rechten voorbehouden.</p>
         <Link href="/"><p className="underline">Privacybeleid</p></Link>
-        <Link href="/"><p className="underline">Algemene Voorwaarden</p></Link>
-        <Link href="/"><p className="underline">Cookie-instellingen</p></Link>
+        <Link target="_blank" rel="noopener noreferrer" href="/Algemene voorwaarden Vosteq Innovations B.V.pdf"><p className="underline">Algemene Voorwaarden</p></Link>
+        {/* <Link href="/"><p className="underline">Cookie-instellingen</p></Link> */}
       </div>
     </footer>
   );
