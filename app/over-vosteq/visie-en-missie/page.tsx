@@ -42,13 +42,13 @@ export default function VisieEnMissie() {
           <h1 className="text-paars">Onze visie: florerende MKB-maakbedrijven</h1>
           <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq zien we een toekomst waarin MKB-maakbedrijven niet alleen overleven, maar juist floreren. Wij geloven dat elk MKB-maakbedrijf de kracht heeft om te innoveren, groeien en een duurzame impact te maken in een wereld die constant verandert. Met de juiste inzet van technologie, mensen en processen kunnen MKB-maakbedrijven hun volledige potentieel bereiken en concurreren in een globaliserende markt.</p>
           <h3 className='pt-8 text-paars max-lg:text-2xl'>Onze missie: jouw partner in groei en innovatie</h3>
-          <p className='text-diepgrijs'>Bij Vosteq willen we MKB-maakbedrijven ondersteunen bij het realiseren van hun ambities. Onze missie is:</p>
+          <p className='text-diepgrijs'>Bij Vosteq ondersteunen we MKB-maakbedrijven bij het realiseren van hun ambities met op maat gemaakte oplossingen. We richten ons op:</p>
           <ul className="flex flex-col gap-1 font-aptos text-base">
-            <li className='list-disc list-inside'><b>Oplossingen op maat</b> bieden voor procesoptimalisatie.</li>
-            <li className='list-disc list-inside'><b>Innovatieve technologieën</b> implementeren.</li>
-            <li className='list-disc list-inside'><b>Menselijk kapitaal versterken</b> binnen jouw organisatie.</li>
+            <li className='list-disc list-inside'><b>Het optimaliseren van bedrijfsprocessen</b> voor efficiëntere en slimmere werkwijzen.</li>
+            <li className='list-disc list-inside'><b>Het implementeren van innovatieve technologieën</b> om de concurrentie voor te blijven.</li>
+            <li className='list-disc list-inside'><b>Het versterken van menselijk kapitaal</b> door talent te ontwikkelen en optimaal te benutten.</li>
           </ul>
-          <p>Wij zijn jouw betrouwbare partner die niet alleen adviseert, maar ook actief bijdraagt aan de uitvoering en het succes van jouw projecten.</p>
+          <p>Als betrouwbare partner adviseren we niet alleen, maar dragen we actief bij aan de uitvoering en het succes van projecten. Met onze klanten bouwen we samen aan duurzame groei en innovatie.</p>
         </div>
         <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc="/images/parttime-innovatieteam.webp" />
