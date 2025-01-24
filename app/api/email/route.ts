@@ -4,6 +4,8 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
     const { naam, topic, onderwerp, email, telefoonnummer, bericht } = await request.json();
 
+    // Nog goed zetten!!
+
     const transporter = nodemailer.createTransport({
         host: 'smtp.office365.com',
         port: 587,
