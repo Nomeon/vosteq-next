@@ -11,7 +11,6 @@ import { WithContext, Organization, WebSite, WebPage } from "schema-dts";
 
 const title = "Optimaliseer jouw MKB-bedrijf | Vosteq";
 const description = "Haal meer uit jouw mensen en machines met Vosteq. Met meer dan 25 jaar ervaring helpen wij MKB-maakbedrijven efficiënter, winstgevender en toekomstbestendig te worden. Ontdek onze expertise in procesoptimalisatie en digitalisering.";
-const siteURL = process.env.NEXT_PUBLIC_SITE_URL || "https://vosteq.nl"; // Maybe change to accomodate for different environments?
 
 export const metadata: Metadata = {
   title: title,
@@ -19,19 +18,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    url: siteURL,
+    url: "https://vosteq.nl",
     siteName: "Vosteq",
     type: "website",
     locale: "nl_NL",
     images: [
       {
-        url: `${siteURL}/images/Vosteq-Hapert-2018-1.webp`,
+        url: 'https://vosteq.nl/images/Vosteq-Hapert-2018-1.webp',
         width: 1100,
         height: 619,
         alt: "Vosteq bij Hapert 2018 1"
       },
       {
-        url: `${siteURL}/images/home2.webp`,
+        url: "https://vosteq.nlimages/home2.webp",
         width: 1344,
         height: 896,
         alt: "Maarten bij Hapert"
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     description: description,
     images: [
       {
-        url: `${siteURL}/images/Vosteq-Hapert-2018-1.webp`,
+        url: 'https://vosteq.nl/images/Vosteq-Hapert-2018-1.webp',
         width: 1100,
         height: 619,
         alt: "Vosteq bij Hapert 2018 1"
@@ -59,9 +58,9 @@ const jsonLd: (WithContext<Organization> | WithContext<WebSite> | WithContext<We
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Vosteq",
-    "url": siteURL,
-    "logo": `${siteURL}/logo.svg`,
-    "image": `${siteURL}/images/Vosteq-Hapert-2018-1.webp`,
+    "url": "https://vosteq.nl",
+    "logo": "https://vosteq.nl/logo.svg",
+    "image": "https://vosteq.nl/images/Vosteq-Hapert-2018-1.webp",
     "description": description,
     "address": {
       "@type": "PostalAddress",
@@ -79,33 +78,33 @@ const jsonLd: (WithContext<Organization> | WithContext<WebSite> | WithContext<We
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": siteURL,
+    "url": "https://vosteq.nl",
     "name": "Vosteq",
     "description": description,
     "publisher": {
       "@type": "Organization",
       "name": "Vosteq",
-      "logo": `${siteURL}/logo.svg`,
-      "url": siteURL
+      "logo": "https://vosteq.nl/logo.svg",
+      "url": "https://vosteq.nl"
     }
   },
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": siteURL,
+    "url": "https://vosteq.nl",
     "name": title,
     "description": description,
     "publisher": {
       "@type": "Organization",
       "name": "Vosteq",
-      "logo": `${siteURL}/logo.svg`,
-      "url": siteURL
+      "logo": "https://vosteq.nl/logo.svg",
+      "url": "https://vosteq.nl"
     },
     "inLanguage": "nl",
-    "isPartOf": siteURL,
+    "isPartOf": "https://vosteq.nl",
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": `${siteURL}/images/Vosteq-Hapert-2018-1.webp`,
+      "url": "https://vosteq.nl/images/Vosteq-Hapert-2018-1.webp",
       "width": {
         "@type": "QuantitativeValue",
         "value": 1100,
