@@ -6,7 +6,7 @@ import { Header } from "@/components/nav/header";
 import { Footer } from "@/components/nav/footer";
 import { ReactNode } from 'react';
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {  
   return (
     <LanguageProvider>
       <html lang={languageTag()}> 
