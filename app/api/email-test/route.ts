@@ -3,11 +3,11 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   const transporter = nodemailer.createTransport({
-    host: 'smtp.office365.com',
-    port: 587,
-    secure: false,
+    host: process.env.SMTP_SERVER_HOST,
+    port: 465,
+    secure: true,
     tls: {
-        rejectUnauthorized: true,
+      rejectUnauthorized: false
     },
     auth: {
         user: process.env.SMTP_SERVER_USERNAME,
