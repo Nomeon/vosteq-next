@@ -11,7 +11,7 @@ import { WithContext, Organization, WebSite, WebPage } from "schema-dts";
 
 const title = "Optimaliseer jouw MKB-bedrijf | Vosteq";
 const description = "Haal meer uit jouw mensen en machines met Vosteq. Met meer dan 25 jaar ervaring helpen wij MKB-maakbedrijven efficiënter, winstgevender en toekomstbestendig te worden. Ontdek onze expertise in procesoptimalisatie en digitalisering.";
-const siteURL = process.env.NEXT_PUBLIC_SITE_URL || "https://vosteq.nl";
+const siteURL = process.env.NEXT_PUBLIC_SITE_URL || "https://vosteq.nl"; // Maybe change to accomodate for different environments?
 
 export const metadata: Metadata = {
   title: title,
