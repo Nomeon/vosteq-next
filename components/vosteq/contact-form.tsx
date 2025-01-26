@@ -1,6 +1,6 @@
 'use client'
 
-import { set, z } from 'zod'
+import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { 
@@ -22,7 +22,7 @@ import {
   SelectLabel
 } from '@/components/ui/select'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const topicItems = [
   {
