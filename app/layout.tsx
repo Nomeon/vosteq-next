@@ -7,8 +7,14 @@ import { Footer } from "@/components/nav/footer";
 import { ReactNode } from 'react';
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {  
+  const isPreview = process.env.VERCEL_ENV !== 'production';
+  console.log(isPreview, process.env.VERCEL_ENV);
+  
   return (
     <LanguageProvider>
+      {isPreview && (
+        <meta name="robots" content="noindex, nofollow" />
+      )}
       <html lang={languageTag()}> 
         <body className="font-aptos">
           <Header />
