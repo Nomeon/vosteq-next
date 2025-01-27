@@ -1,5 +1,6 @@
 import 'leaflet/dist/leaflet.css'
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { LanguageProvider } from "@inlang/paraglide-next"
 import { languageTag } from "@/paraglide/runtime.js"
 import { Header } from "@/components/nav/header";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           </main>
           <Footer />
         </body>
+        <GoogleAnalytics gaId='G-JQWNNG2LK8' />
       </html>
     </LanguageProvider>
   );

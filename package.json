@@ -12,6 +12,7 @@
     "@datocms/cda-client": "^0.2.2",
     "@hookform/resolvers": "^3.9.1",
     "@inlang/paraglide-next": "0.5.2",
+    "@next/third-parties": "^15.1.6",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
