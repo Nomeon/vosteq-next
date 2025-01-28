@@ -58,7 +58,7 @@ const Verbeteren = () => {
 
   return (
     <div className="container flex flex-col items-center py-16">
-    <h2 className="text-paars max-lg:text-xl text-left lg:text-center w-full">Verbeteren in 4 stappen</h2>
+    <h2 className="text-paars max-lg:text-xl text-left lg:text-center w-full">Verbeteren op 4 fronten</h2>
     <div className="flex flex-row gap-4 py-12 max-lg:hidden lg:px-16 lg:pb-16">
       {steps.map((step, index) => (
         <StepCard key={index} icon={step.icon} title={step.title} subtitle={step.subtitle} description={step.description} href={step.href} />
