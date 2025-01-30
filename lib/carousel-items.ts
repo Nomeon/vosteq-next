@@ -83,7 +83,7 @@ export const carouselItems = [
     },
     {
       name: "Daniel Kiemeneij",
-      description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
+      description: "Mechanical engineer met passie voor innovatie en expertise in Cad-Cam, engineering en CNC-machines. Met frisse inzichten in smart production bied ik hoogwaardige oplossingen voor complexe technische uitdagingen.",
       imageSrc: Daniel
     },
     {
