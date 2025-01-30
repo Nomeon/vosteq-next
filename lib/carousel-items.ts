@@ -98,7 +98,7 @@ export const carouselItems = [
     },
     {
       name: "Lars Theunissen",
-      description: "Met visie en als generalist, ervaringsdeskundige en rustgevend klankbord voor directies, plaatsen we samen de stip-op-de-horizon en pakken we door op de verdere organisatieontwikkeling. Lijden wordt leiden.",
+      description: "Interimmanager als er doorgepakt moet worden. Werktuigbouw- en bedrijfskundige met ruim 10 jaar directie-ervaring in Engineering-to-Order bedrijven. Voor innovatie en groei van MKB maakbedrijven.",
       imageSrc: Lars
     },
     {
