@@ -128,7 +128,7 @@ export const carouselItems = [
     },
     {
       name: "Rob ter Meulen",
-      description: "Als interimmanager zorg ik voor continuïteit en begeleid ik organisaties bij veranderingen. Met mijn bedrijfskundige expertise verbeter ik processen en structuren. Daarmee verzorg ik een soepele overgang naar een volgende fase.",
+      description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
       imageSrc: Rob
     },
     {
@@ -148,7 +148,7 @@ export const carouselItems = [
     },
     {
       name: "Wessel van Zwolle",
-      description: "Als interimmanager zorg ik voor continuïteit en begeleid ik organisaties bij veranderingen. Met mijn bedrijfskundige expertise verbeter ik processen en structuren. Daarmee verzorg ik een soepele overgang naar een volgende fase.",
+      description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
       imageSrc: Wessel
     },
 ]
