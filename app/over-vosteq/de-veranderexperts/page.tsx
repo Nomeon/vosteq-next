@@ -78,9 +78,9 @@ export default function DeVeranderexperts() {
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 lg:py-16 py-4">
             <div className="lg:w-1/2 flex flex-col gap-4">
-              <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Veranderexperts voor MKB-maakbedrijven</p>
+              <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Zelfstandige veranderexperts voor MKB-maakbedrijven</p>
               <h1 className="text-paars">De veranderexperts van Vosteq</h1>
-              <p className="font-aktiv-grotesk-extended text-paars">Bij Vosteq werken we met een toegewijd team van ervaren verander-experts die jouw MKB-maakbedrijf helpen bij transformatie en groei. Onze specialisten brengen niet alleen diepgaande kennis en ervaring mee, maar ook een frisse blik en innovatieve ideeën.<br /><br />Wij gaan verder dan alleen adviseren: we staan naast jouw team om veranderingen door te voeren die écht werken en blijvend resultaat opleveren.</p>
+              <p className="font-aktiv-grotesk-extended text-paars">Het Vosteq Expert Team is een coöperatie van zelfstandige experts, gespecialiseerd in transformatie en groei binnen de maakindustrie. Onze professionals brengen diepgaande kennis en praktijkervaring mee en werken als strategisch adviseur, als onderdeel van een Vosteq-transformatieteam of als on-demand specialist of interim manager.<br /><br />Wij gaan verder dan alleen adviseren: we staan naast jouw team om veranderingen door te voeren die écht werken en blijvend resultaat opleveren.</p>
             </div>
             <div className="lg:w-1/2 container relative pb-16">
               <DecoRight imageSrc="/images/interimexperts.webp" />
