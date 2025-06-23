@@ -142,11 +142,6 @@ export const carouselItems = [
       imageSrc: Wijbrand
     },
     {
-      name: "Tom Hassing",
-      description: "Ervaren hands-on C-level manager die duurzaam rendement zal realiseren. Brengt inzicht, inspiratie, motivatie en plezier. Zorgt met passie voor visie, strategie, structuur en flow. Verbetert dagelijks op alle niveaus.",
-      imageSrc: Tom
-    },
-    {
       name: "Wessel van Zwolle",
       description: "Mijn passie is de maakindustrie tijdelijk te versterken met leidinggeven, projectmanagement en verbetertrajecten. Altijd hands-on, verbindend, professioneel en mensgericht, met de focus op kansen!",
       imageSrc: Wessel

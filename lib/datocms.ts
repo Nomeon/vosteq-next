@@ -29,7 +29,9 @@ export const CASE_BY_SLUG_QUERY = `
       slug
       contactpersoon
       uitdaging
+      eersteHeading
       achtergrond
+      tweedeHeading
       procesaanpak
       bulletOpsteken
       bulletOpleveren

@@ -30,7 +30,9 @@ export type DatoCase = {
   slug: string;
   contactpersoon: string;
   uitdaging: string;
+  eersteHeading: string;
   achtergrond: string;
+  tweedeHeading: string;
   procesaanpak: string;
   bulletOpsteken: string;
   bulletOpleveren: string;

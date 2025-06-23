@@ -40,10 +40,9 @@ export default async function CasePage({ params }: { params: { slug: string } })
           <p className='font-aktiv-grotesk-extended text-base text-donkergroen'>Vosteq bij {caseData.title}</p>
           <h1 className="text-paars">De uitdaging</h1>
           <p className="text-paars font-aktiv-grotesk-extended">{caseData.uitdaging}</p>
-          <h2 className='text-paars py-2'>De achtergrond</h2>
+          <h2 className='text-paars py-2' dangerouslySetInnerHTML={{__html: caseData.eersteHeading}}/>
           <p dangerouslySetInnerHTML={{__html: achtergrond}}></p>
         </div>
-        {/* <div className="lg:w-1/2 relative flex p-8 -mt-8 justify-center"> */}
         <div className="lg:w-1/2 container relative pb-16">
           <DecoRight imageSrc={caseData.mainImage.responsiveImage.src} />
         </div>
@@ -54,7 +53,7 @@ export default async function CasePage({ params }: { params: { slug: string } })
           <p className='text-xl font-aktiv-grotesk-extended text-wit pt-8'>- {caseData.contactpersoon}</p>
         </div>
         <div className='lg:w-1/2'>
-          <h2 className='text-paars pb-4'>De procesaanpak</h2>
+          <h2 className='text-paars pb-4' dangerouslySetInnerHTML={{__html: caseData.tweedeHeading}}/>
           <p dangerouslySetInnerHTML={{__html: procesaanpak}}></p>
         </div>
       </div>
