@@ -36,19 +36,52 @@ declare module "@react-three/fiber" {
   }
 }
 
-export function Badge3D({ firstName, lastName, companyName}: {
+export function Badge3D({
+  firstName,
+  lastName,
+  companyName,
+}: {
   firstName: string;
   lastName: string;
   companyName: string;
 }) {
   return (
-      <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
+    <div className="relative w-full h-full">
+      <Canvas
+        style={{ position: "absolute", inset: 0, zIndex: 0 }}
+        gl={{ preserveDrawingBuffer: true }}
+        onCreated={({ gl }) => {
+          gl.setClearColor("white");
+          gl.toneMapping = THREE.NoToneMapping;
+        }}
+      >
+        <color attach="background" args={["white"]} />
+      </Canvas>
+      <Canvas
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 1,
+          background: "transparent",
+          pointerEvents: "auto",
+          touchAction: "none",
+        }}
+        gl={{ alpha: true }}
+        camera={{ position: [0, 0, 13], fov: 25 }}
+        onCreated={({ gl }) => {
+          gl.toneMapping = THREE.ACESFilmicToneMapping;
+          gl.setClearColor(new THREE.Color(0, 0, 0), 0);
+        }}
+      >
         <ambientLight intensity={Math.PI} />
         <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
-          <Band firstName={firstName} lastName={lastName} companyName={companyName}/>
+          <Band
+            firstName={firstName}
+            lastName={lastName}
+            companyName={companyName}
+          />
         </Physics>
-        <Environment background>
-          <color attach="background" args={["white"]} />
+        <Environment>
           <Lightformer
             intensity={2}
             color="white"
@@ -79,6 +112,7 @@ export function Badge3D({ firstName, lastName, companyName}: {
           />
         </Environment>
       </Canvas>
+    </div>
   );
 }
 
@@ -274,45 +308,57 @@ function Band({
               )
             )}
           >
-          <mesh geometry={(nodes.card as THREE.Mesh).geometry}>
-            <meshStandardMaterial>
-              <RenderTexture attach="map">
-                <PerspectiveCamera makeDefault manual aspect={1.05} position={[0.49, 0.22, 2]} />
-                <mesh>
-                  <planeGeometry args={[0.98, -0.97 / (512/771)]} />
-                  <meshBasicMaterial
-                    map={useTexture('/images/badge/voorkant.png')}
-                    side={THREE.BackSide}
+            <mesh geometry={(nodes.card as THREE.Mesh).geometry}>
+              <meshStandardMaterial>
+                <RenderTexture attach="map">
+                  <PerspectiveCamera
+                    makeDefault
+                    manual
+                    aspect={1.05}
+                    position={[0.49, 0.22, 2]}
                   />
-                </mesh>
-                <Center bottom right position={[-0.42, -0.5, 0]}>
-                      <Text3D
-                        bevelEnabled={false}
-                        bevelSize={0}
-                        font="/fonts/font.json"
-                        height={0}
-                        rotation={[0, Math.PI, Math.PI]}
-                        scale={0.05}
-                      >
-                        {firstName}
-                      </Text3D>
-                      <Text3D
-                        bevelEnabled={false}
-                        bevelSize={0}
-                        font="/fonts/font.json"
-                        height={0}
-                        rotation={[0, Math.PI, Math.PI]}
-                        scale={0.05}
-                        position={[0, 0.08, 0]}
-                      >
-                        {lastName}
-                      </Text3D>
-                </Center>
-              </RenderTexture>
-            </meshStandardMaterial>
-          </mesh>
-          <mesh geometry={(nodes.clip as THREE.Mesh).geometry} material={materials.metal} material-roughness={0.3} />
-          <mesh geometry={(nodes.clamp as THREE.Mesh).geometry} material={materials.metal} />
+                  <mesh>
+                    <planeGeometry args={[0.98, -0.97 / (512 / 771)]} />
+                    <meshBasicMaterial
+                      map={useTexture("/images/badge/voorkant.png")}
+                      side={THREE.BackSide}
+                    />
+                  </mesh>
+                  <Center bottom right position={[-0.42, -0.5, 0]}>
+                    <Text3D
+                      bevelEnabled={false}
+                      bevelSize={0}
+                      font="/fonts/font.json"
+                      height={0}
+                      rotation={[0, Math.PI, Math.PI]}
+                      scale={0.05}
+                    >
+                      {firstName}
+                    </Text3D>
+                    <Text3D
+                      bevelEnabled={false}
+                      bevelSize={0}
+                      font="/fonts/font.json"
+                      height={0}
+                      rotation={[0, Math.PI, Math.PI]}
+                      scale={0.05}
+                      position={[0, 0.08, 0]}
+                    >
+                      {lastName}
+                    </Text3D>
+                  </Center>
+                </RenderTexture>
+              </meshStandardMaterial>
+            </mesh>
+            <mesh
+              geometry={(nodes.clip as THREE.Mesh).geometry}
+              material={materials.metal}
+              material-roughness={0.3}
+            />
+            <mesh
+              geometry={(nodes.clamp as THREE.Mesh).geometry}
+              material={materials.metal}
+            />
           </group>
         </RigidBody>
       </group>
