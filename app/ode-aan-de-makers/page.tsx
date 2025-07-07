@@ -82,19 +82,19 @@ const items = [
 
 const inspirations = [
   {
-    id: "strategie-en-plan",
+    id: "strategie",
     label:
-      "Strategie en plan. Hoe je doelen bepaalt en de route ernaartoe helder krijgt.",
+      "Strategie. Wat als je strategie niet meer werkt - maar niemand het zegt?",
   },
   {
-    id: "verandermanagement",
+    id: "veranderen",
     label:
-      "Verandermanagement. Hoe je beweging creëert binnen teams en organisaties, zonder te duwen.",
+      "Veranderen. Wat als je visie werkelijkheid wordt - en jij weer écht kunt ondernemen?  ",
   },
   {
-    id: "empowerment",
+    id: "empoweren",
     label:
-      "Empowerment. Hoe je mensen in hun kracht zet, zodat ze zelf het verschil maken.",
+      "Empoweren. Wat als iedereen gaat bijdragen - zonder dat je hoeft te duwen?",
   },
 ] as const;
 
@@ -114,7 +114,7 @@ const formSchema = z.object({
     .email("Ongeldig e-mailadres")
     .min(1, "E-mailadres is verplicht"),
   telefoonnummer: z.string().optional(),
-  items: z.array(z.string()).min(3, "Selecteer minimaal 3 opties"),
+  // items: z.array(z.string()).min(3, "Selecteer minimaal 3 opties"),
   inspirations: z.array(z.string()).min(2, "Selecteer minimaal 2 opties"),
   nieuwsbrief: z.boolean().optional(),
   beeldmateriaal: z.boolean().optional(),
@@ -137,7 +137,7 @@ export default function Page() {
       functie: "",
       email: "",
       telefoonnummer: "",
-      items: [],
+      // items: [],
       inspirations: [],
       nieuwsbrief: false,
       beeldmateriaal: false,
@@ -175,6 +175,7 @@ export default function Page() {
     setLastName(data.achternaam);
     setCompanyName(data.bedrijfsnaam);
     setSubmitted(true);
+    console.log("Form submitted:", data);
   }
 
   return (
@@ -204,16 +205,18 @@ export default function Page() {
           <h3 className="pt-8 text-paars max-lg:text-2xl">Het programma</h3>
           <ul className="text-diepgrijs font-aktiv-grotesk-extended space-y-1 font-light">
             <li>
-              <span className="mr-4">13:00 uur</span>Inloop met smakelijke ontvangst
+              <span className="mr-4">13:00 uur</span>Inloop met smakelijke
+              ontvangst
             </li>
             <li>
-              <span className="mr-4">13:30 uur</span>Morgen wordt vandaag bedacht
+              <span className="mr-4">13:30 uur</span>Morgen wordt vandaag
+              bedacht
             </li>
             <li>
               <span className="mr-4">13:45 uur</span>Verandering in beeld
             </li>
             <li>
-              <span className="mr-4">14:15 uur</span>Inspiratiesessies
+              <span className="mr-4">14:15 uur</span>Inspirerende sessies
             </li>
             <li>
               <span className="mr-4">15:45 uur</span>Op reis naar de toekomst
@@ -222,10 +225,12 @@ export default function Page() {
               <span className="mr-4">16:15 uur</span>Een ode aan de makers
             </li>
             <li>
-              <span className="mr-4">17:00 uur</span>Netwerken, voor de verandering
+              <span className="mr-4">17:00 uur</span>Netwerken, voor de
+              verandering
             </li>
             <li>
-              <span className="mr-4">17:30 uur</span>Tijd om morgen werk te maken van vandaag
+              <span className="mr-4">17:30 uur</span>Tijd om morgen werk te
+              maken van vandaag
             </li>
           </ul>
         </div>
@@ -411,24 +416,38 @@ export default function Page() {
                                 Selecteer minimaal 2 opties
                               </DropdownMenuLabel>
                               <DropdownMenuSeparator />
-                              {inspirations.map((item) => (
-                                <DropdownMenuCheckboxItem
-                                  key={item.id}
-                                  checked={field.value.includes(item.id)}
-                                  onSelect={(e) => e.preventDefault()}
-                                  onCheckedChange={(checked) => {
-                                    if (checked) {
-                                      field.onChange([...field.value, item.id]);
-                                    } else {
-                                      field.onChange(
-                                        field.value.filter((v) => v !== item.id)
-                                      );
-                                    }
-                                  }}
-                                >
-                                  {item.label}
-                                </DropdownMenuCheckboxItem>
-                              ))}
+                              {inspirations.map((item) => {
+                                const [firstWord, ...rest] =
+                                  item.label.split(" ");
+                                return (
+                                  <DropdownMenuCheckboxItem
+                                    key={item.id}
+                                    checked={field.value.includes(item.id)}
+                                    onSelect={(e) => e.preventDefault()}
+                                    onCheckedChange={(checked) => {
+                                      if (checked) {
+                                        field.onChange([
+                                          ...field.value,
+                                          item.id,
+                                        ]);
+                                      } else {
+                                        field.onChange(
+                                          field.value.filter(
+                                            (v) => v !== item.id
+                                          )
+                                        );
+                                      }
+                                    }}
+                                  >
+                                    <p>
+                                      <span className="font-semibold">
+                                        {firstWord}
+                                      </span>{" "}
+                                      {rest.join(" ")}
+                                    </p>
+                                  </DropdownMenuCheckboxItem>
+                                );
+                              })}
                             </DropdownMenuContent>
                           </DropdownMenu>
                           <FormMessage />
@@ -533,7 +552,9 @@ export default function Page() {
                 Bedankt voor je aanmelding!
               </h1>
               <p className="text-paars text-base lg:text-xl font-aktiv-grotesk text-center">
-                Houd je mail in de gaten — binnenkort ontvang je meer informatie over Ode aan de makers op 25 september. Noteer de datum alvast in de agenda. We kijken uit naar je komst.
+                Houd je mail in de gaten — binnenkort ontvang je meer informatie
+                over Ode aan de makers op 25 september. Noteer de datum alvast
+                in de agenda. We kijken uit naar je komst.
               </p>
             </div>
             <div className="w-full lg:w-1/2 h-2/3 lg:h-full max-lg:h-96">
