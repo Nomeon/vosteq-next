@@ -24,6 +24,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { saveFormSubmission } from "./actions";
 
 const items = [
   {
@@ -98,7 +99,7 @@ const inspirations = [
   },
 ] as const;
 
-const formSchema = z.object({
+export const formSchema = z.object({
   bedrijfsnaam: z.string(),
   voornaam: z
     .string()
@@ -127,6 +128,7 @@ export default function Page() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -171,11 +173,20 @@ export default function Page() {
   }
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
+    const loopsResp = await saveFormSubmission(data);
+    if (!loopsResp.success) {
+      console.error("Error saving form submission:", loopsResp.message);
+      setErrorMessage(
+        "Er is iets misgegaan. Probeer het opnieuw of neem contact op met s.nijhuis@vosteq.nl"
+      );
+      return;
+    }
+
+    setErrorMessage(null);
     setFirstName(data.voornaam);
     setLastName(data.achternaam);
     setCompanyName(data.bedrijfsnaam);
     setSubmitted(true);
-    console.log("Form submitted:", data);
   }
 
   return (
@@ -540,6 +551,11 @@ export default function Page() {
                     onExpired={handleExpired}
                   />
                 </div>
+                {errorMessage && (
+                  <div className="text-red-600 text-sm font-semibold mb-4">
+                    {errorMessage}
+                  </div>
+                )}
               </form>
             </Form>
           </div>
