@@ -2,7 +2,7 @@
 
 
 import { z } from "zod";
-import { formSchema } from "./page";
+import { formSchema } from "./schema";
 import { LoopsClient } from "loops";
 
 const loops = new LoopsClient(process.env.LOOPS_SECRET as string);
