@@ -125,6 +125,8 @@ function Band({
   lastName: string;
   companyName: string;
 }) {
+  const [companyNameLines, setCompanyNameLines] = useState<string[]>([]);
+
   const band = useRef<THREE.Mesh<MeshLineGeometry>>(null),
     fixed = useRef<RapierRigidBody>(null),
     j1 = useRef<RapierRigidBody>(null),
@@ -149,6 +151,27 @@ function Band({
   const texture = useTexture("/images/badge/band.jpg");
   const [dragged, drag] = useState<THREE.Vector3 | boolean>(false);
   const [hovered, hover] = useState(false);
+
+  useEffect(() => {
+    if (companyName.length <= 27) {
+      setCompanyNameLines([companyName]);
+      return;
+    }
+
+    const words = companyName.split(" ");
+    if (words.length < 2) {
+      // fallback: hard split
+      const mid = Math.floor(companyName.length / 2);
+      setCompanyNameLines([companyName.slice(0, mid), companyName.slice(mid)]);
+      return;
+    }
+
+    // Try to find best middle split
+    let bestSplit = Math.floor(words.length / 2);
+    const line1 = words.slice(0, bestSplit).join(" ");
+    const line2 = words.slice(bestSplit).join(" ");
+    setCompanyNameLines([line1, line2]);
+  }, [companyName]);
 
   useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
@@ -320,35 +343,58 @@ function Band({
                   <mesh>
                     <planeGeometry args={[0.98, -0.97 / (512 / 771)]} />
                     <meshBasicMaterial
-                      map={useTexture("/images/badge/voorkant.png")}
+                      map={useTexture("/images/badge/voorkant.webp")}
                       side={THREE.BackSide}
                     />
                   </mesh>
-                  <Center bottom right position={[-0.42, -0.5, 0]}>
+                  <Center bottom right position={[-0.4, 0.45, 0]}>
                     <Text3D
                       bevelEnabled={false}
                       bevelSize={0}
-                      font="/fonts/font.json"
+                      font="/fonts/font2.json"
                       height={0}
                       rotation={[0, Math.PI, Math.PI]}
                       scale={0.05}
                     >
+                      <meshBasicMaterial color="#88268E" />
                       {firstName}
                     </Text3D>
                     <Text3D
                       bevelEnabled={false}
                       bevelSize={0}
-                      font="/fonts/font.json"
+                      font="/fonts/font2.json"
                       height={0}
                       rotation={[0, Math.PI, Math.PI]}
                       scale={0.05}
                       position={[0, 0.08, 0]}
                     >
+                      <meshBasicMaterial color="#88268E" />
                       {lastName}
                     </Text3D>
+                    {companyNameLines.map((line, index) => (
+                      <Text3D
+                        key={index}
+                        bevelEnabled={false}
+                        bevelSize={0}
+                        font="/fonts/font.json"
+                        height={0}
+                        rotation={[0, Math.PI, Math.PI]}
+                        scale={0.05}
+                        position={[0, 0.2 + index * 0.08, 0]}
+                      >
+                        <meshBasicMaterial color="#88268E" />
+                        {line}
+                      </Text3D>
+                    ))}
                   </Center>
                 </RenderTexture>
               </meshStandardMaterial>
+            </mesh>
+            <mesh
+              geometry={(nodes.card as THREE.Mesh).geometry}
+              position={[0, 0, -0.001]}
+            >
+              <meshStandardMaterial color="white" />
             </mesh>
             <mesh
               geometry={(nodes.clip as THREE.Mesh).geometry}

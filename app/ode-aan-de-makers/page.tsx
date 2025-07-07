@@ -204,31 +204,28 @@ export default function Page() {
           <h3 className="pt-8 text-paars max-lg:text-2xl">Het programma</h3>
           <ul className="text-diepgrijs font-aktiv-grotesk-extended space-y-1 font-light">
             <li>
-              <span className="mr-4">13:00 uur</span>Inloop met koffie en thee
+              <span className="mr-4">13:00 uur</span>Inloop met smakelijke ontvangst
             </li>
             <li>
-              <span className="mr-4">13:30 uur</span>Start programma met een ode
-              aan jou
+              <span className="mr-4">13:30 uur</span>Morgen wordt vandaag bedacht
             </li>
             <li>
               <span className="mr-4">13:45 uur</span>Verandering in beeld
             </li>
             <li>
-              <span className="mr-4">14:15 uur</span>Workshopprogramma
+              <span className="mr-4">14:15 uur</span>Inspiratiesessies
             </li>
             <li>
-              <span className="mr-4">15:45 uur</span>Terugblikken en doorkijken
+              <span className="mr-4">15:45 uur</span>Op reis naar de toekomst
             </li>
             <li>
-              <span className="mr-4">16:15 uur</span>Kennis makers
+              <span className="mr-4">16:15 uur</span>Een ode aan de makers
             </li>
             <li>
-              <span className="mr-4">17:00 uur</span>Vooruit blikken, glazen
-              heffen
+              <span className="mr-4">17:00 uur</span>Netwerken, voor de verandering
             </li>
             <li>
-              <span className="mr-4">17:30 uur</span>Op tijd weer naar huis,
-              voor de verandering
+              <span className="mr-4">17:30 uur</span>Tijd om morgen werk te maken van vandaag
             </li>
           </ul>
         </div>
@@ -337,7 +334,7 @@ export default function Page() {
                     />
                   </div>
                   <div className="w-full flex flex-col gap-4">
-                    <FormField
+                    {/* <FormField
                       control={form.control}
                       name="items"
                       render={({ field }) => (
@@ -386,17 +383,17 @@ export default function Page() {
                           <FormMessage />
                         </FormItem>
                       )}
-                    />
+                    /> */}
                     <FormField
                       control={form.control}
                       name="inspirations"
                       render={({ field }) => (
                         <FormItem className="w-full space-y-4">
                           <h2 className="text-paars text-lg -mb-2">
-                            Voorkeur voor inspiratie sessies?
+                            Voorkeur voor inspirerende sessies?
                           </h2>
                           <p className="text-xs font-aktiv-grotesk-extended">
-                            Selecteer 2 inspiratie sessies. We proberen zoveel
+                            Selecteer 2 inspirerende sessies. We proberen zoveel
                             mogelijk rekening te houden met je voorkeuren, maar
                             vol = vol. ({field.value.length} geselecteerd)*
                           </p>
