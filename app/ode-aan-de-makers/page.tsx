@@ -122,7 +122,7 @@ export default function Page() {
       // items: [],
       inspirations: [],
       nieuwsbrief: false,
-      beeldmateriaal: false,
+      // beeldmateriaal: false,
     },
   });
 
@@ -464,7 +464,7 @@ export default function Page() {
                           </FormItem>
                         )}
                       />
-                      <FormField
+                      {/* <FormField
                         control={form.control}
                         name="beeldmateriaal"
                         render={({ field }) => (
@@ -483,13 +483,9 @@ export default function Page() {
                             </FormLabel>
                           </FormItem>
                         )}
-                      />
-                      {!form.getValues("beeldmateriaal") && (
-                        <div className="text-xs italic text-paars flex flex-col gap-2">
+                      /> */}
+                        <div className="text-xs italic text-diepgrijs flex flex-col gap-2 mt-2">
                           <p>
-                            “Je hebt nog geen akkoord gegeven voor het gebruik
-                            van beeldmateriaal (foto en video) waarop je
-                            mogelijk herkenbaar of onherkenbaar in beeld bent.
                             Tijdens het event worden opnames gemaakt die
                             uitsluitend worden ingezet voor terugblikken,
                             sfeerimpressies en promotionele uitingen van Vosteq.
@@ -510,7 +506,6 @@ export default function Page() {
                             .
                           </p>
                         </div>
-                      )}
                     </div>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ export async function saveFormSubmission(data: z.infer<typeof formSchema>) {
     company: data.bedrijfsnaam,
     phone: data.telefoonnummer ?? "",
     inspirations: JSON.stringify(data.inspirations),
-    allowedPhotos: data.beeldmateriaal ?? false,
+    allowedPhotos: true,
     source: "Ode aan de Makers formulier"
   }
 
