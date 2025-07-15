@@ -100,7 +100,6 @@ const inspirations = [
   },
 ] as const;
 
-
 export default function Page() {
   const [submitted, setSubmitted] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -446,11 +445,32 @@ export default function Page() {
                       )}
                     />
                     <div className="flex flex-col items-start gap-2">
+                      <div className="text-xs italic text-diepgrijs flex flex-col gap-2 mt-2">
+                        <p>
+                          Tijdens het event worden opnames gemaakt die
+                          uitsluitend worden ingezet voor terugblikken,
+                          sfeerimpressies en promotionele uitingen van Vosteq.
+                          We gaan uiteraard zorgvuldig om met het
+                          beeldmateriaal.
+                        </p>
+                        <p>
+                          Mocht je principiële bezwaren hebben of andere
+                          zwaarwegende redenen om niet in beeld te willen komen,
+                          neem dan gerust contact op met Ingrid Genger via{" "}
+                          <a
+                            className="font-bold underline"
+                            href="mailto:i.genger@vosteq.nl"
+                          >
+                            i.genger@vosteq.nl
+                          </a>
+                          .
+                        </p>
+                      </div>
                       <FormField
                         control={form.control}
                         name="nieuwsbrief"
                         render={({ field }) => (
-                          <FormItem className="flex items-center gap-2">
+                          <FormItem className="flex items-center gap-2 mt-2">
                             <FormControl>
                               <Checkbox
                                 checked={field.value}
@@ -464,48 +484,6 @@ export default function Page() {
                           </FormItem>
                         )}
                       />
-                      {/* <FormField
-                        control={form.control}
-                        name="beeldmateriaal"
-                        render={({ field }) => (
-                          <FormItem className="flex items-center gap-2">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                                className="rounded-none"
-                              />
-                            </FormControl>
-                            <FormLabel className="font-light text-diepgrijs text-sm font-aktiv-grotesk-extended">
-                              Ik ga ermee akkoord dat Vosteq beeldmateriaal
-                              gebruikt dat tijdens het event is gemaakt en
-                              waarop ik mogelijk te zien ben.
-                            </FormLabel>
-                          </FormItem>
-                        )}
-                      /> */}
-                        <div className="text-xs italic text-diepgrijs flex flex-col gap-2 mt-2">
-                          <p>
-                            Tijdens het event worden opnames gemaakt die
-                            uitsluitend worden ingezet voor terugblikken,
-                            sfeerimpressies en promotionele uitingen van Vosteq.
-                            We gaan uiteraard zorgvuldig om met het
-                            beeldmateriaal.
-                          </p>
-                          <p>
-                            Mocht je principiële bezwaren hebben of andere
-                            zwaarwegende redenen om niet in beeld te willen
-                            komen, neem dan gerust contact op met Ingrid Genger
-                            via{" "}
-                            <a
-                              className="font-bold underline"
-                              href="mailto:i.genger@vosteq.nl"
-                            >
-                              i.genger@vosteq.nl
-                            </a>
-                            .
-                          </p>
-                        </div>
                     </div>
                   </div>
                 </div>
