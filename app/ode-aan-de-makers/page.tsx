@@ -203,16 +203,16 @@ export default function Page() {
               bedacht
             </li>
             <li>
-              <span className="mr-4">13:45 uur</span>Verandering in beeld
+              <span className="mr-4">14:30 uur</span>Verandering in beeld
             </li>
             <li>
-              <span className="mr-4">14:15 uur</span>Inspirerende sessies
+              <span className="mr-4">14:45 uur</span>Inspirerende sessies
             </li>
             <li>
               <span className="mr-4">15:45 uur</span>Op reis naar de toekomst
             </li>
             <li>
-              <span className="mr-4">16:15 uur</span>Een ode aan de makers
+              <span className="mr-4">16:45 uur</span>Een ode aan de makers
             </li>
             <li>
               <span className="mr-4">17:00 uur</span>Netwerken, voor de
