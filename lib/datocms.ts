@@ -54,7 +54,7 @@ export const CASE_BY_SLUG_QUERY = `
 
 export const PAGE_CONTENT_QUERY = `
   query {
-    allCases {
+    allCases(orderBy: _firstPublishedAt_DESC) {
       id
       service
       title
