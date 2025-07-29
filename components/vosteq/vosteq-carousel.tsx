@@ -56,7 +56,7 @@ const VosteqCarousel = ({ cases }: { cases: DatoCase[] }) => {
                 </div>
                 <div className="flex flex-col lg:w-1/2 lg:p-16 bg-wit p-4 h-full">
                   <p className="text-paars font-aktiv-grotesk-extended text-base pb-4 flex-none">
-                    Project Management bij {caseItem.title}
+                    {caseItem.service} bij {caseItem.title}
                   </p>
                   <p className="text-paars font-aktiv-grotesk-extended text-base lg:text-2xl pb-8 font-semibold grow">
                     "{caseItem.quote}"

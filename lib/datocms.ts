@@ -56,6 +56,7 @@ export const PAGE_CONTENT_QUERY = `
   query {
     allCases {
       id
+      service
       title
       quote
       slug

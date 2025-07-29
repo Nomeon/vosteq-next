@@ -25,6 +25,7 @@ export type StepCardProps = {
 
 export type DatoCase = {
   id: string;
+  service: string;
   title: string;
   quote: string;
   slug: string;
