@@ -16,89 +16,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ReCAPTCHA from "react-google-recaptcha";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { formSchema } from "./schema";
 import { saveFormSubmission } from "./actions";
 
-const items = [
-  {
-    id: "inspiratie",
-    label: "Veel inspiratie opdoen",
-  },
-  {
-    id: "praktische-tips",
-    label: "Praktische tips waar ik direct mee aan de slag kan",
-  },
-  {
-    id: "oplossingsrichting",
-    label: "Een oplossingsrichting voor MKB-uitdagingen",
-  },
-  {
-    id: "gezellige-middag",
-    label: "Gewoon een gezellige middag",
-  },
-  {
-    id: "nieuwe-mensen",
-    label: "Nieuwe mensen ontmoeten",
-  },
-  {
-    id: "inzicht-trends",
-    label: "Inzicht in trends of ontwikkelingen in mijn vakgebied",
-  },
-  {
-    id: "beter-beeld-vosteq",
-    label: "Een beter beeld krijgen van wat Vosteq doet",
-  },
-  {
-    id: "sparren-ideeën",
-    label: "Sparren over ideeën of plannen",
-  },
-  {
-    id: "kennis-maken-partner",
-    label: "Kennis maken met Vosteq als mogelijke partner",
-  },
-  {
-    id: "frisse-blik",
-    label: "Een frisse blik op mijn situatie of organisatie",
-  },
-  {
-    id: "leren-ervaringen-anderen",
-    label: "Leren van de ervaringen van anderen",
-  },
-  {
-    id: "bevestiging-goede-weg",
-    label: "Bevestiging dat ik op de goede weg zit",
-  },
-  {
-    id: "verrassen",
-    label: "Niks, ik laat me gewoon verrassen",
-  },
-] as const;
 
-const inspirations = [
-  {
-    id: "strategie",
-    label:
-      "Strategie. Wat als je strategie niet meer werkt - maar niemand het zegt?",
-  },
-  {
-    id: "veranderen",
-    label:
-      "Veranderen. Wat als je visie werkelijkheid wordt - en jij weer écht kunt ondernemen?  ",
-  },
-  {
-    id: "empoweren",
-    label:
-      "Empoweren. Wat als iedereen gaat bijdragen - zonder dat je hoeft te duwen?",
-  },
-] as const;
 
 export default function Page() {
   const [submitted, setSubmitted] = useState(false);
@@ -118,10 +39,6 @@ export default function Page() {
       functie: "",
       email: "",
       telefoonnummer: "",
-      // items: [],
-      inspirations: [],
-      nieuwsbrief: false,
-      // beeldmateriaal: false,
     },
   });
 
@@ -242,19 +159,16 @@ export default function Page() {
         >
           <div className="container xl:w-2/3 border border-donkergroen p-8 my-8">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-              <h1 className="text-paars text-2xl">Aanmeldformulier</h1>
-              <p className="text-paars text-2xl font-aktiv-grotesk-extended font-semibold">
-                "Ode aan de Makers"
-              </p>
+              <h1 className="text-paars text-2xl">Nieuwsbrief</h1>
             </div>
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="flex flex-col gap-8"
               >
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="w-full flex flex-col gap-8">
-                    <h2 className="text-paars text-lg -mb-4">Gegevens</h2>
+                <div className="flex flex-col gap-8">
+                  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <h2 className="text-paars text-lg -mb-4 col-span-2">Gegevens</h2>
                     <FormField
                       control={form.control}
                       name="voornaam"
@@ -327,164 +241,6 @@ export default function Page() {
                         </FormItem>
                       )}
                     />
-                  </div>
-                  <div className="w-full flex flex-col gap-4">
-                    {/* <FormField
-                      control={form.control}
-                      name="items"
-                      render={({ field }) => (
-                        <FormItem className="w-full space-y-4">
-                          <h2 className="text-paars text-lg -mb-2">
-                            Wat verwacht ik van het event?
-                          </h2>
-                          <p className="text-xs font-aktiv-grotesk-extended">
-                            Selecteer minimaal 3 verwachtingen, (
-                            {field.value.length} geselecteerd)*
-                          </p>
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <button
-                                type="button"
-                                className="btn-solid text-xs"
-                              >
-                                Selecteer verwachtingen
-                              </button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-80 overflow-y-auto">
-                              <DropdownMenuLabel>
-                                Selecteer minimaal 3 opties
-                              </DropdownMenuLabel>
-                              <DropdownMenuSeparator />
-                              {items.map((item) => (
-                                <DropdownMenuCheckboxItem
-                                  key={item.id}
-                                  checked={field.value.includes(item.id)}
-                                  onSelect={(e) => e.preventDefault()}
-                                  onCheckedChange={(checked) => {
-                                    if (checked) {
-                                      field.onChange([...field.value, item.id]);
-                                    } else {
-                                      field.onChange(
-                                        field.value.filter((v) => v !== item.id)
-                                      );
-                                    }
-                                  }}
-                                >
-                                  {item.label}
-                                </DropdownMenuCheckboxItem>
-                              ))}
-                            </DropdownMenuContent>
-                          </DropdownMenu>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    /> */}
-                    <FormField
-                      control={form.control}
-                      name="inspirations"
-                      render={({ field }) => (
-                        <FormItem className="w-full space-y-4">
-                          <h2 className="text-paars text-lg -mb-2">
-                            Voorkeur voor inspirerende sessies?
-                          </h2>
-                          <p className="text-xs font-aktiv-grotesk-extended">
-                            Selecteer 2 inspirerende sessies. We proberen zoveel
-                            mogelijk rekening te houden met je voorkeuren, maar
-                            vol = vol. ({field.value.length} geselecteerd)*
-                          </p>
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <button
-                                type="button"
-                                className="btn-solid text-xs"
-                              >
-                                Selecteer sessies
-                              </button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-80 overflow-y-auto">
-                              <DropdownMenuLabel>
-                                Selecteer maximaal 2 opties
-                              </DropdownMenuLabel>
-                              <DropdownMenuSeparator />
-                              {inspirations.map((item) => {
-                                const [firstWord, ...rest] =
-                                  item.label.split(" ");
-                                return (
-                                  <DropdownMenuCheckboxItem
-                                    key={item.id}
-                                    checked={field.value.includes(item.id)}
-                                    onSelect={(e) => e.preventDefault()}
-                                    onCheckedChange={(checked) => {
-                                      if (checked) {
-                                        field.onChange([
-                                          ...field.value,
-                                          item.id,
-                                        ]);
-                                      } else {
-                                        field.onChange(
-                                          field.value.filter(
-                                            (v) => v !== item.id
-                                          )
-                                        );
-                                      }
-                                    }}
-                                  >
-                                    <p>
-                                      <span className="font-semibold">
-                                        {firstWord}
-                                      </span>{" "}
-                                      {rest.join(" ")}
-                                    </p>
-                                  </DropdownMenuCheckboxItem>
-                                );
-                              })}
-                            </DropdownMenuContent>
-                          </DropdownMenu>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <div className="flex flex-col items-start gap-2">
-                      <div className="text-xs italic text-diepgrijs flex flex-col gap-2 mt-2">
-                        <p>
-                          Tijdens het event worden opnames gemaakt die
-                          uitsluitend worden ingezet voor terugblikken,
-                          sfeerimpressies en promotionele uitingen van Vosteq.
-                          We gaan uiteraard zorgvuldig om met het
-                          beeldmateriaal.
-                        </p>
-                        <p>
-                          Mocht je principiële bezwaren hebben of andere
-                          zwaarwegende redenen om niet in beeld te willen komen,
-                          neem dan gerust contact op met Ingrid Genger via{" "}
-                          <a
-                            className="font-bold underline"
-                            href="mailto:i.genger@vosteq.nl"
-                          >
-                            i.genger@vosteq.nl
-                          </a>
-                          .
-                        </p>
-                      </div>
-                      <FormField
-                        control={form.control}
-                        name="nieuwsbrief"
-                        render={({ field }) => (
-                          <FormItem className="flex items-center gap-2 mt-2">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                                className="rounded-none mt-2"
-                              />
-                            </FormControl>
-                            <FormLabel className="font-light text-diepgrijs text-sm text-center font-aktiv-grotesk-extended">
-                              Ik wil graag de nieuwsbrief ontvangen
-                            </FormLabel>
-                          </FormItem>
-                        )}
-                      />
-                    </div>
                   </div>
                 </div>
 
