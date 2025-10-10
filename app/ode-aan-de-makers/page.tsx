@@ -152,14 +152,36 @@ export default function Page() {
           </div>
         </div>
       </div>
+
+      {/* Aftermovie Section */}
+      <div className="container py-16">
+        <div className="flex flex-col items-center gap-8">
+          <h2 className="text-paars w-full text-left">Bekijk de aftermovie</h2>
+          <div className="w-full aspect-video">
+            <video
+              className="w-full h-full object-cover border border-border shadow-xl rounded-xl"
+              controls
+              preload="metadata"
+            >
+              <source src="/aftermovie.mp4" type="video/mp4" />
+              Je browser ondersteunt geen video.
+            </video>
+          </div>
+        </div>
+      </div>
+
       {!submitted ? (
         <div
           id="aanmeldformulier"
           className="flex flex-col items-center justify-center w-full h-full container mb-8"
         >
           <div className="container xl:w-2/3 border border-donkergroen p-8 my-8">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
+            <div className="flex flex-col justify-center items-center gap-4 mb-8">
               <h1 className="text-paars text-2xl">Nieuwsbrief</h1>
+              <p className="text-paars text-center font-aktiv-grotesk-extended">
+                Op de hoogte blijven van de nieuwe ontwikkelingen bij Vosteq?
+                Meld je aan voor onze nieuwsbrief
+              </p>
             </div>
             <Form {...form}>
               <form
@@ -168,7 +190,7 @@ export default function Page() {
               >
                 <div className="flex flex-col gap-8">
                   <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <h2 className="text-paars text-lg -mb-4 col-span-2">Gegevens</h2>
+                    <h2 className="text-paars text-lg -mb-4 md:col-span-2">Gegevens</h2>
                     <FormField
                       control={form.control}
                       name="voornaam"
