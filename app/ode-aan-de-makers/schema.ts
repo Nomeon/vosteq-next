@@ -17,7 +17,7 @@ export const formSchema = z.object({
     .min(1, "E-mailadres is verplicht"),
   telefoonnummer: z.string().optional(),
   // items: z.array(z.string()).min(3, "Selecteer minimaal 3 opties"),
-  inspirations: z.array(z.string()).max(2, "Selecteer maximaal 2 opties"),
-  nieuwsbrief: z.boolean().optional(),
+  // inspirations: z.array(z.string()).max(2, "Selecteer maximaal 2 opties"),
+  // nieuwsbrief: z.boolean().optional(),
   // beeldmateriaal: z.boolean().optional(),
 });

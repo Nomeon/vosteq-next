@@ -14,14 +14,14 @@ export async function saveFormSubmission(data: z.infer<typeof formSchema>) {
     position: data.functie ?? "",
     company: data.bedrijfsnaam,
     phone: data.telefoonnummer ?? "",
-    inspirations: JSON.stringify(data.inspirations),
-    allowedPhotos: true,
-    source: "Ode aan de Makers formulier"
+    // inspirations: JSON.stringify(data.inspirations),
+    // allowedPhotos: true,
+    source: "Nieuwsbrief formulier"
   }
 
-  const mailingLists = data.nieuwsbrief ? {
-    "cmcsxhths08vj0i195m4d5pjo": true
-  } : undefined;
+  const mailingLists = {
+    "cmgkngp7b6eo20ix64v2uamks": true,
+  }
 
   try {
     const resp: {
