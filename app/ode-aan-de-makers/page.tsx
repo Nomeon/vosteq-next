@@ -7,19 +7,15 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ReCAPTCHA from "react-google-recaptcha";
 import { formSchema } from "./schema";
 import { saveFormSubmission } from "./actions";
-
-
 
 export default function Page() {
   const [submitted, setSubmitted] = useState(false);
@@ -91,11 +87,20 @@ export default function Page() {
         <div className="lg:w-1/2 flex flex-col gap-4">
           <h1 className="text-paars">Ode aan de makers</h1>
           <p className="font-aktiv-grotesk-extended text-paars">
-            Op <b>25 september 2025</b> vieren we het 20-jarig jubileum van
-            Vosteq met een ode aan jou - de maker. Geen lange speeches, maar
-            interactieve workshops, beeldende klantverhalen en volop ruimte om
-            elkaar te ontmoeten en in gesprek te gaan. Scroll naar beneden om je
-            aan te melden, of klik op de knop.
+            Op <b>25 september </b>vierden we samen met ruim 150 gasten het 20-jarig
+            jubileum van Vosteq. Een bijzonder moment dat we hebben aangegrepen
+            om iets terug te geven aan de mensen die het verschil maken in de
+            maakindustrie. Ode aan de Makers werd een dag vol inspiratie,
+            ontmoetingen en waardevolle inzichten. Samen hebben we werk gemaakt
+            van morgen. Tijdens het evenement is veel waardevolle informatie
+            gedeeld. Daar gaan we actief mee aan de slag en daar komen we zeker
+            bij je op terug. Het was een schitterende dag en dat hebben we
+            vastgelegd in de aftermovie. Beleef de hoogtepunten opnieuw of
+            ontdek wat je gemist hebt.
+          </p>
+          <p className="pt-8 font-aktiv-grotesk-extended">
+            Wil je op de hoogte blijven van de nieuwe ontwikkelingen bij Vosteq?
+            Meld je aan voor onze nieuwsbrief.
           </p>
           <button
             aria-label="aanmeldformulier"
@@ -109,37 +114,6 @@ export default function Page() {
           >
             Aanmelden
           </button>
-          <h3 className="pt-8 text-paars max-lg:text-2xl">Het programma</h3>
-          <ul className="text-diepgrijs font-aktiv-grotesk-extended space-y-1 font-light">
-            <li>
-              <span className="mr-4">13:00 uur</span>Inloop met smakelijke
-              ontvangst
-            </li>
-            <li>
-              <span className="mr-4">13:30 uur</span>Morgen wordt vandaag
-              bedacht
-            </li>
-            <li>
-              <span className="mr-4">14:30 uur</span>Verandering in beeld
-            </li>
-            <li>
-              <span className="mr-4">14:45 uur</span>Inspirerende sessies
-            </li>
-            <li>
-              <span className="mr-4">15:45 uur</span>Op reis naar de toekomst
-            </li>
-            <li>
-              <span className="mr-4">16:45 uur</span>Een ode aan de makers
-            </li>
-            <li>
-              <span className="mr-4">17:00 uur</span>Netwerken, voor de
-              verandering
-            </li>
-            <li>
-              <span className="mr-4">17:30 uur</span>Tijd om morgen werk te
-              maken van vandaag
-            </li>
-          </ul>
         </div>
         <div className="lg:w-1/2 container relative pb-16">
           <div className="relative sm:w-full md:w-2/3 lg:w-full aspect-[18/21]">
@@ -190,7 +164,9 @@ export default function Page() {
               >
                 <div className="flex flex-col gap-8">
                   <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <h2 className="text-paars text-lg -mb-4 md:col-span-2">Gegevens</h2>
+                    <h2 className="text-paars text-lg -mb-4 md:col-span-2">
+                      Gegevens
+                    </h2>
                     <FormField
                       control={form.control}
                       name="voornaam"
