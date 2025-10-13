@@ -91,15 +91,15 @@ export default function Page() {
             jubileum van Vosteq. Een bijzonder moment dat we hebben aangegrepen
             om iets terug te geven aan de mensen die het verschil maken in de
             maakindustrie. Ode aan de Makers werd een dag vol inspiratie,
-            ontmoetingen en waardevolle inzichten. Samen hebben we werk gemaakt
+            ontmoetingen en waardevolle inzichten. <br/><br/>Samen hebben we werk gemaakt
             van morgen. Tijdens het evenement is veel waardevolle informatie
             gedeeld. Daar gaan we actief mee aan de slag en daar komen we zeker
             bij je op terug. Het was een schitterende dag en dat hebben we
             vastgelegd in de aftermovie. Beleef de hoogtepunten opnieuw of
             ontdek wat je gemist hebt.
           </p>
-          <p className="pt-8 font-aktiv-grotesk-extended">
-            Wil je op de hoogte blijven van de nieuwe ontwikkelingen bij Vosteq?
+          <p className="pt-6 font-aktiv-grotesk-extended">
+            Wil je op de hoogte blijven van nieuwe ontwikkelingen bij Vosteq?
             Meld je aan voor onze nieuwsbrief.
           </p>
           <button
@@ -153,7 +153,7 @@ export default function Page() {
             <div className="flex flex-col justify-center items-center gap-4 mb-8">
               <h1 className="text-paars text-2xl">Nieuwsbrief</h1>
               <p className="text-paars text-center font-aktiv-grotesk-extended">
-                Op de hoogte blijven van de nieuwe ontwikkelingen bij Vosteq?
+                Op de hoogte blijven van nieuwe ontwikkelingen bij Vosteq?
                 Meld je aan voor onze nieuwsbrief
               </p>
             </div>
