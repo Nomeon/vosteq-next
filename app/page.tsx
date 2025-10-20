@@ -65,9 +65,9 @@ const jsonLd: (WithContext<Organization> | WithContext<WebSite> | WithContext<We
     "description": description,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Edisonstraat 11",
+      "streetAddress": "Einsteinstraat 16",
       "addressLocality": "Almelo",
-      "postalCode": "7601 PS",
+      "postalCode": "7601 PR",
       "addressCountry": "NL"
     },
     "email": "vdvosse@vosteq.nl",

@@ -39,7 +39,7 @@ export default function Contact() {
             <h3 className="text-wit">Onze contactgegevens:</h3>
             <div className="flex gap-4 items-center">
               <Icon icon="mdi:location" className="text-wit w-6 h-6" />
-              <p className="text-wit font-aktiv-grotesk-extended">Edisonstraat 11, 7601 PS Almelo</p>
+              <p className="text-wit font-aktiv-grotesk-extended">Einsteinstraat 16, 7601 PR Almelo</p>
             </div>
             <div className="flex gap-4 items-center">
               <Icon icon="mdi:phone" className="text-wit w-6 h-6" />
