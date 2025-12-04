@@ -16,6 +16,8 @@ import { z } from "zod";
 import ReCAPTCHA from "react-google-recaptcha";
 import { formSchema } from "./schema";
 import { saveFormSubmission } from "./actions";
+import Image from "next/image";
+import { Tilt } from "@/components/ui/tilt";
 
 export default function Page() {
   const [submitted, setSubmitted] = useState(false);
@@ -102,27 +104,47 @@ export default function Page() {
             Wil je op de hoogte blijven van nieuwe ontwikkelingen bij Vosteq?
             Meld je aan voor onze nieuwsbrief.
           </p>
-          <button
-            aria-label="aanmeldformulier"
-            className="btn-solid w-fit"
-            onClick={() => {
-              document.querySelector("#aanmeldformulier")?.scrollIntoView({
-                block: "center",
-                behavior: "smooth",
-              });
-            }}
-          >
-            Aanmelden
-          </button>
+          <div className="flex gap-6">
+            <button
+              aria-label="aanmeldformulier"
+              className="btn-solid w-fit"
+              onClick={() => {
+                document.querySelector("#aanmeldformulier")?.scrollIntoView({
+                  block: "center",
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Aanmelden
+            </button>
+            <button
+              className="btn-outline w-fit"
+              onClick={() => {
+                window.open("/Ode aan de Makers - de Ode.pdf", "_blank");
+              }}
+            >
+              De ode downloaden
+            </button>
+          </div>
         </div>
         <div className="lg:w-1/2 container relative pb-16">
-          <div className="relative sm:w-full md:w-2/3 lg:w-full aspect-[18/21]">
-            <div
-              className="absolute left-[7.1%] right-[9.33%] border-border border bg-cover bg-center top-0 bottom-0 shadow-xl bg-gradient-to-r from-[#6ABEC0] to-[#88268E]"
-              style={{
-                backgroundImage: `url(${"/images/ode-aan-de-makers.png"})`,
-              }}
-            />
+          <div className="relative sm:w-full md:w-2/3 lg:w-full aspect-[5/7]">
+            <Tilt
+              className="h-full w-full border-border border-2 shadow-xl overflow-hidden"
+              rotationFactor={2}
+              isRevese
+            >
+              <Image
+                onClick={() => {
+                  window.open("/Ode aan de Makers - de Ode.pdf", "_blank");
+                }}
+                src="/images/de-ode.webp"
+                alt="Ode aan de makers"
+                height={1400}
+                width={1000}
+                className="object-cover cursor-pointer"
+              />
+            </Tilt>
           </div>
         </div>
       </div>
