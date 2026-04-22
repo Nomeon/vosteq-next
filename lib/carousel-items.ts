@@ -18,12 +18,14 @@ import Ramon from "@/public/images/experts/Ramon_Huiskamp.webp";
 import Rens from "@/public/images/experts/Rens_Hofstede.webp";
 import Rob from "@/public/images/experts/Rob_ter_Meulen.webp";
 import Ronald from "@/public/images/experts/Ronald_de_Witte.webp";
-import Ruud from "@/public/images/experts/Ruud_Pullen.webp";
 import Sibbele from "@/public/images/experts/Sibbele_Douma.webp";
 import Stijn from "@/public/images/experts/Stijn_Nijhuis.webp";
 import Wessel from "@/public/images/experts/Wessel_van_Zwolle.webp";
 import Wijbrand from "@/public/images/experts/Wijbrand_Medendorp.webp";
 import Willem from "@/public/images/experts/Willem_Lenselink.webp";
+import Herman from "@/public/images/experts/Herman_van_Ommen.webp";
+import Arjan from "@/public/images/experts/Arjan_Ester.webp";
+// import Roland from "@/public/images/experts/Roland_Bosman.webp";
 
 export const carouselItems = [
   {
@@ -129,12 +131,6 @@ export const carouselItems = [
     imageSrc: Patrick,
   },
   {
-    name: "Ruud Pullen",
-    description:
-    "Met visie en als generalist, ervaringsdeskundige en rustgevend klankbord voor directies, plaatsen we samen de stip-op-de-horizon en pakken we door op de verdere organisatieontwikkeling. Lijden wordt leiden.",
-    imageSrc: Ruud,
-  },
-  {
     name: "Ramon Huiskamp",
     description:
     "Ervaren projectleider, projectmanager voor productontwikkeling, productieautomatisering en/of speciaal machinebouw. Expert in het leiden van technische projecten en het implementeren van innovatieve oplossingen.",
@@ -176,4 +172,22 @@ export const carouselItems = [
       "Projectleider, organisatiedeskundige of proces engineer - de rol is bijzaak: het resultaat telt. Met theoretische kennis, maar vooral met boerenverstand en humor, draag ik bij aan creatieve oplossingen in de maakindustrie.",
     imageSrc: Alice,
   },
+  {
+    name: "Herman van Ommen",
+    description:
+      "Als directieadviseur geloof ik dat mens en technologie samen het verschil maken. Mijn doel is productiviteit te verhogen met slimme automatisering én een betrokken, plezierige werkomgeving te creëren.",
+    imageSrc: Herman,
+  },
+  {
+    name: "Arjan Ester",
+    description:
+      "Brengt focus, tempo en scherpte in directieteams. Verbindt strategie met uitvoering en daagt uit om transformatie zichtbaar te maken in resultaat.",
+    imageSrc: Arjan,
+  },
+  // {
+  //   name: "Roland Bosman",
+  //   description:
+  //     "Mijn kracht zit in het vertalen van inhoud naar communicatie die herkenbaar, onderscheidend en geloofwaardig is. Soms strategisch, soms creatief, soms heel praktisch. Altijd gedreven en betrokken.",
+  //   imageSrc: Roland,
+  // },
 ];
