@@ -65,9 +65,9 @@ const jsonLd: (WithContext<Organization> | WithContext<WebSite> | WithContext<We
     "description": description,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Edisonstraat 11",
+      "streetAddress": "Einsteinstraat 16",
       "addressLocality": "Almelo",
-      "postalCode": "7601 PS",
+      "postalCode": "7601 PR",
       "addressCountry": "NL"
     },
     "email": "vdvosse@vosteq.nl",
@@ -130,7 +130,7 @@ export default async function Home() {
       <Verbeteren />
       <Experts />
       <VosteqCarousel cases={allCases} />
-      <BottomCta titel="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen?" paragraph="Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig."/>
+      <BottomCta titel="Nieuwsgierig hoe wij jouw bedrijf kunnen helpen?" paragraph="Neem vandaag nog contact op voor een vrijblijvende kennismaking met ons innovatieteam. Samen maken we jouw organisatie efficiënter en toekomstbestendig." />
     </div>
   );
 }

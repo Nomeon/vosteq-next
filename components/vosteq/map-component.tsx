@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import L, { LatLngTuple} from 'leaflet'
+import L, { LatLngTuple } from 'leaflet'
 
 const position: LatLngTuple = [52.338306, 6.684023]
 const customIcon = L.divIcon({
@@ -18,7 +18,7 @@ const customIcon = L.divIcon({
 
 const ForceResize = () => {
   const map = useMap()
-  
+
   useEffect(() => {
     setTimeout(() => map.invalidateSize(), 0)
   }, [map])
@@ -31,7 +31,7 @@ const MapComponent = () => {
     <div className='h-96 w-full relative'>
       <MapContainer center={position} zoom={13} className='w-full h-full'>
         <ForceResize />
-        <TileLayer 
+        <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
@@ -40,7 +40,7 @@ const MapComponent = () => {
             <div className="flex flex-col">
               <p className="font-bold text-center text-paars font-aktiv-grotesk-extended">Vosteq</p>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Edisonstraat+11,+7601+PS+Almelo,+Nederland"
+                href="https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Einsteinstraat+16,+7601+PR+Almelo,+Nederland"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="!text-paars font-aptos underline text-center"

@@ -61,12 +61,12 @@ const menuData = [
 ]
 
 const MenuSection: FC<MenuSectionProps> = ({ title, href, links }) => (
-  links.length > 1 ? 
+  links.length > 1 ?
     <NavigationMenuItem>
       <NavigationMenuTrigger className="submenu-trigger text-base">
-        { href? <Link href={href}>{title}</Link> : title }
+        {href ? <Link href={href}>{title}</Link> : title}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className='flex flex-col p-6'> 
+      <NavigationMenuContent className='flex flex-col p-6'>
         {links.map((link, idx) => (
           <Link key={idx} href={link.href} legacyBehavior passHref>
             <NavigationMenuLink className='w-auto pr-2 text-base whitespace-nowrap border-b text-paars border-paars hover:font-semibold hover:text-donkergroen hover:border-donkergroen'>
@@ -76,7 +76,7 @@ const MenuSection: FC<MenuSectionProps> = ({ title, href, links }) => (
         ))}
       </NavigationMenuContent>
     </NavigationMenuItem>
-  :
+    :
     <NavigationMenuItem>
       <Link href={href!} legacyBehavior passHref>
         <NavigationMenuLink className='w-auto pr-2 no-underline font-aktiv-grotesk text-base whitespace-nowrap text-paars font-medium hover:text-donkergroen hover:border-donkergroen'>
@@ -102,7 +102,7 @@ const AccordionSection: FC<AccordionSectionProps> = ({ title, href, links }) => 
         ))}
       </AccordionContent>
     </AccordionItem>
-  :
+    :
     <AccordionItem value={title} className='py-4 font-medium text-base font-aktiv-grotesk hover:text-donkergroen hover:font-semibold'>
       <Link href={href!} >
         {title}
@@ -173,10 +173,10 @@ const Header = () => {
           <div className='h-24 bg-groen flex flex-row items-center container'>
             <Link href='/contact' className='font-aktiv-grotesk text-wit font-bold w-1/3 flex justify-start'>Contact</Link>
             {/* <button className='h-8 w-1/3 flex justify-center'> */}
-            <Link 
-              href='https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Edisonstraat+11,+7601+PS+Almelo,+Nederland' 
+            <Link
+              href='https://www.google.com/maps/dir/?api=1&destination=Vosteq+Innovations+B.V.,+Einsteinstraat+16,+7601+PR+Almelo,+Nederland'
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               className='h-8 w-1/3 flex justify-center'
             >
               <Icon icon='mdi:location-outline' className='text-wit w-8 h-8' />
